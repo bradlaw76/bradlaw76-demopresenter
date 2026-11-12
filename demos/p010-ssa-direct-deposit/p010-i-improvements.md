@@ -42,7 +42,7 @@ The improvements below concern **presentation quality**, not whether Dynamics, c
 - **Case resolution:** Keep Case CAS-01523-T1R7X6 open and distinguish pending authorization from the older Case's Review & Resolution example.
 
 **Public presenter HTML / talk track (library changes)**
-- **Script:** Rehearse the two pasted citizen messages, right-side Intent suggestion to left-side editable reply, Timeline history and two Contact forms.
+- **Script:** Rehearse the Intent suggestion first, then the custom SSA Agent Support sidebar, ending on the public-facing my Social Security Assistant; preserve Timeline and two-form transitions.
 - **Timeboxes:** Align historical 13- and 52-minute notes with the current seven-section narrative, or label differences explicitly.
 - **QA:** Check the two copy buttons, mobile layout, keyboard controls, timers and all public runbook/notes links.
 
