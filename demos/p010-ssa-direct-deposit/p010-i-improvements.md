@@ -7,16 +7,16 @@ The improvements below concern **presentation quality**, not whether Dynamics, c
 ## Seven scoring criteria
 
 ### 1. Source fidelity and evidence — 24/25
-- **Why:** The current 40-minute story matches the originating source; older 13- and 52-minute versions contain superseded details.
+- **Why:** The 40-minute source now includes copyable portal prompts and Timeline history; 13- and 52-minute versions retain older story details.
 - **Improve:** Reconcile the alternative scripts with today's source, or clearly keep them historical.
 
 ### 2. Storyline, goals and transitions — 19/20
-- **Why:** The seven-section script includes live chat, two Contact forms and questions, but full showtime navigation is not independently tested.
-- **Improve:** Rehearse the actual chat handoff and brief question checkpoints with the final screen sequence.
+- **Why:** The chat handoff, two Contact forms and seven question cues are scripted; the new Copy buttons and chat-history drill-in lack browser validation.
+- **Improve:** Test both Copy buttons, the live handoff, optional Intent/Case Agent cues and the Contact chat-history drill-in.
 
 ### 3. Runbook completeness and presenter utility — 13/15
-- **Why:** The current HTML, runbook and notes match the new Case story; older timeboxes use earlier scenarios.
-- **Improve:** Give each alternative its own shorter goal, click path and exact handoffs.
+- **Why:** HTML, runbook and notes now match the portal/chat and current Case storyline; historical variants remain separate.
+- **Improve:** Keep older timeboxes clearly historical and check the new portal and Timeline cues in rehearsal.
 
 ### 4. Visual design and accessibility — 11/15
 - **Why:** Responsive styling exists, but public mobile, keyboard, focus and contrast checks were not rerun.
@@ -42,9 +42,9 @@ The improvements below concern **presentation quality**, not whether Dynamics, c
 - **Case resolution:** Keep Case CAS-01523-T1R7X6 open and distinguish pending authorization from the older Case's Review & Resolution example.
 
 **Public presenter HTML / talk track (library changes)**
-- **Script:** Rehearse the brief live-chat-to-Contact bridge and the standard-to-SSA Contact form comparison aloud.
+- **Script:** Rehearse two pasted customer lines, agent controls, Timeline/chat-history highlight and standard-to-SSA form switch.
 - **Timeboxes:** Align historical 13- and 52-minute notes with the current seven-section narrative, or label differences explicitly.
-- **QA:** Check mobile layout, keyboard navigation, presentation timers and every public runbook/notes link.
+- **QA:** Check the two copy buttons, mobile layout, keyboard controls, timers and all public runbook/notes links.
 
 These are recommendations, not approval to deploy or change source systems.
 
