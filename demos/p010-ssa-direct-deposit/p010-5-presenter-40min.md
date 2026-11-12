@@ -4,6 +4,8 @@
 
 [P010-1 live presenter](p010-1-presenter-40min.html) · [P010-B runbook](p010-b-runbook.md) · [Collection](index.html) · [P010-Q quality](p010-q-quality.md) · [P010-I improvements](p010-i-improvements.md)
 
+**Presenter display convention:** P010-1 is the on-stage speaking guide. Its **Section introduction** and expanded **Audience takeaway** are exact words to say; the primary talk track appears as bullets with bold visual cues. The **next-section transition** comes before the audience question. Optional live-path fallback and truth-boundary reminders are collapsed by default, with truth-boundary guidance below the chapter navigation. This Markdown note preserves the fuller source script and caveats for rehearsal.
+
 ## Core message
 
 - Chat is **another entry point into a consistent customer-service experience**, not another disconnected chatbot.
