@@ -36,6 +36,8 @@ The P010-1 HTML, P010-B runbook and P010-5 speaker notes now follow the same cas
 
 **Portal/chat supplement (November 12):** The current P010-1/B/5 set now includes Overview → Direct Deposit → chat; two ASCII citizen prompts with individual Copy controls; automatic assistant reply; a representative-workspace control summary; an observed right-side Intent-based suggestion (Issue: SSA FAQ), editable representative response guidance, conditional Case Management Agent creation; and Contact Timeline history with an optional actual stored chat record. The Contact and Case sections rebalance to 8 and 10 minutes, keeping the total at 40. The 89% / B+ grade is unchanged pending browser/mobile validation.
 
+**Custom sidebar refinement (November 12):** Section 3 now presents conversation tools, then the observed SSA FAQ Intent suggestion, and closes with the custom SSA Agent Support sidebar. The last highlight selects **my Social Security Assistant**, identified by the owner as the same configured public-facing Copilot Studio agent. This is an agent-access pattern, not proof of shared authenticated citizen context or live protected-record access. Timing stays 40 minutes; quality remains 89% / B+ pending full browser/mobile acceptance.
+
 ## Graded categories
 
 | Category | Earned | Maximum | Evidence and explicit deduction |
