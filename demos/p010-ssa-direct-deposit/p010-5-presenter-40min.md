@@ -1,8 +1,8 @@
-> **P010-5 · 40-minute version notes.** [Open this presenter](p010-1-presenter-40min.html) · [Canonical P010-4 runbook](p010-4-runbook.md) · [SSA collection](index.html) · [P010-8 score](p010-8-quality.md).
+> **P010-5 · 40-minute version notes.** [Open this presenter](p010-1-presenter-40min.html) · [Canonical P010-B runbook](p010-b-runbook.md) · [SSA collection](index.html) · [P010-Q quality](p010-q-quality.md) · [P010-G grade](p010-g-grade.md) · [P010-S score](p010-s-score.json).
 
 # H084 — SSA Direct Deposit Actual-Day Presenter Guide
 
-> **Public reference:** Project-specific source links and internal evidence remain in the private project. Use the [main interactive presenter](p010-1-presenter-40min.html) and this [public runbook](p010-4-runbook.md) for audience-safe rehearsal.
+> **Public reference:** Project-specific source links and internal evidence remain in the private project. Use the [main interactive presenter](p010-1-presenter-40min.html) and this [public runbook](p010-b-runbook.md) for audience-safe rehearsal.
 
 
 **Owner:** Presenter · **Date:** November 11, 2026 · **Target:** 40-minute core demonstration + optional Q&A · **Type:** Standalone presenter resource, not a deployment script.
@@ -20,7 +20,7 @@ Download/open the HTML in a modern browser; it works offline except for links to
 - Explicit conditional/live boundaries and a safe fallback for each chapter.
 - Preflight checklist, printable presenter notes and copyable cue sheet.
 
-The **original full playbook** in [PR #2](p010-4-runbook.md), November 11 [master runbook](p010-4-runbook.md), and the **H083 13-minute dry-run** in [PR #30](p010-4-runbook.md) are preserved and unchanged. This is a separate day-of-demonstration tool.
+The **original full playbook** in [PR #2](p010-b-runbook.md), November 11 [master runbook](p010-b-runbook.md), and the **H083 13-minute dry-run** in [PR #30](p010-b-runbook.md) are preserved and unchanged. This is a separate day-of-demonstration tool.
 
 ## Seven-chapter show order — November 11 revised
 
@@ -97,4 +97,4 @@ Don't create a duplicate Case for the presentation or claim the protected bank u
 
 Capture evidence and questions separately from the presentation guide. Future work can reconcile actual screenshots into the seven-chapter click path. Do not treat this guide as another requirements backlog, an installation package or deployment authorization.
 
-**Reference links:** [Full 17-scene H034 playbook](p010-4-runbook.md) · [Master runbook PR #11](p010-4-runbook.md) · [H083 dry-run PR #30](p010-4-runbook.md) · [H079 banking PR #26](p010-4-runbook.md) · [H071 reports PR #16](p010-4-runbook.md) · [H082 TED PR #29](p010-4-runbook.md)
+**Reference links:** [Full 17-scene H034 playbook](p010-b-runbook.md) · [Master runbook PR #11](p010-b-runbook.md) · [H083 dry-run PR #30](p010-b-runbook.md) · [H079 banking PR #26](p010-b-runbook.md) · [H071 reports PR #16](p010-b-runbook.md) · [H082 TED PR #29](p010-b-runbook.md)
