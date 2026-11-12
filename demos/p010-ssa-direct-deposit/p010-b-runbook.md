@@ -133,38 +133,43 @@ The configured chat assistant responds automatically; do not type a redundant ag
 ### 3. Dynamics · Live representative conversation — 4 minutes
 
 **Owner:** Brad · Customer Service workspace  
-**Goal:** Accept the live chat and briefly introduce the representative's summary, response, consult and transfer controls, without a feature-by-feature tour.  
+**Goal:** Accept Elena's live chat, show the Intent-based suggestion in Copilot, and explain how a representative can adapt the proposed answer before responding.  
 **Primary screen:** Dynamics Customer Service workspace → accept chat → conversation panel → Elena Contact
 
-**Key highlight:** A real chat enters Customer Service workspace; one workspace offers conversation history, summaries, response tools and appropriate escalation options.
+**Key highlight:** Right-hand Copilot Intent-based suggestions identify a topic such as SSA FAQ and provide guidance; the representative reviews and edits a response in the left-hand conversation.
 
 **Say**
 
-> Now the live chat arrives in Dynamics 365 Customer Service workspace. I'll accept the interaction and show the context that actually came across. We can use conversation summaries, quick replies, consultation and transfer controls to help the representative manage the request. The current agent is configured to respond automatically, so I don't need to type out a second conversation. Other options include voice or video, file attachments, notes, rich messages, translation and text suggestions. I'll mention these briefly rather than demonstrate them all. If the Intent Agent provides a verified suggestion, or Case Management Agent actually creates a Case, I'll show the observed output. Those are being tested, not assumed. Now let's open the related Contact and look at the customer's history.
+> Now the live chat has arrived in Dynamics 365 Customer Service workspace. I'll accept Elena's conversation and highlight how the representative can continue helping her. In the right-hand Copilot pane, Intent-based suggestions are identifying the topic as SSA FAQ and offering a suggested response and recommended path. This gives the agent a useful starting point rather than requiring a new answer from scratch. I can take relevant wording into the chat composer on the left, adjust it for Elena's situation, and decide whether to send it. The representative remains accountable for what goes back to the customer, and the suggestion doesn't complete identity verification or authorize a banking change. We also have conversation summaries, quick replies, consultation and transfer tools available. I'll mention those briefly before moving to Elena's Contact and her history.
 
 **What to show**
 
-1. Accept the actual inbound chat and show the message and conversation window.
-2. Highlight conversation summary or Summarize Conversation, where available; avoid claiming a summary was generated if none exists.
-3. Mention Quick Replies such as /q hello if configured, consult/transfer, and other message options briefly; the agent's configured response arrives automatically.
-4. Show Intent Agent suggestions or Case Management Agent creation only if the relevant output is verified and actually appears; otherwise omit these optional steps.
-5. Navigate to the exact Case-linked Elena Contact before opening the Case.
+1. Accept Elena's actual live chat in Customer Service workspace; highlight the customer request and conversation on the left.
+2. Show the available conversation summary and point out how it helps the representative get oriented.
+3. Intent Agent: In the right-hand Copilot pane, highlight Intent-based suggestions, the visible Issue: SSA FAQ classification, suggested response and recommended path. Use relevant guidance in the left-side chat composer, edit it as needed, and send only after review.
+4. Briefly mention Quick Replies such as /q hello when configured, text prediction, consultation/transfer and the other communication controls from the workspace.
+5. Keep Case Management Agent Case creation conditional on a verified result. Do not treat the Case shown alongside the conversation as proof the agent created it.
+6. Navigate to the exact Elena Contact linked to the chosen existing Case and show her Timeline next.
 
 **Agent tools — one sentence each**
 
-- **Chat and conversation summary:** Continue Elena's issue and use the recorded or generated conversation summary when it is available.
-- **Quick Replies and text prediction:** Reusable responses, including /q hello when configured, and optional typing assistance.
-- **Consultation and transfer:** Request help from another representative or transfer the interaction when the flow allows.
-- **Voice and video call:** Additional agent communication options; Daniel owns the separate voice demonstration.
-- **Attachments, links, notes and rich messages:** Tools to share content or record service context, subject to configuration and permissions.
-- **Translation and compliance nudges:** Configurable language support and guidance; a no-nudge message does not certify overall compliance.
-- **Intent and Case Management Agents:** Show only observed suggestions or actual Case creation after verification; never assume an automated result.
+- **Intent-based suggestions (Copilot pane):** The right-side panel shows Issue: SSA FAQ, a suggested response and a recommended path based on the conversation. The representative may use the content as an editable draft in the chat on the left before sending.
+- **Chat and conversation summary:** Continue Elena's live request and review the available conversation recap without searching older messages manually.
+- **Quick Replies and text prediction:** Use repeatable responses such as /q hello when configured, and optional draft assistance.
+- **Consultation and transfer:** Request help from a colleague or transfer the conversation through the appropriate supported path.
+- **Voice and video call:** Other communication options in the workspace; Daniel's voice demo remains separate.
+- **Attachments, links, notes and rich messages:** Share relevant content and retain context where these controls are configured.
+- **Translation and compliance nudges:** Optional language and guidance tools; an absence of nudges is not a blanket compliance approval.
+- **Case Management Agent:** Case creation is a separate capability. Show an automatically created Case only if its creation is actually verified.
 
 **Key beats**
 
-- **Live chat acceptance:** Follow the human handoff into Customer Service workspace.
-- **Context:** Only describe delivered conversation details.
-- **Service continuity:** Move into the correct Contact.
+- **Live chat:** Accept Elena's conversation on the left.
+- **Conversation summary:** Point to the brief recap when available.
+- **3 · Intent-based suggestion:** Show Issue: SSA FAQ and the right-side suggestion; adapt relevant wording in the left chat before sending.
+- **Representative control:** The agent reviews, edits and chooses the response; no autonomous banking action.
+- **Other tools:** Quick replies, consultation, transfer, and other configured controls get a short mention.
+- **Contact history:** Continue to the same Case-linked Contact and Timeline.
 
 **Questions**
 
@@ -172,11 +177,11 @@ The configured chat assistant responds automatically; do not type a redundant ag
 
 **Transition**
 
-> We understand Elena's issue. Now let's look at the customer history a representative can access instead of having to navigate another system.
+> The representative has the conversation and can use contextual suggestions while keeping control of the response. Now let's look at Elena's interaction history and the customer information available on her Contact.
 
-**Do not overstate:** The agent responds automatically in the configured path, but chat delivery does not establish authenticated identity or automatically created Case. Intent and Case Management Agent results are conditional until verified.
+**Do not overstate:** The screenshot proves an Intent-based suggestion is displayed for the conversation, not that a precise Direct Deposit intent, one-click suggestion insertion, automated Case creation or approved banking update occurred. Human review is required before sending.
 
-**Fallback:** Use a clearly labeled prepared conversation if showtime routing fails. If Intent/Case Agent output is not yet ready, continue to the established Contact and saved Case.
+**Fallback:** If the suggestion has not loaded during the live demonstration, use the already observed screenshot as an explicitly labeled example and continue to the existing Contact. Case Management Agent creation remains conditional.
 
 
 ### 4. Contact · Standard and SSA-specific experiences — 8 minutes
