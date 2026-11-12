@@ -1,28 +1,24 @@
-# Source-repository agent guidance — Demo Presenter library
+# Copyable source-repository agent guidance — Demo Presenters
 
-Add this guidance to the **existing** source repository agent policy. Preserve any stronger security, approval, handoff or deployment controls.
+Merge this into a source repository's **existing** agent policy; do not replace existing security, handoff or deployment controls.
 
-## Canonical library and quality contract
+## Public presenter library
 
-- Public library: `bradlaw76/bradlaw76-demopresenter`
-- Website (when enabled): `https://bradlaw76.github.io/bradlaw76-demopresenter/`
-- Source-readiness, HTML/runbook requirements and grading rubric: `docs/ARTIFACT_QUALITY_STANDARD.md` in the library repository.
-- Example: P010 SSA Direct Deposit collection with P011 presenter, P014 runbook, P018 **89% · B+** quality assessment.
+- Catalog repository: `bradlaw76/bradlaw76-demopresenter`
+- Planned website: `https://bradlaw76.github.io/bradlaw76-demopresenter/`
+- Authoritative standard: `docs/ARTIFACT_QUALITY_STANDARD.md` in the library
+- Source review: `docs/SOURCE_REVIEW.md` in the library
 
-## Mandatory workflow for a new source project
+## Requirements
 
-1. Keep the originating repository **authoritative** for demo implementation, detailed source status and private technical evidence.
-2. Confirm the source has the full approved story: audience, business use case, persona, goal, screen sequence, speaker owners, actual clicks, spoken lines, exact transitions, truthful integration limitations, fallback and desired timed variants. **No public artifact generation before all eight source-readiness checks pass.**
-3. Request a unique permanent **P collection ID and artifact IDs from the owner**; check the library registry. Do not select/reuse an ID autonomously.
-4. Prepare **sanitized** standalone HTML presenter(s), a complete section-by-section Markdown runbook, named timed notes, a P-numbered manifest, a P-numbered quality scorecard and a P-numbered collection guide.
-5. Every HTML version must **visibly link to its own P-numbered runbook and its own numbered speaker notes**; its sections/length must match the approved source. Historical variants must be labeled.
-6. Remove source-private GitHub URLs, environment/domain IDs, credentials, real data and implementation details before preparing a public preview. Never promote a staged capability into an asserted live success.
-7. Calculate grade using the library's **100-point seven-category rubric**, showing exact points, percentage and A+–F +/- letter; new public content needs at least **80% (B−)** and source READY.
-8. Obtain the owner's explicit approval for the **specific public release**, then update only the approved files and library catalog/registry. **No automatic public sync or live environment writes.**
-9. After public publication, link to the permanent P-numbered URLs from the private README/runbook when permitted.
+1. **Review THIS repo's actual source first**, read-only. Identify its authoritative business case, existing runbook, owner, demonstration steps, speaker text, transitions, timeboxes, and latest accepted vs. unverified functionality. A public library cannot autonomously read a private source repo without authorized connection.
+2. Require the library's **eight-item source-readiness gate** before authoring public output. No invented screens, data, handoffs or completed transactions.
+3. The owner assigns **one parent P ID per demo**, e.g. P011. Timed presenters/notes use numeric children (`P011-1`, `P011-2`); standard documents use **P011-B**, **P011-Q**, **P011-G**, **P011-S**, **P011-I**, **P011-R**, **P011-M**.
+4. Create **B** runbook with each chapter's goal, audience highlight, exact click path, spoken script, transition, fallback and source/live acceptance boundary. Keep section durations accurate.
+5. Each static HTML timebox must visibly link to **B** runbook and its numbered notes, and show stage controls and truth boundaries. No private URLs, client IDs, real customer data, credentials, or access to live systems.
+6. Score all seven rubric categories: **Q** = evidence and deductions, **G** = letter, **S** = percentage/points. Produce **I** as a concise Markdown improvement plan: each category has **Why** and **Improve** bullets, and actionable demo-vs-talk-track recommendations. Q/G/S all link to I.
+7. Update **R** overview and **M** manifest with each artifact's canonical P URL. Link current grade/score/improvements from collection landing and library catalog.
+8. Require explicit owner review/approval of the **specific sanitized public delta** before publication. Source repo approval does not authorize public publication. No automatic mirroring.
+9. After approved publication, confirm GitHub readback, source-to-public fidelity, links, syntax, timings, and any browser/mobile/keyboard validation; disclose anything unverified. Preserve previous grades and ID history.
 
-## Agent prompt for a new demo
-
-“Read this repository's own AGENTS and its authoritative demo source, then apply the Demo Presenters public-library quality and P-number requirements. First prove all eight source-readiness inputs exist; if not, report gaps without inventing a demo. Ask the owner to allocate unique P IDs. Build a sanitized, source-faithful public runbook and static timed HTML variants with clear goals, clicks, scripts, transitions, fallbacks and linked notes. Score the artifact set with the A+–F 100-point rubric. Request explicit public-release approval before committing anything to the public library.”
-
-Do not replace existing project security or source ownership rules.
+**Agent instruction example:** “Read the originating repository's current authoritative documents and the central Demo Presenters standards. Report any gaps in the eight-item source gate. If ready, prepare a sanitized PNNN collection with timed HTML, B runbook, Q/G/S scores, I improvements, R overview and M manifest. For each grade criterion write short Why and Improve bullets. Show the public diff for explicit approval; do not publish or change the underlying live system without its own authorization.”
