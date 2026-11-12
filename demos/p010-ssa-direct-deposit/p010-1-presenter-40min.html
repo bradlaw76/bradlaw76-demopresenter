@@ -89,6 +89,15 @@ h1{font-size:clamp(22px,2.4vw,32px);letter-spacing:-.025em;line-height:1.2;margi
 .chat-copy{margin-bottom:16px;padding:17px;border:1px solid #bfd8eb;border-radius:12px;background:#edf6fd}.chat-copy .copy-row{padding:12px 0;border-top:1px solid #caddec;display:flex;gap:12px;align-items:center;justify-content:space-between}.chat-copy .copy-row:first-of-type{border-top:0}.chat-copy .copy-row p{margin:0;flex:1;overflow-wrap:anywhere}.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.tool-grid .tool{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fafcff}.tool-grid .tool strong{display:block;color:#194b72}.tool-grid .tool p{font-size:13px;margin:6px 0 0}.script{border-left:5px solid var(--blue2);border-radius:0 12px 12px 0;background:#edf6fd;padding:21px 23px}
 .label{font-size:11px;letter-spacing:.12em;color:#326e9c;text-transform:uppercase;font-weight:850;margin:0 0 7px}
 .script blockquote{font-size:18px;line-height:1.55;margin:0;color:#143a5d}
+.spoken-points{margin:0;padding-left:22px;display:grid;gap:13px;font-size:17px;line-height:1.55;color:#143a5d}
+.spoken-points li{padding-left:4px}
+.spoken-points strong{color:#075b9b;font-weight:850}
+.takeaway-script{font-size:17px;line-height:1.55;font-weight:650;color:#194b72;margin:0}
+.compact-details{border:1px solid var(--line);border-radius:10px;background:#f7fafd;font-size:12px;color:#536b83}
+.compact-details summary{cursor:pointer;padding:8px 11px;font-weight:750;color:#59718a}
+.compact-details[open] summary{border-bottom:1px solid var(--line)}
+.compact-details p{margin:0;padding:10px 11px}
+.safety-footnote{margin-top:0;background:#fffaf0}
 .grid2{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:17px}
 .box{padding:19px;border:1px solid var(--line);border-radius:12px;background:#fff}
 .box.alt{background:#f9fcff}
@@ -146,6 +155,7 @@ body.focus .script blockquote{font-size:22px}
  .stage-footer{padding:14px 17px}
  .script{padding:15px 17px}
  .script blockquote{font-size:16px}
+ .spoken-points{font-size:15px}
  .chapter-count strong{font-size:18px}
 }
 @media print{
@@ -592,6 +602,24 @@ body.focus .script blockquote{font-size:22px}
   }
 ];
  const PREP=["Daniel's voice details are unknown; Brad's flexible transition is ready.","Portal Overview → Direct Deposit → live chat. Two copyable ASCII citizen messages are ready; chatbot responds automatically.","Accept Elena's live chat; highlight summary and quick replies, show Intent-based suggestions near the end, then custom SSA Agent Support sidebar and my Social Security Assistant LAST. Do not claim Case Management Agent creation unless verified.","One Elena Contact, two forms; standard-form Timeline and stored chat details only when present. SSA-specific form follows.","Case CAS-01523-T1R7X6 remains pending; keep Case section to ten minutes.","One supporting source-data pane, AI Recommendation Center, Review & Resolution and CRM dashboards are pre-opened.","Brad's section checkpoints and architecture close are prepared; Beth's content is owned by Beth."];
+ const SPOKEN={
+  voice:{intro:"Thanks, Daniel. I'm going to show another entry point into the customer-service journey: chat.",takeaway:"The key point is that chat is one entry point into a broader customer-service experience. The channel changes, but the goal is consistent: help representatives continue service with relevant information and tools."},
+  portal:{intro:"Let's start with Elena, who sees a notice that her direct-deposit change requires additional verification.",takeaway:"Elena can recognize the issue, ask a question in natural language and request human assistance from the same digital experience. The portal and chat are a starting point for customer service, not a disconnected chatbot encounter."},
+  conversation:{intro:"Now we're in the representative's Dynamics 365 workspace, where the value goes well beyond today's chat window.",takeaway:"The biggest takeaway is the integrated representative workspace. We're showing chat today, but the same workspace can support telephony, collaboration and task-specific tools—including Copilot Studio assistance—so representatives have useful capabilities on screen when serving a customer."},
+  contact:{intro:"Let's open Elena's Contact and look at two views of the same customer-service record.",takeaway:"The same underlying Contact supports different representative experiences. One view emphasizes customer context and interaction history; the SSA-specific view brings forward verification and Direct Deposit information without creating a second customer record."},
+  case:{intro:"Now we're moving from Elena's Contact to the Case where her Direct Deposit request is being worked.",takeaway:"The Case organizes the request, related information, recommendations and next actions in one service workflow. Guidance helps the representative make an informed decision; it does not replace verification, authorization or human review."},
+  reports:{intro:"We've followed one constituent request. Let's step back and look at how agents and supervisors manage their wider workload.",takeaway:"The same organized service data supports the agent handling a single request and the supervisor managing a team. Agents can prioritize follow-up, while supervisors see ownership, workload distribution and aging from the CRM perspective."},
+  admin:{intro:"Let me close by connecting the experience we've seen to the broader omnichannel picture.",takeaway:"Across channels and roles, the goal is a coherent service experience supported by relevant information and representative tools. That wraps up my portion, and I'll hand over to Beth for the contact-center view."}
+ };
+ const EMPHASIS={
+  voice:["chat","consistent customer-service experience","voice","website","Elena"],
+  portal:["Direct Deposit","additional verification","chat","human representative","protected payment issue"],
+  conversation:["agent workspace","chat","telephony","conversation summary","quick replies","Intent-based suggestion","SSA FAQ","custom SSA Agent Support sidebar","Copilot Studio agents","my Social Security Assistant","representative"],
+  contact:["Timeline","Contact – Customer Insights – SSA","SSA | Constituent Verification & Direct Deposit","same Elena Contact","Dataverse"],
+  case:["Case Overview","Direct Deposit","Verification Required","Pending Authorization","AI Recommendation Center","Review & Resolution"],
+  reports:["Agent Dashboard","My Workload","Supervisor Operations","CRM service information","demonstration data"],
+  admin:["chat","consistent customer-service experience","Dynamics 365","Dataverse","mobile","Beth"]
+ };
  const $=id=>document.getElementById(id);
  const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  let stored={};try{stored=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(_){}
@@ -606,29 +634,42 @@ body.focus .script blockquote{font-size:22px}
   document.querySelectorAll("[data-route]").forEach(el=>el.addEventListener("click",()=>go(Number(el.dataset.route))));
  }
  function ordered(items){return '<ol class="step-list">'+items.map(x=>'<li><span>'+esc(x)+'</span></li>').join("")+'</ol>'}
+ function spokenBullets(c){
+  const phrases=EMPHASIS[c.id]||[];
+  const sentences=c.say.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)||[c.say];
+  return '<ul class="spoken-points">'+sentences.map(s=>{
+   let html=esc(s.trim());
+   for(const phrase of [...phrases].sort((a,b)=>b.length-a.length)){
+    const escaped=esc(phrase).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const re=new RegExp('('+escaped+')','i');
+    if(re.test(html)){html=html.replace(re,'<strong>$1</strong>');break;}
+   }
+   return '<li>'+html+'</li>';
+  }).join('')+'</ul>';
+ }
  function renderStage(){
-  const c=CHAPTERS[state.index],s=statusInfo(c.status);
+  const c=CHAPTERS[state.index],s=statusInfo(c.status),spoken=SPOKEN[c.id];
   const beatHtml=c.beats.map(b=>'<div class="beat"><strong>'+esc(b[0])+'</strong><p>'+esc(b[1])+'</p></div>').join("");
   $("stage").innerHTML=
    '<div class="stage-hero"><div class="stage-hero-top"><div><div class="eyebrow">'+esc(c.owner)+' · Original scenes '+esc(c.original)+'</div><h2>'+esc(c.title)+'</h2><p>'+esc(c.objective)+'</p></div><div class="chapter-count"><span class="smalltext muted">CHAPTER</span><strong>'+c.number+' / 07</strong></div></div><div class="hero-meta"><span class="chip">Target '+c.min+' minutes</span><span class="chip">Primary screen: '+esc(c.screen)+'</span><span class="badge '+s[1]+'">'+esc(s[0])+'</span><span class="chapter-clock" id="chapterClock">00:00 / '+String(c.min).padStart(2,"0")+':00</span></div></div>'+
    '<div class="stage-body">'+
-   '<section class="box"><div class="label">Speaker highlight · what is shown</div><p>'+esc(c.highlight)+'</p></section>'+
-   '<section class="script"><div class="label">Presenter talk track · say this</div><blockquote>“'+esc(c.say)+'”</blockquote></section>'+
+   '<section class="box"><div class="label">Section introduction · say this</div><p>“'+esc(spoken.intro)+'”</p></section>'+
+   '<section class="script"><div class="label">Presenter talk track · say this</div>'+spokenBullets(c)+'</section>'+
    (c.customerLines?'<section class="chat-copy"><div class="label">You said · copy only the citizen message</div>'+c.customerLines.map((x,i)=>'<div class="copy-row"><p><strong>Message '+(i+1)+':</strong> '+esc(x)+'</p><button type="button" class="btn small" data-copy-citizen="'+i+'">Copy message '+(i+1)+'</button></div>').join('')+'<p>Paste the copied line into chat. No label or formatting is included.</p></section>':'')+
    (c.screenHighlights?'<section class="box"><div class="label">Portal screen highlights</div>'+ordered(c.screenHighlights.map(x=>x[0]+': '+x[1]))+'</section>':'')+
    (c.toolHighlights?'<section class="box"><div class="label">Agent workspace · short talking points</div><div class="tool-grid">'+c.toolHighlights.map(x=>'<div class="tool"><strong>'+esc(x[0])+'</strong><p>'+esc(x[1])+'</p></div>').join('')+'</div></section>':'')+
-   '<div class="grid2"><section class="box"><h3>What to click / show</h3>'+ordered(c.clicks)+'</section><section class="box alt"><div class="label">Audience takeaway</div><p style="font-weight:700;color:#194b72;margin:0 0 19px">'+esc(c.value)+'</p><div class="label">If the live path is not ready</div><p style="margin:0;font-size:13px">'+esc(c.fallback)+'</p></section></div>'+
-   '<div class="guard"><div class="label">Truth boundary · do not claim</div><p>'+esc(c.guard)+'</p></div>'+
-   '<div class="box"><div class="label">Audience checkpoint · invite questions</div><p>“'+esc(c.checkpoint)+'”</p></div>'+
+   '<div class="grid2"><section class="box"><h3>What to click / show</h3>'+ordered(c.clicks)+'</section><section class="box alt"><div class="label">Audience takeaway · say this</div><p class="takeaway-script">“'+esc(spoken.takeaway)+'”</p><details class="compact-details" style="margin-top:16px"><summary>If the live path is not ready</summary><p>'+esc(c.fallback)+'</p></details></section></div>'+
    '<div class="handoff"><div class="label">Next section · presenter transition</div><p>“'+esc(c.handoff)+'”</p></div>'+
+   '<div class="box"><div class="label">Audience checkpoint · invite questions</div><p>“'+esc(c.checkpoint)+'”</p></div>'+
    '<div class="deep-wrap"><button type="button" class="deep-toggle" id="deepToggle" aria-expanded="'+Boolean(state.deep[c.id])+'"><span>Detailed screen beats · '+esc(c.original)+'</span><span>'+ (state.deep[c.id]?'Hide −':'Expand +')+'</span></button>'+(state.deep[c.id]?'<div class="deep-panel">'+beatHtml+'</div>':'')+'</div>'+
    '</div>'+
-   '<div class="stage-footer"><div class="button-group"><button class="btn" id="prev" '+(state.index===0?'disabled':'')+'>← Previous</button><button class="btn primary" id="next">'+(state.index===6?'Back to opening':'Next chapter →')+'</button></div><div class="button-group"><button class="btn small" id="copyChapter">Copy this chapter</button><button class="btn small" id="mark">'+(state.done[c.id]?'✓ Complete':'Mark complete')+'</button></div></div>';
+   '<div class="stage-footer"><div class="button-group"><button class="btn" id="prev" '+(state.index===0?'disabled':'')+'>← Previous</button><button class="btn primary" id="next">'+(state.index===6?'Back to opening':'Next chapter →')+'</button></div><div class="button-group"><button class="btn small" id="copyChapter">Copy this chapter</button><button class="btn small" id="mark">'+(state.done[c.id]?'✓ Complete':'Mark complete')+'</button></div></div>'+
+   '<details class="compact-details safety-footnote" style="margin:9px 20px 15px"><summary>Truth boundary · do not claim</summary><p>'+esc(c.guard)+'</p></details>';
   $("prev").onclick=()=>go(state.index-1);
   $("next").onclick=()=>go(state.index===6?0:state.index+1);
   $("mark").onclick=()=>{state.done[c.id]=!state.done[c.id];save();renderRoute();renderStage();updateClocks()};
   document.querySelectorAll('[data-copy-citizen]').forEach(b=>b.onclick=()=>{const i=Number(b.getAttribute('data-copy-citizen'));if(c.customerLines&&c.customerLines[i])copyText(c.customerLines[i],'Citizen message '+(i+1)+' copied.');});
-  $("copyChapter").onclick=()=>copyText(c.title+"\nGoal: "+c.objective+"\nHighlight: "+c.highlight+"\nTalk track: "+c.say+"\nClicks:\n"+c.clicks.map((v,i)=>(i+1)+". "+v).join("\n")+"\nCheckpoint: "+c.checkpoint+"\nNext: "+c.handoff);
+  $("copyChapter").onclick=()=>copyText(c.title+"\nIntroduction: "+spoken.intro+"\nTalk track: "+c.say+"\nClicks:\n"+c.clicks.map((v,i)=>(i+1)+". "+v).join("\n")+"\nTakeaway: "+spoken.takeaway+"\nNext: "+c.handoff+"\nQuestions: "+c.checkpoint);
   $("deepToggle").onclick=()=>{state.deep[c.id]=!state.deep[c.id];save();renderStage();updateClocks()};
   updateClocks();
  }
@@ -640,7 +681,7 @@ body.focus .script blockquote{font-size:22px}
   $("timeTable").innerHTML=CHAPTERS.map((c,i)=>'<tr><td>'+(i+1)+'. '+esc(c.title)+'</td><td>'+esc(c.original)+'</td><td>'+c.min+'m</td></tr>').join("");
  }
  function printAll(){
-  $("printArea").innerHTML=CHAPTERS.map((c,i)=>'<section class="print-chapter"><div class="print-tag">Chapter '+(i+1)+' / 7 · '+c.min+' min · '+esc(c.owner)+' · Original scenes '+esc(c.original)+'</div><h2>'+esc(c.title)+'</h2><p><b>Screen:</b> '+esc(c.screen)+'</p><p><b>Talk track:</b> “'+esc(c.say)+'”</p><ol>'+c.clicks.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol><p><b>Takeaway:</b> '+esc(c.value)+'</p><p><b>Fallback:</b> '+esc(c.fallback)+'</p><p><b>Do not claim:</b> '+esc(c.guard)+'</p><p><b>Questions:</b> '+esc(c.checkpoint)+'</p><p><b>Handoff:</b> '+esc(c.handoff)+'</p></section>').join("");
+  $("printArea").innerHTML=CHAPTERS.map((c,i)=>'<section class="print-chapter"><div class="print-tag">Chapter '+(i+1)+' / 7 · '+c.min+' min · '+esc(c.owner)+' · Original scenes '+esc(c.original)+'</div><h2>'+esc(c.title)+'</h2><p><b>Screen:</b> '+esc(c.screen)+'</p><p><b>Introduction:</b> “'+esc(SPOKEN[c.id].intro)+'”</p><p><b>Talk track:</b> “'+esc(c.say)+'”</p><ol>'+c.clicks.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol><p><b>Takeaway:</b> “'+esc(SPOKEN[c.id].takeaway)+'”</p><p><b>Next:</b> '+esc(c.handoff)+'</p><p><b>Questions:</b> '+esc(c.checkpoint)+'</p><p><b>Fallback:</b> '+esc(c.fallback)+'</p><p><b>Do not claim:</b> '+esc(c.guard)+'</p></section>').join("");
  }
  let elapsed=0,chapterElapsed=0,timer=null;
  function fmt(n){return String(Math.floor(n/60)).padStart(2,"0")+":"+String(n%60).padStart(2,"0")}
