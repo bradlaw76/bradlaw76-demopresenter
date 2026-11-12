@@ -1,23 +1,30 @@
-# P Artifact Registry — Demo Presenters
+# Demo Presenters — P identifier registry
 
-**Global ID rule:** Unique, permanent P IDs in the format `P010`, `P010-1`, ... using at least three digits. **SSA starts at P010.** The P ID appears in the canonical URL and visible artifact title. Never assign the same P ID twice or rename an allocated artifact. Future demos use the next unallocated ID.
+**Rule:** A demo collection receives one permanent parent ID: **P010** for SSA, **P011** for the next different demo. Timed HTML presenters and notes receive numbered children such as **P010-1**. The **standard documents** receive fixed suffixes and do **not** consume numeric child IDs.
 
-| P ID | Canonical artifact | Canonical path |
+**Required fixed suffixes for every demo:** **B** runbook, **Q** quality, **G** letter grade, **S** numeric score, **I** improvements, **R** README, **M** manifest.
+
+| P ID | Artifact | Canonical path |
 | --- | --- | --- |
-| P010 | SSA Direct Deposit collection | `demos/p010-ssa-direct-deposit/` |
-| P010-1 | SSA 40-minute presenter (current) | `demos/p010-ssa-direct-deposit/p010-1-presenter-40min.html` |
-| P010-2 | SSA 13-minute rehearsal (historical) | `demos/p010-ssa-direct-deposit/p010-2-presenter-13min.html` |
-| P010-3 | SSA 52-minute walkthrough (historical) | `demos/p010-ssa-direct-deposit/p010-3-presenter-52min.html` |
-| P010-4 | SSA master public runbook | `demos/p010-ssa-direct-deposit/p010-4-runbook.md` |
-| P010-5 | SSA 40-minute notes | `demos/p010-ssa-direct-deposit/p010-5-presenter-40min.md` |
-| P010-6 | SSA 13-minute notes | `demos/p010-ssa-direct-deposit/p010-6-presenter-13min.md` |
-| P010-7 | SSA 52-minute notes | `demos/p010-ssa-direct-deposit/p010-7-presenter-52min.md` |
-| P010-8 | SSA scorecard | `demos/p010-ssa-direct-deposit/p010-8-quality.md` |
-| P010-9 | SSA machine-readable manifest | `demos/p010-ssa-direct-deposit/p010-9-manifest.json` |
-| P010-10 | SSA collection README | `demos/p010-ssa-direct-deposit/p010-10-README.md` |
+| P010 | collection | `demos/p010-ssa-direct-deposit/index.html` |
+| P010-1 | presenter current 40min | `demos/p010-ssa-direct-deposit/p010-1-presenter-40min.html` |
+| P010-2 | presenter historical 13min | `demos/p010-ssa-direct-deposit/p010-2-presenter-13min.html` |
+| P010-3 | presenter historical 52min | `demos/p010-ssa-direct-deposit/p010-3-presenter-52min.html` |
+| P010-5 | notes current 40min | `demos/p010-ssa-direct-deposit/p010-5-presenter-40min.md` |
+| P010-6 | notes historical 13min | `demos/p010-ssa-direct-deposit/p010-6-presenter-13min.md` |
+| P010-7 | notes historical 52min | `demos/p010-ssa-direct-deposit/p010-7-presenter-52min.md` |
+| P010-B | runbook | `demos/p010-ssa-direct-deposit/p010-b-runbook.md` |
+| P010-Q | quality | `demos/p010-ssa-direct-deposit/p010-q-quality.md` |
+| P010-G | grade | `demos/p010-ssa-direct-deposit/p010-g-grade.md` |
+| P010-S | score | `demos/p010-ssa-direct-deposit/p010-s-score.json` |
+| P010-I | improvements | `demos/p010-ssa-direct-deposit/p010-i-improvements.md` |
+| P010-R | readme | `demos/p010-ssa-direct-deposit/p010-r-readme.md` |
+| P010-M | manifest | `demos/p010-ssa-direct-deposit/p010-m-manifest.json` |
 
-**Next available collection ID:** P011, subject to fresh registry and repository inspection before allocation.
+**Next distinct collection:** P011 (subject to owner assignment and a fresh registry check). **Next numerical child for P010:** P010-11 (older numeric child IDs P010-4 and P010-8 through P010-10 were superseded and remain retired, not reusable).
 
-The root `index.html`, `README.md`, policies and templates are library infrastructure rather than demo artifacts. The canonical P010 collection path resolves to its `index.html` and the P010 page links to P010-1–P010-10.
+Do **not** publish redirects or duplicate old unnumbered copies. The collection `index.html` belongs to the parent **P010**, while its presenters and notes are P010-N and its mandatory documents are P010-letter.
 
-**No redirects or unnumbered aliases are required.** Old unnumbered SSA copies were transitional and should not be maintained. Always link to numbered canonical paths. To republish an existing artifact, update the same P-numbered file without changing its P ID; history is in Git. A genuinely new presenter variant requires a new P ID. Keep [artifact-registry.json](../artifact-registry.json), each demo's numbered manifest and the catalog consistent.
+Every HTML presenter links to **P010-B** and its own notes. **P010-Q, P010-G, P010-S** and the collection landing link to **P010-I**. The I plan has brief **Why** and **Improve** bullets under all seven graded criteria and must reconcile with Q/S scores.
+
+[Quality standard](ARTIFACT_QUALITY_STANDARD.md) · [Source review](SOURCE_REVIEW.md) · [Machine-readable registry](../artifact-registry.json)
