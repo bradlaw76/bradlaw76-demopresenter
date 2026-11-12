@@ -1,30 +1,70 @@
 {
-  "schema_version": 1,
-  "slug": "example-demo",
-  "title": "Example Demo",
-  "description": "Short audience-safe description",
+  "schema_version": 2,
+  "collection_id": "P021",
+  "slug": "example-service-flow",
+  "folder": "p021-example-service-flow",
+  "title": "Example Service Flow",
+  "description": "Sanitized example business scenario",
   "visibility": "public-presentation-only",
-  "default_variant": "20min",
+  "source_readiness": "READY",
+  "default_variant": "P022",
   "index": "index.html",
-  "runbook": "runbook.md",
+  "runbook": {
+    "id": "P023",
+    "source": "p023-runbook.md"
+  },
+  "quality": {
+    "id": "P025",
+    "source": "p025-quality.md",
+    "percentage": 85,
+    "letter": "B",
+    "reviewed_on": "YYYY-MM-DD"
+  },
   "versions": [
     {
-      "id": "10min",
-      "label": "10-minute rehearsal",
-      "duration_minutes": 10,
-      "html": "presenter-10min.html",
-      "notes": "presenter-10min.md",
-      "current": false
+      "id": "P022",
+      "label": "20-minute main",
+      "duration_minutes": 20,
+      "html": "p022-presenter-20min.html",
+      "notes_id": "P024",
+      "notes": "p024-presenter-20min.md",
+      "current": true,
+      "status": "current"
+    }
+  ],
+  "assets": [
+    {
+      "id": "P021",
+      "type": "collection",
+      "path": "index.html"
     },
     {
-      "id": "20min",
-      "label": "20-minute main walkthrough",
-      "duration_minutes": 20,
-      "html": "index.html",
-      "notes": "presenter-20min.md",
-      "current": true
+      "id": "P023",
+      "type": "runbook",
+      "path": "p023-runbook.md"
+    },
+    {
+      "id": "P025",
+      "type": "quality",
+      "path": "p025-quality.md"
+    },
+    {
+      "id": "P026",
+      "type": "manifest",
+      "path": "p026-manifest.json"
+    },
+    {
+      "id": "P027",
+      "type": "guide",
+      "path": "p027-README.md"
     }
   ],
   "owner_approval_required_for_public_updates": true,
-  "contains_live_integrations": false
+  "contains_live_integrations": false,
+  "checks": {
+    "html_js": "not_run",
+    "public_links": "not_run",
+    "browser_mobile": "not_run",
+    "pages_live": "not_verified"
+  }
 }
