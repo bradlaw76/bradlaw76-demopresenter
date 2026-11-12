@@ -133,14 +133,16 @@ The configured chat assistant responds automatically; do not type a redundant ag
 ### 3. Dynamics · Live representative conversation — 4 minutes
 
 **Owner:** Brad · Customer Service workspace  
-**Goal:** Briefly show the live conversation tools and intent guidance, then finish the workspace tour with the custom SSA Agent Support sidebar and my Social Security Assistant.  
+**Goal:** Use the live chat scenario to showcase the broader agent workspace: support for chat and telephony, practical productivity tools, and embedded Copilot assistance.
 **Primary screen:** Customer Service workspace → chat and summary → Intent-based suggestion → SSA Agent Support → my Social Security Assistant → Contact
 
-**Key highlight:** The representative can use contextual Intent suggestions and can also access the same public-facing Copilot Studio assistant from a custom internal sidebar.
+**Key highlight:** Chat is today's example. The broader value is an agent workspace supporting multiple channels, including telephony, with summaries, quick replies, consultation, transfers and contextual assistance.
+
+**Primary takeaway:** Dynamics 365 Contact Center offers a unified workspace for chat, telephony and other configured channels, equipping representatives with tools that help them serve customers efficiently.
 
 **Say**
 
-> The live conversation has arrived in Customer Service workspace. I'll highlight the conversation summary, quick replies and consultation or transfer controls, all without touring every option. Near the end, notice the Intent-based suggestion in the Copilot pane. It identifies the issue as SSA FAQ and gives the representative a suggested response and recommended path. I can take useful wording into the chat on the left, edit it and decide whether to send it. Finally, I want to show our custom SSA Agent Support sidebar. It can make multiple Copilot Studio agents available within this workspace for different service needs. I'll finish by selecting my Social Security Assistant, the same configured assistant Elena used in the public portal. When connected to approved published SSA website information, it can help with general questions here as well. That reuse illustrates consistent guidance across the citizen and representative experiences, but it does not transfer Elena's authenticated session or authorize a banking change.
+> Today we're demonstrating a live chat interaction, but the broader capability is the agent workspace. Dynamics 365 Contact Center can support chat, telephony and other configured channels in one place, giving representatives practical tools to assist customers more effectively. We can see the conversation summary, quick replies and consultation or transfer controls without touring every feature. Near the end, notice the Intent-based suggestion in the Copilot pane. It identifies the issue as SSA FAQ and gives the representative a suggested response and recommended path. I can take useful wording into the chat on the left, edit it and decide whether to send it. Finally, I want to show our custom SSA Agent Support sidebar. It can make multiple Copilot Studio agents available within this workspace for different service needs. I'll finish by selecting my Social Security Assistant, the same configured assistant Elena used in the public portal. When connected to approved published SSA website information, it can help with general questions here as well. That reuse illustrates consistent guidance across citizen and representative experiences, but it does not transfer Elena's authenticated session or authorize a banking change.
 
 **What to show**
 
@@ -178,7 +180,7 @@ The configured chat assistant responds automatically; do not type a redundant ag
 
 > We've seen the conversation, contextual guidance, and the same public-facing assistant available to the representative through a custom sidebar. Now let's open Elena's Contact to see the customer history behind the interaction.
 
-**Do not overstate:** The sidebar identifies my Social Security Assistant as the public-facing agent reused internally; this does not establish inherited portal authentication, a shared session or protected-record access. Public SSA website grounding requires an approved configured knowledge source. The SSA FAQ suggestion is observed; one-click insertion and Case Management Agent creation are not independently proven.
+**Do not overstate:** Telephony is a supported workspace capability, not a claim that this SSA environment has demonstrated a live call. The sidebar identifies my Social Security Assistant as the public-facing agent reused internally; this does not establish inherited portal authentication, a shared session or protected-record access. Public SSA website grounding requires an approved configured knowledge source. The SSA FAQ suggestion is observed; one-click insertion and Case Management Agent creation are not independently proven.
 
 **Fallback:** If Intent suggestions do not appear, describe the observed guidance briefly. If the custom assistant is slow, show the configured sidebar and avoid claiming an answer was generated. Continue to the Contact without troubleshooting.
 
