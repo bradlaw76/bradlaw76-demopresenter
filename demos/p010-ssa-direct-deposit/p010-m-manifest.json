@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "collection_id": "P010",
   "slug": "ssa-direct-deposit",
   "folder": "p010-ssa-direct-deposit",
@@ -117,6 +117,11 @@
       "id": "P010-M",
       "type": "manifest",
       "path": "p010-m-manifest.json"
+    },
+    {
+      "id": "P010-I",
+      "type": "improvement-plan",
+      "path": "p010-i-improvements.md"
     }
   ],
   "owner_approval_required_for_public_updates": true,
@@ -141,5 +146,11 @@
   "collection_readme": {
     "id": "P010-R",
     "source": "p010-r-readme.md"
+  },
+  "improvements": {
+    "id": "P010-I",
+    "source": "p010-i-improvements.md",
+    "criteria_count": 7,
+    "format": "two concise bullets for each scoring category"
   }
 }
