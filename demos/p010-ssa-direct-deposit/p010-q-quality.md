@@ -20,7 +20,11 @@ The originating SSA demo project supplied the complete master storyline, detaile
 | Public sanitization | PASS on targeted static checks — no original private GitHub/Dataverse/Power Pages URLs in the published copies |
 | Owner authorization to publish sanitized completed set | PASS — explicitly directed in this conversation |
 
-**Source-ready is not system-ready.** The real channel transfer, protected banking update, identity verification and final Case close remain outside this artifact grade.
+**Source-ready is not system-ready.** The owner has confirmed the chat-to-representative handoff for the demonstration. Protected banking updates, identity verification, source-system integration and final Case closure remain outside this artifact grade.
+
+## November 12 talk-track reassessment
+
+The P010-1 HTML, P010-B runbook and P010-5 speaker notes now follow the same case-specific story: Brad's flexible bridge from Daniel, live chat handoff, standard-to-SSA Contact form switch, synthetic Case **CAS-01523-T1R7X6**, AI recommendations, CRM workload reporting, and an audience checkpoint at every section. This review preserves the **89% / B+** score because browser/mobile accessibility and historical-variant reconciliation remain unverified; no points are awarded for live transaction completion.
 
 ## Standard score/grade references
 
@@ -35,8 +39,8 @@ The originating SSA demo project supplied the complete master storyline, detaile
 | Category | Earned | Maximum | Evidence and explicit deduction |
 | --- | ---: | ---: | --- |
 | Source fidelity and evidence | **24** | 25 | Current 40-minute source and runbook agree; 13/52 minute versions retain older notes and must remain historical |
-| Storyline, goals and transitions | **19** | 20 | Clear seven-step business journey and exact handoffs; real agent escalation is conditional |
-| Runbook completeness and presenter usefulness | **13** | 15 | Script, click path, owner, goal, highlights, fallbacks and current seven-stage conclusion; historical alternatives are not entirely restaged to current flow |
+| Storyline, goals and transitions | **19** | 20 | Seven coherent stages, audience questions and exact handoffs; live chat is owner-confirmed but complete browser rehearsal is not independently accepted |
+| Runbook completeness and presenter usefulness | **13** | 15 | Refined seven-stage script, two Contact forms, Case CAS-01523-T1R7X6, questions and transitions; historical 13/52 versions retain earlier narratives |
 | Visual design and accessibility | **11** | 15 | Standalone responsive CSS and keyboard-related controls present; no independent full visual, mobile, contrast or keyboard acceptance of public copies |
 | Technical integrity and variants | **9** | 10 | 3 HTML scripts parsed, 40-minute main durations sum, variant notes/runbook links checked; live browser navigation not rerun |
 | Public privacy and no-false-claim safeguards | **9** | 10 | Sanitized project URLs and internal identifiers, fictional names, no live writes; independent broad privacy review not performed |
