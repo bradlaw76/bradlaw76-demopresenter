@@ -79,9 +79,6 @@
       "path": "p020-README.md"
     }
   ],
-  "legacy_aliases": [
-    "../ssa-direct-deposit/"
-  ],
   "owner_approval_required_for_public_updates": true,
   "contains_live_integrations": false,
   "checks": {
@@ -89,5 +86,7 @@
     "link_targets": "source_verified",
     "browser_visual": "not_verified",
     "pages_live": "not_verified"
-  }
+  },
+  "aliases": [],
+  "redirects_required": false
 }
