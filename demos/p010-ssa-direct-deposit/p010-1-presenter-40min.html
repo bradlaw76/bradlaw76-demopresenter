@@ -347,81 +347,73 @@ body.focus .script blockquote{font-size:22px}
     "min": 4,
     "original": "aligned to 17-scene source",
     "status": "mixed",
-    "objective": "Accept Elena's live chat, show the Intent-based suggestion in Copilot, and explain how a representative can adapt the proposed answer before responding.",
-    "highlight": "Right-hand Copilot Intent-based suggestions identify a topic such as SSA FAQ and provide guidance; the representative reviews and edits a response in the left-hand conversation.",
-    "screen": "Dynamics Customer Service workspace → accept chat → conversation panel → Elena Contact",
-    "say": "Now the live chat has arrived in Dynamics 365 Customer Service workspace. I'll accept Elena's conversation and highlight how the representative can continue helping her. In the right-hand Copilot pane, Intent-based suggestions are identifying the topic as SSA FAQ and offering a suggested response and recommended path. This gives the agent a useful starting point rather than requiring a new answer from scratch. I can take relevant wording into the chat composer on the left, adjust it for Elena's situation, and decide whether to send it. The representative remains accountable for what goes back to the customer, and the suggestion doesn't complete identity verification or authorize a banking change. We also have conversation summaries, quick replies, consultation and transfer tools available. I'll mention those briefly before moving to Elena's Contact and her history.",
+    "objective": "Show a few agent productivity controls, the custom SSA Agent Support sidebar with reusable Copilot Studio agents, then finish with Intent-based suggestions.",
+    "highlight": "One workspace can host chat, reusable Copilot Studio agents and intent-based assistance. The same configured my Social Security Assistant is available in the public portal and the representative's sidebar.",
+    "screen": "Dynamics Customer Service workspace → chat and summary → SSA Agent Support sidebar → Copilot Intent suggestions → Contact",
+    "say": "Elena's live chat is now in Customer Service workspace. I'll briefly show the conversation summary, quick replies, and consultation or transfer options. I also want to show our custom SSA Agent Support sidebar. It can bring multiple Copilot Studio agents into the representative's workspace, so the agent isn't jumping between disconnected tools. Here is my Social Security Assistant, the same configured assistant available to the public through the portal. For general questions it can provide guidance using publicly available SSA information, including content from the SSA website. Showing the same assistant in two places does not mean this internal view inherits Elena's portal session or can access protected account information. Finally, in the right-hand Copilot pane, Intent-based suggestions identify the issue as SSA FAQ and offer a suggested response and recommended path. The representative can use relevant guidance in the chat on the left, adjust it as needed, and decide what to send. These are assistance tools; verification and banking authorization remain human-controlled.",
     "clicks": [
-      "Accept Elena's actual live chat in Customer Service workspace; highlight the customer request and conversation on the left.",
-      "Show the available conversation summary and point out how it helps the representative get oriented.",
-      "Intent Agent: In the right-hand Copilot pane, highlight Intent-based suggestions, the visible Issue: SSA FAQ classification, suggested response and recommended path. Use relevant guidance in the left-side chat composer, edit it as needed, and send only after review.",
-      "Briefly mention Quick Replies such as /q hello when configured, text prediction, consultation/transfer and the other communication controls from the workspace.",
-      "Keep Case Management Agent Case creation conditional on a verified result. Do not treat the Case shown alongside the conversation as proof the agent created it.",
-      "Navigate to the exact Elena Contact linked to the chosen existing Case and show her Timeline next."
+      "Accept the live chat and point out Elena's actual request in the communication panel.",
+      "Show the available conversation summary and briefly mention Quick Replies, consultation, transfer and other configured communication tools.",
+      "Open the custom SSA Agent Support sidebar; highlight the linked agents and explain that additional Copilot Studio assistants can be made available within the agent workspace.",
+      "Select my Social Security Assistant in the sidebar. Identify it as the same configured assistant offered in the public portal, appropriate for general guidance drawn from public SSA information; show its actual response rather than assuming a record lookup.",
+      "Near the END of this workspace tour, open the right-hand Copilot Intent-based suggestions. Point to Issue: SSA FAQ, recommended path and suggested response; adapt relevant text in the left-hand chat composer if needed and review before sending.",
+      "Show Case Management Agent creation only if independently verified. Otherwise navigate to the existing Elena Contact and its Timeline."
     ],
     "checkpoint": "Any questions about the representative's conversation experience before we open the customer record?",
-    "handoff": "The representative has the conversation and can use contextual suggestions while keeping control of the response. Now let's look at Elena's interaction history and the customer information available on her Contact.",
-    "guard": "The screenshot proves an Intent-based suggestion is displayed for the conversation, not that a precise Direct Deposit intent, one-click suggestion insertion, automated Case creation or approved banking update occurred. Human review is required before sending.",
-    "fallback": "If the suggestion has not loaded during the live demonstration, use the already observed screenshot as an explicitly labeled example and continue to the existing Contact. Case Management Agent creation remains conditional.",
+    "handoff": "The representative can continue the conversation, draw on the same public-information assistant, and use other contextual suggestions while keeping control. Now let's look at the interaction history and customer information on Elena's Contact.",
+    "guard": "The owner identifies the internal my Social Security Assistant as the same configured public-facing agent; this does not prove shared authenticated context, protected-record access or a transferred session. Its public SSA website content is general guidance, not an authorized payment-change process. The screenshot shows a visible SSA FAQ intent suggestion, not autonomous case creation or a completed banking update.",
+    "fallback": "If the custom agent or intent pane is slow, state its role using the observed screen and continue; do not troubleshoot or claim a response was produced. Use the existing Case unless Case Management Agent creation is separately verified.",
     "beats": [
       [
-        "Live chat",
-        "Accept Elena's conversation on the left."
+        "Live conversation",
+        "Accept chat and show the available summary and representative tools."
       ],
       [
-        "Conversation summary",
-        "Point to the brief recap when available."
+        "Custom agent sidebar",
+        "Open SSA Agent Support and show multiple linked Copilot Studio agents."
       ],
       [
-        "3 · Intent-based suggestion",
-        "Show Issue: SSA FAQ and the right-side suggestion; adapt relevant wording in the left chat before sending."
+        "Shared public assistant",
+        "Show my Social Security Assistant inside the agent sidebar; it is also available through the citizen portal."
       ],
       [
-        "Representative control",
-        "The agent reviews, edits and chooses the response; no autonomous banking action."
+        "Intent suggestion (near the end)",
+        "Show the right-side SSA FAQ guidance and the agent-controlled editable response on the left."
       ],
       [
-        "Other tools",
-        "Quick replies, consultation, transfer, and other configured controls get a short mention."
-      ],
-      [
-        "Contact history",
-        "Continue to the same Case-linked Contact and Timeline."
+        "Existing Contact",
+        "Continue to Elena's Contact and Timeline. Case Management Agent creation remains conditional."
       ]
     ],
-    "value": "Copilot can provide intent-based guidance and a suggested answer within the workspace, while the representative controls the final response.",
+    "value": "A consistent service experience can reuse a public-facing Copilot Studio assistant inside an agent workspace while offering additional specialized assistance and preserving human decision-making.",
     "toolHighlights": [
       [
-        "Intent-based suggestions (Copilot pane)",
-        "The right-side panel shows Issue: SSA FAQ, a suggested response and a recommended path based on the conversation. The representative may use the content as an editable draft in the chat on the left before sending."
+        "Live chat and conversation summary",
+        "Continue Elena's conversation and use a recap of the messages when available."
       ],
       [
-        "Chat and conversation summary",
-        "Continue Elena's live request and review the available conversation recap without searching older messages manually."
+        "Quick Replies, consultation and transfer",
+        "Use reusable responses or get help from another representative without restarting the conversation."
       ],
       [
-        "Quick Replies and text prediction",
-        "Use repeatable responses such as /q hello when configured, and optional draft assistance."
+        "Custom SSA Agent Support sidebar",
+        "Show that the agent workspace can host several linked Copilot Studio assistants for different purposes."
       ],
       [
-        "Consultation and transfer",
-        "Request help from a colleague or transfer the conversation through the appropriate supported path."
+        "my Social Security Assistant in both experiences",
+        "The same configured assistant is exposed in the public portal and representative sidebar for general public-information guidance; no shared session or protected-record access is implied."
       ],
       [
-        "Voice and video call",
-        "Other communication options in the workspace; Daniel's voice demo remains separate."
+        "Additional communication controls",
+        "Voice/video, attachments, notes, rich messages, translations, text prediction and compliance nudges are briefly referenced, not individually demonstrated."
       ],
       [
-        "Attachments, links, notes and rich messages",
-        "Share relevant content and retain context where these controls are configured."
-      ],
-      [
-        "Translation and compliance nudges",
-        "Optional language and guidance tools; an absence of nudges is not a blanket compliance approval."
+        "Intent-based suggestions (show near the end)",
+        "The right-side Copilot pane displays Issue: SSA FAQ and suggested guidance; the representative can edit useful wording in the left chat before sending."
       ],
       [
         "Case Management Agent",
-        "Case creation is a separate capability. Show an automatically created Case only if its creation is actually verified."
+        "An automatically created Case is demonstrated only when its creation is verified; the existing Case remains the safe navigation path."
       ]
     ]
   },
@@ -595,7 +587,7 @@ body.focus .script blockquote{font-size:22px}
     "value": "Voice, chat, web and mobile-capable Dynamics/portals are ways to engage with a consistent service experience; Facebook is only a future configured option."
   }
 ];
- const PREP=["Daniel's voice details are unknown; Brad's flexible transition is ready.","Portal Overview → Direct Deposit → live chat. Two copyable ASCII citizen messages are ready; chatbot responds automatically.","Accept live chat, show the right-side Intent-based suggestions (Issue: SSA FAQ), adapt guidance in the left chat as appropriate, then briefly show summary/quick replies/consult/transfer. Case Management Agent creation is conditional.","One Elena Contact, two forms; standard-form Timeline and stored chat details only when present. SSA-specific form follows.","Case CAS-01523-T1R7X6 remains pending; keep Case section to ten minutes.","One supporting source-data pane, AI Recommendation Center, Review & Resolution and CRM dashboards are pre-opened.","Brad's section checkpoints and architecture close are prepared; Beth's content is owned by Beth."];
+ const PREP=["Daniel's voice details are unknown; Brad's flexible transition is ready.","Portal Overview → Direct Deposit → live chat. Two copyable ASCII citizen messages are ready; chatbot responds automatically.","Accept live chat; summarize and mention quick replies/consult/transfer, show custom SSA Agent Support and my Social Security Assistant as the same public-facing agent, then show Intent-based SSA FAQ suggestion near the END. Case Management Agent creation remains conditional.","One Elena Contact, two forms; standard-form Timeline and stored chat details only when present. SSA-specific form follows.","Case CAS-01523-T1R7X6 remains pending; keep Case section to ten minutes.","One supporting source-data pane, AI Recommendation Center, Review & Resolution and CRM dashboards are pre-opened.","Brad's section checkpoints and architecture close are prepared; Beth's content is owned by Beth."];
  const $=id=>document.getElementById(id);
  const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  let stored={};try{stored=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(_){}
