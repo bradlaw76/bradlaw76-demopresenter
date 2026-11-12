@@ -34,6 +34,20 @@ The improvements below concern **presentation quality**, not whether Dynamics, c
 - **Why:** P010 has a stable collection, manifest and grading system; automated consistency checks are not yet established.
 - **Improve:** Validate manifest, registry, grade, runbook and file links with one repeatable static check.
 
+## Improvements by owner and artifact type
+
+**Originating demo / workflow (source-repo changes — suggestions only)**
+- **Human handoff:** Verify actual chatbot-to-representative routing; otherwise retain the prepared-transition label.
+- **Contact alert:** Display a secure, read-only warning from the related banking record instead of adding a duplicate Contact field.
+- **Case resolution:** Keep the current Not Ready outcome until evidence, authorization and any approved transaction are independently verified.
+
+**Public presenter HTML / talk track (library changes)**
+- **Script:** Make the live-versus-prepared conversation pivot a single clear sentence.
+- **Timeboxes:** Align historical 13- and 52-minute notes with the current seven-section narrative, or label differences explicitly.
+- **QA:** Check mobile layout, keyboard navigation, presentation timers and every public runbook/notes link.
+
+These are recommendations, not approval to deploy or change source systems.
+
 ## Priority for next revision
 
 - **First:** Browser/mobile accessibility testing and link verification.
