@@ -31,7 +31,7 @@ The **two Copy buttons in P010-1 HTML** copy only the text below, without a labe
 
 **You said — Message 1**
 
-I see a notice that my direct deposit change needs additional verification. Can you explain what that means?
+I see a notice when logged into the mySSA portal that my direct deposit change needs additional verification. Can you explain what that means?
 
 **You said — Message 2**
 
