@@ -1,6 +1,5 @@
 {
   "schema_version": 3,
-  "artifact_id": "P010-M",
   "collection_id": "P010",
   "slug": "ssa-direct-deposit",
   "folder": "p010-ssa-direct-deposit",
@@ -10,12 +9,6 @@
   "source_readiness": "READY",
   "default_variant": "P010-1",
   "index": "index.html",
-  "id_policy": {
-    "collection_format": "P###",
-    "standard_document_format": "P###-[B|Q|G|S|R|M]",
-    "variant_format": "P###-N",
-    "next_collection": "P011"
-  },
   "runbook": {
     "id": "P010-B",
     "source": "p010-b-runbook.md"
@@ -26,26 +19,6 @@
     "percentage": 89,
     "letter": "B+",
     "reviewed_on": "2026-11-12"
-  },
-  "grade": {
-    "id": "P010-G",
-    "source": "p010-g-grade.md",
-    "letter": "B+"
-  },
-  "score": {
-    "id": "P010-S",
-    "source": "p010-s-score.json",
-    "percentage": 89,
-    "earned_points": 89,
-    "max_points": 100
-  },
-  "readme": {
-    "id": "P010-R",
-    "source": "p010-r-readme.md"
-  },
-  "manifest": {
-    "id": "P010-M",
-    "source": "p010-m-manifest.json"
   },
   "versions": [
     {
@@ -87,17 +60,17 @@
     },
     {
       "id": "P010-1",
-      "type": "interactive-presenter",
+      "type": "html-presenter",
       "path": "p010-1-presenter-40min.html"
     },
     {
       "id": "P010-2",
-      "type": "interactive-presenter",
+      "type": "html-presenter",
       "path": "p010-2-presenter-13min.html"
     },
     {
       "id": "P010-3",
-      "type": "interactive-presenter",
+      "type": "html-presenter",
       "path": "p010-3-presenter-52min.html"
     },
     {
@@ -122,12 +95,12 @@
     },
     {
       "id": "P010-Q",
-      "type": "quality",
+      "type": "qualitative-quality",
       "path": "p010-q-quality.md"
     },
     {
       "id": "P010-G",
-      "type": "letter-grade",
+      "type": "grade",
       "path": "p010-g-grade.md"
     },
     {
@@ -137,7 +110,7 @@
     },
     {
       "id": "P010-R",
-      "type": "readme",
+      "type": "collection-readme",
       "path": "p010-r-readme.md"
     },
     {
@@ -146,14 +119,27 @@
       "path": "p010-m-manifest.json"
     }
   ],
-  "legacy_aliases": [],
-  "redirects_required": false,
   "owner_approval_required_for_public_updates": true,
   "contains_live_integrations": false,
   "checks": {
     "inline_javascript": "passed",
-    "link_targets": "static_source_verified",
+    "link_targets": "source_verified",
     "browser_visual": "not_verified",
     "pages_live": "not_verified"
+  },
+  "redirects_required": false,
+  "grade": {
+    "id": "P010-G",
+    "source": "p010-g-grade.md",
+    "letter": "B+"
+  },
+  "score": {
+    "id": "P010-S",
+    "source": "p010-s-score.json",
+    "percentage": 89
+  },
+  "collection_readme": {
+    "id": "P010-R",
+    "source": "p010-r-readme.md"
   }
 }
