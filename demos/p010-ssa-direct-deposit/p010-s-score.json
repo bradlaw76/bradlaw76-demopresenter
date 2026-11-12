@@ -124,5 +124,10 @@
     "id": "P010-I",
     "path": "p010-i-improvements.md",
     "format": "seven criteria with Why and Improve bullets"
+  },
+  "improvements": {
+    "id": "P010-I",
+    "path": "p010-i-improvements.md",
+    "format": "per-rubric short why-and-improve bullets"
   }
 }
