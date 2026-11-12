@@ -1,8 +1,8 @@
 # Demo Presenter Quality and Source-Readiness Standard
 
-**Standard version:** 1.0 · **Updated:** November 12, 2026
+**Standard version:** 1.1 · **Updated:** November 12, 2026
 
-This policy governs each public `demos/pNNN-<slug>/` collection. Its letter grade measures **presenter and runbook quality**, not the success of live Dynamics, banking, telephony, AI or government integrations.
+This policy governs each public `demos/p<demo>-<child>-<slug>/` collection. Its letter grade measures **presenter and runbook quality**, not the success of live Dynamics, banking, telephony, AI or government integrations.
 
 ## Source-readiness gate
 
@@ -23,39 +23,41 @@ If **any** input is missing, record `NOT READY` in the source project or private
 
 ## P-number registry and URL contract
 
-Use a unique, permanent **P identifier**, formatted `P010`, `P011` … (minimum three digits; do not truncate beyond `P999`). The owner reserves P identifiers; agents must never silently reassign or reuse them.
+Each **demo collection** gets one permanent P ID: `P010` for SSA Direct Deposit, then `P011` for the next independent demo, then `P012` and so on (at least three digits; expand naturally after P999).
 
-**SSA is reserved as the first example at P010.**
+**Artifacts within the same demo are children, not new demos.** Their permanent IDs use a dash and local sequence: `P010-1`, `P010-2`, `P010-3`, etc. These child IDs must appear in the canonical URLs and visible titles. A new release of an existing artifact retains its child ID; a genuinely different timebox or new file gets the next available child number **within that collection**.
 
-- Each demo collection is `demos/pNNN-<stable-kebab-slug>/`, e.g. `demos/p010-ssa-direct-deposit/`. The collection's root `index.html` is its **P010 overview**.
-- Every **versioned HTML presenter, runbook, notes file, quality report, manifest, and collection README** receives its own P number with a matching lowercase path token. Example: `p011-presenter-40min.html`, `p014-runbook.md`.
-- The P-numbered file and URL are the **canonical public artifact**. If an old URL exists, preserve it as an alias or link and do not break an established bookmark.
-- Root library `/index.html` and shared policy documents are global infrastructure, not demo-specific P artifacts.
-- Maintain a registry in the root `README.md`, in the demo's numbered `pNNN-manifest.json`, and (for future demos) a machine-readable global `artifact-registry.json`.
-- A timed variant's HTML and Markdown notes have **different IDs** but the same duration. A new revision keeps its existing P ID and URL, while Git history records change; a genuinely new version receives a new P ID.
-- Reserved IDs do not establish publication. Use `published`, `prepared`, or `historical` status, with evidence.
+- Collection URL: `/demos/p010-ssa-direct-deposit/` (P010, with `index.html` as its landing page).
+- Canonical presenter: `p010-1-presenter-40min.html` (P010-1).
+- Canonical runbook: `p010-4-runbook.md` (P010-4). Each HTML must link to this specific runbook and its own notes.
+- Generic file naming: `p<collection-number>-<child-number>-presenter-<minutes>min.html`; `p<collection-number>-<child-number>-runbook.md`; `p<collection-number>-<child-number>-quality.md`; `p<collection-number>-<child-number>-manifest.json`; and `p<collection-number>-<child-number>-README.md`.
+- New-demo example: `P011` at `demos/p011-example/`; its first presenter is `P011-1`, not P012.
+- Library catalog/root `index.html` and shared global policies are infrastructure without a P ID. The demo collection landing page belongs to the parent P ID.
+- No redirects, aliases, duplicate unnumbered copies or obsolete P011–P020 numbers from an earlier file-per-P design. This library is new; only canonical paths are required.
+
+The owner allocates **collection IDs**. Agents may propose available child numbers only after checking the [global registry](../artifact-registry.json), [Markdown registry](P_REGISTRY.md), and the collection manifest; never silently duplicate or change an ID.
 
 ### Canonical SSA example
 
-| ID | Artifact | Canonical path |
+| ID | Artifact | Canonical path within `demos/p010-ssa-direct-deposit/` |
 | --- | --- | --- |
-| P010 | Demo collection | `demos/p010-ssa-direct-deposit/` |
-| P011 | Current 40-minute presenter | `p011-presenter-40min.html` |
-| P012 | Historical 13-minute presenter | `p012-presenter-13min.html` |
-| P013 | Historical 52-minute presenter | `p013-presenter-52min.html` |
-| P014 | Master public runbook | `p014-runbook.md` |
-| P015 | 40-minute notes | `p015-presenter-40min.md` |
-| P016 | 13-minute notes | `p016-presenter-13min.md` |
-| P017 | 52-minute notes | `p017-presenter-52min.md` |
-| P018 | Quality scorecard | `p018-quality.md` |
-| P019 | Manifest | `p019-manifest.json` |
-| P020 | Collection README | `p020-README.md` |
+| **P010** | Demo collection | `index.html` |
+| **P010-1** | Current 40-minute presenter | `p010-1-presenter-40min.html` |
+| **P010-2** | Historical 13-minute presenter | `p010-2-presenter-13min.html` |
+| **P010-3** | Historical 52-minute presenter | `p010-3-presenter-52min.html` |
+| **P010-4** | Master public runbook | `p010-4-runbook.md` |
+| **P010-5** | 40-minute notes | `p010-5-presenter-40min.md` |
+| **P010-6** | 13-minute notes | `p010-6-presenter-13min.md` |
+| **P010-7** | 52-minute notes | `p010-7-presenter-52min.md` |
+| **P010-8** | Quality scorecard | `p010-8-quality.md` |
+| **P010-9** | Manifest | `p010-9-manifest.json` |
+| **P010-10** | Collection overview | `p010-10-README.md` |
 
-The collection may retain conventional `index.html`, `README.md`, `runbook.md`, `manifest.json`, and `quality.md` **as aliases**, but they must point to the numbered canonical artifact. Only the P-numbered canonical asset is graded/tracked.
+**Next distinct demo:** P011. **Next SSA artifact:** P010-11, if required. Each is reserved only when the owner approves that work.
 
 ## Exact runbook requirements
 
-Every current `pNNN-runbook.md` must be the public narrative authority for the demo and contain:
+Every current numbered runbook must be the public narrative authority for the demo and contain:
 
 1. **Title, P ID, target audience, use case, primary duration, version/assessment date and public-safe disclaimer.**
 2. **Origin/source-readiness summary:** what originating artifact types exist and what was verified, without disclosing the private repo URL or environment.
@@ -71,11 +73,11 @@ Do not promote a prepared feature to a live claim, invent an auto-generated Case
 
 ## Exact HTML presenter requirements
 
-Every `pNNN-presenter-<minutes>min.html` must be:
+Every `p<demo>-<child>-presenter-<minutes>min.html` must be:
 
 - Self-contained, valid UTF-8 HTML5, mobile-friendly, readable and keyboard-usable; avoid a build step or secrets.
 - Clearly titled with the **P ID, demo, duration and version/historical status**.
-- A **working, visible link to the same demo's numbered `pNNN-runbook.md` on every page**, and a link to the collection/home catalog.
+- A **working, visible link to the same demo's numbered `p<demo>-<child>-runbook.md` on every page**, and a link to the collection/home catalog.
 - Linked to its **own numbered Markdown notes** and the other timebox options.
 - Accurate to the originating runbook for its declared duration: section titles/order, owners, goals, audience highlights, click steps, speaker text, transitions and acceptance boundaries.
 - Timed so all section minutes sum to its manifest duration. If a historical presenter uses another storyline, label it historical, do not silently claim equivalence.
