@@ -146,6 +146,10 @@ Daniel demonstrates Sofía's Spanish benefit-letter voice scenario in his **own 
 
 **Canonical public artifact:** P010-B. **Grading record:** [P010-Q · 89% / B+](p010-q-quality.md). Last static review: November 12, 2026. Browser acceptance and live integration acceptance are separately documented as incomplete where applicable.
 
+## Improvement plan
+
+[P010-I · Seven concise criteria improvements](p010-i-improvements.md) records why points were deducted and the next corrections.
+
 ## Standard document references
 
 [P010-R — Collection README](p010-r-readme.md) · [P010-Q — Quality](p010-q-quality.md) · [P010-G — Grade](p010-g-grade.md) · [P010-S — Numeric score](p010-s-score.json) · [P010-M — Manifest](p010-m-manifest.json).
