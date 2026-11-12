@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "slug": "example-demo",
+  "title": "Example Demo",
+  "description": "Short audience-safe description",
+  "visibility": "public-presentation-only",
+  "default_variant": "20min",
+  "index": "index.html",
+  "runbook": "runbook.md",
+  "versions": [
+    {
+      "id": "10min",
+      "label": "10-minute rehearsal",
+      "duration_minutes": 10,
+      "html": "presenter-10min.html",
+      "notes": "presenter-10min.md",
+      "current": false
+    },
+    {
+      "id": "20min",
+      "label": "20-minute main walkthrough",
+      "duration_minutes": 20,
+      "html": "index.html",
+      "notes": "presenter-20min.md",
+      "current": true
+    }
+  ],
+  "owner_approval_required_for_public_updates": true,
+  "contains_live_integrations": false
+}
