@@ -4,7 +4,7 @@
 
 [P010-1 live presenter](p010-1-presenter-40min.html) · [P010-B runbook](p010-b-runbook.md) · [Collection](index.html) · [P010-Q quality](p010-q-quality.md) · [P010-I improvements](p010-i-improvements.md)
 
-**Presenter display convention:** P010-1 is the on-stage speaking guide. Its **Section introduction** and expanded **Audience takeaway** are exact words to say; the primary talk track appears as bullets with bold visual cues. The **next-section transition** comes before the audience question. Optional live-path fallback and truth-boundary reminders are collapsed by default, with truth-boundary guidance below the chapter navigation. This Markdown note preserves the fuller source script and caveats for rehearsal.
+**Presenter display convention:** P010-1 is the on-stage screen-by-screen guide. Every chapter has timed **Point / click / show**, **Say this**, and **Why it matters** stops, followed by an exact spoken takeaway. These target minutes include navigation, pauses to inspect the UI, transitions and questions; they are not a claim that reading the words takes that long. The older full narrative remains available in a collapsed rehearsal section. Live-path fallback and truth-boundary reminders remain collapsed by default. This Markdown note preserves the fuller source script and caveats.
 
 ## Core message
 
@@ -18,13 +18,13 @@
 
 | # | Presenter | Time | Main screen |
 | --- | --- | ---: | --- |
-| 1 | Daniel (independent) → Brad | 5 min | Daniel concludes → Brad opens Elena's portal |
-| 2 | Brad · digital engagement | 5 min | Elena portal → Overview → Direct Deposit → Copilot chat |
-| 3 | Brad · Customer Service workspace | 4 min | Dynamics Customer Service workspace → accept chat → conversation panel → Elena Contact |
+| 1 | Daniel (independent) → Brad | 2 min | Daniel concludes → Brad opens Elena's portal |
+| 2 | Brad · digital engagement | 6 min | Elena portal → Overview → Direct Deposit → Copilot chat |
+| 3 | Brad · Customer Service workspace | 8 min | Dynamics Customer Service workspace → accept chat → conversation panel → Elena Contact |
 | 4 | Brad · Contact | 8 min | Same Elena Contact → standard Customer Insights form → SSA service form |
 | 5 | Brad · Case | 10 min | Elena Case CAS-01523-T1R7X6 / request DD-DEMO-H095-01523 |
 | 6 | Brad · CRM reporting | 4 min | Dynamics CRM Agent Dashboard and Supervisor Dashboard |
-| 7 | Brad → Beth | 4 min | Brad ends CRM walkthrough → Beth begins her own contact-center section |
+| 7 | Brad → Beth | 2 min | Brad ends CRM walkthrough → Beth begins her own contact-center section |
 | | **Total** | **40 min** | Keep questions brief; park technical discovery |
 
 ## The only two customer messages to paste
@@ -41,7 +41,7 @@ Can I speak to an agent about my direct deposit? I really need to get it correct
 
 The first portal alert is a fictional demonstration example. It is **not the same record** as the later Case's H095 banking request.
 
-## 1. Daniel → Brad · Omnichannel bridge — 5 minutes
+## 1. Daniel → Brad · Omnichannel bridge — 2 minutes
 
 **Goal:** Bridge into Brad's separate chat demonstration without presuming what Daniel showed.
 
@@ -61,7 +61,7 @@ The first portal alert is a fictional demonstration example. It is **not the sam
 **Do not claim:** Do not imply that Daniel's voice session, caller, transcript or tenant is transferred to Brad.
 
 
-## 2. Elena · Digital portal and Copilot chat — 5 minutes
+## 2. Elena · Digital portal and Copilot chat — 6 minutes
 
 **Goal:** Show the Overview verification notice, briefly visit Direct Deposit, then send two copyable constituent messages and request a human representative.
 
@@ -88,7 +88,7 @@ The first portal alert is a fictional demonstration example. It is **not the sam
 **Do not claim:** The portal is a fictional demonstration. Its DD-DEMO-1042 example is distinct from the Case's DD-DEMO-H095-01523. Do not claim bank authorization, verified portal-to-Case linkage or an automatically created Case.
 
 
-## 3. Dynamics · Live representative conversation — 4 minutes
+## 3. Dynamics · Live representative conversation — 8 minutes
 
 **Goal:** Use the live chat scenario to showcase the broader agent workspace: support for chat and telephony, practical productivity tools, and embedded Copilot assistance.
 
@@ -189,7 +189,7 @@ The first portal alert is a fictional demonstration example. It is **not the sam
 **Do not claim:** Dashboard values are demonstration/scope-specific and not government production service metrics.
 
 
-## 7. Omnichannel close · Hand off to Beth — 4 minutes
+## 7. Omnichannel close · Hand off to Beth — 2 minutes
 
 **Goal:** Close Brad's service journey and introduce possible channel extensibility without scripting Beth's part.
 
