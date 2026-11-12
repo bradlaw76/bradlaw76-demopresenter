@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "collection_id": "P010",
+  "artifact_id": "P010-S",
+  "artifact_type": "numeric-score",
+  "evaluated_on": "2026-11-12",
+  "evaluates": [
+    "P010-1",
+    "P010-2",
+    "P010-3",
+    "P010-B"
+  ],
+  "source_readiness": "READY",
+  "max_score": 100,
+  "earned_points": 89,
+  "percentage": 89,
+  "grade_id": "P010-G",
+  "letter_grade": "B+",
+  "quality_report_id": "P010-Q",
+  "quality_report": "p010-q-quality.md",
+  "scoring_standard": "../../docs/ARTIFACT_QUALITY_STANDARD.md",
+  "dimensions": [
+    {
+      "name": "Source fidelity and evidence",
+      "earned": 24,
+      "maximum": 25,
+      "deducted": 1
+    },
+    {
+      "name": "Storyline, goals and transitions",
+      "earned": 19,
+      "maximum": 20,
+      "deducted": 1
+    },
+    {
+      "name": "Runbook completeness and presenter usefulness",
+      "earned": 13,
+      "maximum": 15,
+      "deducted": 2
+    },
+    {
+      "name": "Visual design and accessibility",
+      "earned": 11,
+      "maximum": 15,
+      "deducted": 4
+    },
+    {
+      "name": "Technical integrity and variants",
+      "earned": 9,
+      "maximum": 10,
+      "deducted": 1
+    },
+    {
+      "name": "Public privacy and no-false-claim safeguards",
+      "earned": 9,
+      "maximum": 10,
+      "deducted": 1
+    },
+    {
+      "name": "Maintainability and reusable standards",
+      "earned": 4,
+      "maximum": 5,
+      "deducted": 1
+    }
+  ],
+  "status": {
+    "artifact_static_validation": "STATIC_VERIFIED",
+    "browser_mobile_accessibility": "NOT_VERIFIED",
+    "public_git_source": "COMMITTED",
+    "github_pages": "NOT_VERIFIED",
+    "live_system_integrations": "NOT_GRADED"
+  },
+  "interpretation": "Only quality of public presenter/runbook artifacts grounded in reviewed source; NOT live Dynamics, banking, identity, or SSA integration acceptance.",
+  "reviewed_source_types": [
+    "authoritative master presenter runbook",
+    "current 40-minute HTML",
+    "13-minute historical rehearsal",
+    "52-minute historical walkthrough",
+    "supporting feature status evidence"
+  ],
+  "improvements": [
+    "Independent mobile/keyboard/visual review",
+    "Independent live Pages URL and all relative links check",
+    "Retain historical labels until alternate variants are reconciled"
+  ],
+  "owner_approval_required_for_future_changes": true
+}
