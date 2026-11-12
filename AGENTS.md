@@ -8,15 +8,22 @@ Maintain a reusable GitHub Pages catalog of **presentation-only**, static, self-
 
 ## Required structure
 
-- Catalog root: `/index.html`
-- Each demo: `/demos/<lowercase-kebab-slug>/`
-- Primary presenter: `index.html`
-- Public full runbook: `runbook.md`
-- Per-demo landing/notes: `README.md`
-- Standard variants: `presenter-<N>min.html` and `presenter-<N>min.md`
-- Metadata: `manifest.json`, including an explicit `default_variant`, `versions`, `duration_minutes`, and relative URLs
+**One P ID per DEMO.** SSA is collection `P010` at `/demos/p010-ssa-direct-deposit/`. Its presenters and timeboxed notes have child IDs `P010-1`, `P010-2`, etc. The next distinct demo is `P011`, not the next file.
 
-Do not create duplicate repos or renumber workstreams just to publish a new timebox. Reuse the same demo folder, update `manifest.json` and the catalog, and preserve existing stable URLs.
+- Library catalog: `/index.html` (global infrastructure)
+- Collection: `/demos/pNNN-<lowercase-kebab-slug>/index.html` (parent ID `PNNN`)
+- Timed presenters: `pNNN-<child>-presenter-<minutes>min.html`, each with uniquely numbered `.md` notes
+- Mandatory **standard documents for EVERY demo** (fixed suffix identifiers, not numeric children):
+  - `PNNN-B` — `pNNN-b-runbook.md`: canonical full presenter runbook
+  - `PNNN-Q` — `pNNN-q-quality.md`: narrative quality assessment and source evidence
+  - `PNNN-G` — `pNNN-g-grade.md`: A+ through F letter grade and interpretation
+  - `PNNN-S` — `pNNN-s-score.json`: machine-readable percentage and seven-category scoring
+  - `PNNN-R` — `pNNN-r-readme.md`: per-demo overview, navigation and artifacts
+  - `PNNN-M` — `pNNN-m-manifest.json`: version, artifact IDs, file paths and status metadata
+- `docs/P_REGISTRY.md` and `artifact-registry.json` must agree with the per-demo manifest.
+- **Every HTML** visibly links to that demo's **B runbook**, its own notes, and the quality/grade/score references. Do not keep redirects, legacy aliases or duplicate unnumbered artifacts in this new library.
+
+See [the authoritative standard](docs/ARTIFACT_QUALITY_STANDARD.md) for exact section, HTML, scoring, source-readiness and publication requirements.
 
 ## Public-data gate — mandatory
 
@@ -47,18 +54,15 @@ Share [templates/AGENTS.demo-presenter.md](templates/AGENTS.demo-presenter.md) w
 
 This repository's content can be published through the GitHub connector. GitHub Pages settings may still require the owner to enable Pages on `main` / root. The agent must check actual Pages status rather than claiming the live site works based on file existence.
 
-## Mandatory P-ID and quality contract (supersedes earlier unnumbered examples)
+## Mandatory source review, grading and publication workflow
 
-Read **[docs/ARTIFACT_QUALITY_STANDARD.md](docs/ARTIFACT_QUALITY_STANDARD.md)** before generating, changing, grading or publishing a demo. The [global registry](artifact-registry.json) is authoritative for existing IDs and the next free allocation. **The owner reserves new P numbers; agents never choose, reuse, or silently renumber them.**
+1. Review the originating repo **read-only** using the connected GitHub account or authorized local source reviewer ([source review guide](docs/SOURCE_REVIEW.md)). The public Pages site itself cannot read private repos; never store source credentials or documents here.
+2. Confirm **all eight source-readiness inputs**: authoritative revision, business scenario, ordered walkthrough, owner/timeboxes, speaker words and transitions, actual/conditional status, privacy safeguards and owner permission for this specific public release. Stop with `SOURCE_NOT_VERIFIED` / `SOURCE_NOT_READY` rather than inventing missing content.
+3. Build a public-safe, self-contained HTML presenter for each requested timebox. Use real stage goals, visible highlights, exact clicks, speaker scripts, next-speaker transitions, safe fallbacks, true live/preview status and accurate durations. Link to **PNNN-B** and own numbered notes.
+4. Build the complete **PNNN-B** runbook: agenda sum, objectives, personas, sections and owners, on-screen steps, talk tracks, exact transitions, permissions, fallback, source-readiness status and quality links.
+5. Grade the artifact set on the published **100-point, seven-category rubric**. Publish the full **Q** scorecard, separate letter **G** and numeric **S** results, the **R** overview and authoritative **M** manifest. Include earned/max, percentage, A+–F plus/minus letter, evidence, caveats and independent `live_integration` state.
+6. New demo content must score at least **80% / B−** and pass the source-readiness gate. A grade applies to the **demo's public artifact set**, not to every file separately and not to whether Dynamics/SSA integrations work.
+7. Require explicit owner approval for the actual sanitized public release. Do not mirror a private repository, upload its raw docs, schedule background sync, merge its work, or perform live Dataverse/portal writes.
+8. Verify exact GitHub readback, P registry/manifest, valid links, HTML/JS parse and browser/mobile/keyboard tests when available. Disclose if browser checks or GitHub Pages activation remain unverified. Do not claim public-site success from a source commit alone.
 
-- **P010** is the SSA Direct Deposit reference collection; its canonical folder is `demos/p010-ssa-direct-deposit/`.
-- Every collection and demo-specific artifact has a unique permanent **P###** ID embedded in its canonical URL. The collection's `index.html` belongs to its collection P ID; each presenter, runbook, notes, quality file, manifest and collection guide gets a separate P ID.
-- Canonical names: `pNNN-presenter-<minutes>min.html`, `pNNN-presenter-<minutes>min.md`, `pNNN-runbook.md`, `pNNN-quality.md`, `pNNN-manifest.json`, and `pNNN-README.md`.
-- **No redirects, compatibility aliases or duplicate unnumbered copies are needed** for this new library. Use only canonical P-numbered destinations and keep the catalog, global registry, and collection manifest consistent.
-- Do not generate any public HTML or runbook before the **eight-item source-readiness gate is READY**, meaning the originating project actually contains the use case, speakers, approved story, screen path, timing, words, transitions, truth boundaries, privacy clearance and public-publish permission. Do not invent missing scenarios.
-- Each public **runbook** must document the exact goal, duration, audience highlight, clicks, spoken words, transition, fallback and acceptance boundary for *every* section, plus a time-summed agenda, source-readiness and graded quality reference.
-- **Every HTML version must visibly link to its own numbered runbook and numbered speaker notes**, show its P ID and duration, and contain navigable timed sections, actions, transitions, speaker words and fallbacks. Historical alternatives must say that they may differ from the current storyline.
-- Score each completed collection and runbook on the documented **100-point rubric** and publish a `pNNN-quality.md` scorecard with earned points in seven categories, percentage and **A+ through F** letter, source-readiness status, and specific unverified tests. Minimum publishable quality is **80% / B−**. A high artifact grade is NOT proof of live integration acceptance.
-- Before declaring success, verify every relative URL and P ID from both registry and manifest, HTML syntax, exact timing, display runbook links, privacy constraints and any obtainable browser/mobile accessibility checks. When an external Pages deployment is unverified, label it **committed**, not **live**.
-
-Earlier sections of this policy describe the original unnumbered folder layout; **these P-numbered rules supersede those names**.
+**Current reference:** P010 SSA Direct Deposit is a completed presentation **content** example. Its source-informed Case/Contact claims are carefully qualified; this does not make all live integrations accepted. The next independent demo is P011, using P011-B/Q/G/S/R/M and numeric child variants P011-1, P011-2, etc.
