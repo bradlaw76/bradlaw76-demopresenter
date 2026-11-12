@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "collection_id": "P010",
+  "slug": "ssa-direct-deposit",
+  "folder": "p010-ssa-direct-deposit",
+  "title": "SSA Direct Deposit",
+  "description": "Seven-section presenter journey from fictional portal alert to Dynamics representative, Contact, Case, reporting and governance.",
+  "visibility": "public-presentation-only",
+  "source_readiness": "READY",
+  "default_variant": "P011",
+  "index": "index.html",
+  "runbook": {
+    "id": "P014",
+    "source": "p014-runbook.md"
+  },
+  "quality": {
+    "id": "P018",
+    "source": "p018-quality.md",
+    "percentage": 89,
+    "letter": "B+",
+    "reviewed_on": "2026-11-12"
+  },
+  "versions": [
+    {
+      "id": "P011",
+      "label": "40-minute current presenter",
+      "duration_minutes": 40,
+      "html": "p011-presenter-40min.html",
+      "notes_id": "P015",
+      "notes": "p015-presenter-40min.md",
+      "current": true,
+      "status": "current"
+    },
+    {
+      "id": "P012",
+      "label": "13-minute rehearsal",
+      "duration_minutes": 13,
+      "html": "p012-presenter-13min.html",
+      "notes_id": "P016",
+      "notes": "p016-presenter-13min.md",
+      "current": false,
+      "status": "historical"
+    },
+    {
+      "id": "P013",
+      "label": "52-minute detailed walkthrough",
+      "duration_minutes": 52,
+      "html": "p013-presenter-52min.html",
+      "notes_id": "P017",
+      "notes": "p017-presenter-52min.md",
+      "current": false,
+      "status": "historical"
+    }
+  ],
+  "assets": [
+    {
+      "id": "P010",
+      "type": "collection",
+      "path": "index.html"
+    },
+    {
+      "id": "P014",
+      "type": "runbook",
+      "path": "p014-runbook.md"
+    },
+    {
+      "id": "P018",
+      "type": "quality",
+      "path": "p018-quality.md"
+    },
+    {
+      "id": "P019",
+      "type": "manifest",
+      "path": "p019-manifest.json"
+    },
+    {
+      "id": "P020",
+      "type": "collection-notes",
+      "path": "p020-README.md"
+    }
+  ],
+  "legacy_aliases": [
+    "../ssa-direct-deposit/"
+  ],
+  "owner_approval_required_for_public_updates": true,
+  "contains_live_integrations": false,
+  "checks": {
+    "inline_javascript": "passed",
+    "link_targets": "source_verified",
+    "browser_visual": "not_verified",
+    "pages_live": "not_verified"
+  }
+}
