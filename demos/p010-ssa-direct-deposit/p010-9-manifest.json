@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "collection_id": "P010",
+  "slug": "ssa-direct-deposit",
+  "folder": "p010-ssa-direct-deposit",
+  "title": "SSA Direct Deposit",
+  "description": "Seven-section presenter journey from fictional portal alert to Dynamics representative, Contact, Case, reporting and governance.",
+  "visibility": "public-presentation-only",
+  "source_readiness": "READY",
+  "default_variant": "P010-1",
+  "index": "index.html",
+  "runbook": {
+    "id": "P010-4",
+    "source": "p010-4-runbook.md"
+  },
+  "quality": {
+    "id": "P010-8",
+    "source": "p010-8-quality.md",
+    "percentage": 89,
+    "letter": "B+",
+    "reviewed_on": "2026-11-12"
+  },
+  "versions": [
+    {
+      "id": "P010-1",
+      "label": "40-minute current presenter",
+      "duration_minutes": 40,
+      "html": "p010-1-presenter-40min.html",
+      "notes_id": "P010-5",
+      "notes": "p010-5-presenter-40min.md",
+      "current": true,
+      "status": "current"
+    },
+    {
+      "id": "P010-2",
+      "label": "13-minute rehearsal",
+      "duration_minutes": 13,
+      "html": "p010-2-presenter-13min.html",
+      "notes_id": "P010-6",
+      "notes": "p010-6-presenter-13min.md",
+      "current": false,
+      "status": "historical"
+    },
+    {
+      "id": "P010-3",
+      "label": "52-minute detailed walkthrough",
+      "duration_minutes": 52,
+      "html": "p010-3-presenter-52min.html",
+      "notes_id": "P010-7",
+      "notes": "p010-7-presenter-52min.md",
+      "current": false,
+      "status": "historical"
+    }
+  ],
+  "assets": [
+    {
+      "id": "P010",
+      "type": "collection",
+      "path": "index.html"
+    },
+    {
+      "id": "P010-4",
+      "type": "runbook",
+      "path": "p010-4-runbook.md"
+    },
+    {
+      "id": "P010-8",
+      "type": "quality",
+      "path": "p010-8-quality.md"
+    },
+    {
+      "id": "P010-9",
+      "type": "manifest",
+      "path": "p010-9-manifest.json"
+    },
+    {
+      "id": "P010-10",
+      "type": "collection-notes",
+      "path": "p010-10-README.md"
+    }
+  ],
+  "owner_approval_required_for_public_updates": true,
+  "contains_live_integrations": false,
+  "checks": {
+    "inline_javascript": "passed",
+    "link_targets": "source_verified",
+    "browser_visual": "not_verified",
+    "pages_live": "not_verified"
+  },
+  "aliases": [],
+  "redirects_required": false
+}
