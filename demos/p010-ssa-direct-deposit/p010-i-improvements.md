@@ -11,11 +11,11 @@ The improvements below concern **presentation quality**, not whether Dynamics, c
 - **Improve:** Reconcile the alternative scripts with today's source, or clearly keep them historical.
 
 ### 2. Storyline, goals and transitions — 19/20
-- **Why:** The seven-stage customer journey is coherent; real chatbot-to-agent escalation is still conditional.
-- **Improve:** Refine the prepared-to-live handoff wording after a verified rehearsal.
+- **Why:** The seven-section script includes live chat, two Contact forms and questions, but full showtime navigation is not independently tested.
+- **Improve:** Rehearse the actual chat handoff and brief question checkpoints with the final screen sequence.
 
 ### 3. Runbook completeness and presenter utility — 13/15
-- **Why:** The main runbook includes speaker lines, clicks and fallbacks; older timeboxes are not fully aligned.
+- **Why:** The current HTML, runbook and notes match the new Case story; older timeboxes use earlier scenarios.
 - **Improve:** Give each alternative its own shorter goal, click path and exact handoffs.
 
 ### 4. Visual design and accessibility — 11/15
@@ -37,12 +37,12 @@ The improvements below concern **presentation quality**, not whether Dynamics, c
 ## Improvements by owner and artifact type
 
 **Originating demo / workflow (source-repo changes — suggestions only)**
-- **Human handoff:** Verify actual chatbot-to-representative routing; otherwise retain the prepared-transition label.
-- **Contact alert:** Display a secure, read-only warning from the related banking record instead of adding a duplicate Contact field.
-- **Case resolution:** Keep the current Not Ready outcome until evidence, authorization and any approved transaction are independently verified.
+- **Human handoff:** Preserve the working live route and a clearly labeled fallback for showtime interruptions.
+- **Contact alert:** The SSA form visibly shows an alert; confirm underlying record sourcing only if a future demo explicitly claims synchronization.
+- **Case resolution:** Keep Case CAS-01523-T1R7X6 open and distinguish pending authorization from the older Case's Review & Resolution example.
 
 **Public presenter HTML / talk track (library changes)**
-- **Script:** Make the live-versus-prepared conversation pivot a single clear sentence.
+- **Script:** Rehearse the brief live-chat-to-Contact bridge and the standard-to-SSA Contact form comparison aloud.
 - **Timeboxes:** Align historical 13- and 52-minute notes with the current seven-section narrative, or label differences explicitly.
 - **QA:** Check mobile layout, keyboard navigation, presentation timers and every public runbook/notes link.
 
