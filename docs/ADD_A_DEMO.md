@@ -1,87 +1,62 @@
-# Add a new demo to the Demo Presenters library
+# Add a new P-numbered demo collection
 
-This page defines a repeatable process for any source repository (Dynamics, FOIA, Power Platform, Copilot Studio, business process, etc.).
+Read [AGENTS.md](../AGENTS.md), the [quality/source standard](ARTIFACT_QUALITY_STANDARD.md), [global registry](../artifact-registry.json) and [source-repo agent template](../templates/AGENTS.demo-presenter.md).
 
-## 1. Choose a permanent slug
+## 1. Verify source readiness before generating public content
 
-Name the folder by stable subject, not customer, date, ticket or developer:
+The originating repository must already contain a credible, complete source storyline—not merely a project name. Check the **eight mandatory gates** in the quality standard: source revision; audience/persona/problem; actual or proposed screen sequence; owners/durations; speaker words and transitions; truthful capability/fallback status; public-safe extraction; **explicit approval to publish the sanitized material**.
 
-- `ssa-direct-deposit`
-- `foia-case-categorization`
-- `contact-center-voice`
+If a required item is absent, **stop public artifact creation** and report the specific gap to the source owner. Do not invent persona details, demo screens, claims, integrations or spoken transitions. Avoid copying the full private operational/deployment runbook.
 
-Never rename a public slug casually; stable Pages URLs may be bookmarked.
+## 2. Obtain unique P IDs from the owner and registry
 
-## 2. Prepare presenter inputs in the source repository
-
-Maintain the authoritative full runbook and editable source there. Use a top-level `docs/demo/` folder if the repo has no established convention; otherwise retain its current document structure. Record the private source branch/revision and the required time-box variants. **Do not copy private source controls, environment IDs, endpoint credentials or real customer data to this repository.**
-
-In the source project, add a reference to the library using the [agent template](../templates/AGENTS.demo-presenter.md). **Do not replace the source repo's existing AGENTS.md or security policy**.
-
-## 3. Build the public folder
-
-Create:
+The owner assigns the **collection ID** and **one permanent ID per artifact**. Check [artifact-registry.json](../artifact-registry.json) to avoid overlap. Use a stable kebab-case slug and folder:
 
 ```text
-demos/<slug>/
-├── index.html                  # Main/current interactive presenter
-├── runbook.md                  # Public-safe full storyline and handoffs
-├── README.md                   # Demo landing + version links
-├── manifest.json               # Metadata and time-box routes
-├── presenter-<N>min.html       # Every alternative timing
-└── presenter-<N>min.md         # Notes for each timing
+demos/pNNN-<subject-slug>/
+    index.html                          # Collection home, belongs to collection P ID
+    pAAA-presenter-<minutes>min.html    # Current main presenter
+    pBBB-presenter-<minutes>min.html    # Each alternative
+    pCCC-runbook.md                    # Current public narrative source of truth
+    pDDD-presenter-<minutes>min.md     # Notes for each version, unique P ID
+    pEEE-quality.md                    # A+/A/…/F + score %
+    pFFF-manifest.json                 # IDs, filenames, grade and state
+    pGGG-README.md                     # Collection guide
 ```
 
-If the main version is 40 minutes, its notes should be `presenter-40min.md`, not a second `presenter-40min.html`. `index.html` must remain the single canonical main URL.
+The [P010 SSA example](../demos/p010-ssa-direct-deposit/) and its [P019 manifest](../demos/p010-ssa-direct-deposit/p019-manifest.json) are the canonical reference. **No redirects or unnumbered mirrored copies are needed.**
 
-Copy [manifest example](../templates/demo-manifest.example.json) and fill its fields with **relative** paths. A variant `id` should match the lowercase duration suffix, e.g. `13min`, `40min`, `52min`.
+## 3. Build the exact runbook and HTML presenters
 
-## 4. Public-safety review
+The numbered **runbook** must specify audience, objective, initiating problem, story conclusion, source evidence, time-summed section agenda, and per-section presenter, duration, goal, what is shown, click path, copy-ready spoken lines, **exact transition**, limitations, and fallback. Include version links and quality/source states.
 
-Before publishing inspect **all** HTML, Markdown, metadata, image paths and external links for:
+Every numbered **HTML** must be standalone and usable on mobile/desktop, display its P ID and timing, contain navigable timed sections and print/copy notes, show presenter-specific transitions, and link prominently to its **numbered runbook** and own numbered speaker notes. Alternate timeboxes must come from the actual source and be clearly historical where their storyline predates the current one. Do not treat mock/test evidence as live system acceptance.
 
-- Actual private GitHub repo URLs, internal implementation paths or private pull requests
-- Microsoft environment names/URLs, tenant IDs, organization/app/user IDs or Dataverse GUIDs
-- Authentication configuration, secrets, tokens, account numbers, identity answers, credentials
-- Real person/customer/tenant data, actual records or screenshots with restricted information
-- Incorrect claims of live agent transfer, identity verification, financial updates or accepted integration
+## 4. Redact, verify and score before release
 
-Prefer clearly labeled fictional cases and masked example data. Public vendor documentation links may remain when useful. Do not publish raw private runbooks/hand-off histories. Require an explicit owner acceptance of the public-facing content.
+- Remove private source-repo URLs, Microsoft environment addresses/IDs, secrets, actual personal/customer/banking data and restricted screenshots.
+- Validate HTML/JS parse, unique IDs, links, timebox sums, manifest/registry matches, relevant accessibility and mobile behavior when tools allow.
+- Score the seven [rubric categories](ARTIFACT_QUALITY_STANDARD.md) out of **100**; record earned/max, evidence and deductions in the numbered quality report. Convert to percentage and A+–F with plus/minus as documented.
+- A new collection is publishable only if **source readiness is READY** and artifact score is **80% (B−) or higher**; a passing grade does not mean bot routing, transaction or production service is accepted.
+- Check all file URLs and score values from the public chart and manifest, keeping unverified browser tests explicitly unverified.
 
-## 5. Validate
+## 5. Publish only after owner authorization
 
-- HTML parses and opens independently, without remote project credentials.
-- All alternate durations are correct and clearly marked; the main runbook and latest presenter have the same story, section boundaries and transitions.
-- All relative links, catalog cards and `manifest.json` paths resolve.
-- Every timeboxed HTML has a same-name Markdown notes file; `index.html` has `presenter-<main-duration>min.md`.
-- The site shows genuine existing capabilities as implemented/deployed/accepted separately from previews.
+Confirm which sanitized files will become public. Require owner permission for this specific public change, not just permission to edit the private source project. Commit only authorized files, read them back, update the catalog and registry, and report whether GitHub Pages is live **separately** from source publication.
 
-## 6. Obtain owner approval and publish
+No automatic cross-repo mirroring or deployment.
 
-**Owner approval is required each time private source material is copied or updated in this public repository.** Confirm the exact demo slug, versions, public URLs and redaction report. Commit only approved, sanitized files; verify remote readback. Then update root `index.html` and root `README.md` catalog entries.
+## 6. Link from originating private repositories
 
-Do not automatically sync future changes. A source project can propose an update by passing the current source revision and a publication request, but a new public commit still needs owner approval.
-
-## 7. Link back from the source repo
-
-Add references in the original source repo's README, demo runbook, and presenter guide only after owner permission:
+After permission, point their README/demo guide at the P-numbered public collection and presenter. Do not link publicly back into private code. Example:
 
 ```md
-## Interactive demo presentations
 - [Demo presenter library](https://bradlaw76.github.io/bradlaw76-demopresenter/)
-- [<Demo> — current presenter](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/<slug>/)
-- [<Demo> — public runbook](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/<slug>/runbook.md)
+- [SSA collection P010](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/)
+- [SSA 40-minute P011](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p011-presenter-40min.html)
+- [SSA runbook P014](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p014-runbook.md)
 ```
 
-The private repo links **out** to public pages. Public pages should not link **back** to a private source.
+## 7. GitHub Pages activation
 
-## 8. GitHub Pages
-
-On this public repository: **Settings → Pages → Deploy from a branch → main → /(root) → Save**. A GitHub commit is not proof that Pages is enabled; verify the deployment status or open the public URL.
-
-## Example: SSA Direct Deposit
-
-- [Main 40-minute presenter](../demos/ssa-direct-deposit/index.html)
-- [13-minute rehearsal](../demos/ssa-direct-deposit/presenter-13min.html)
-- [52-minute detailed walkthrough](../demos/ssa-direct-deposit/presenter-52min.html)
-- [Current public runbook](../demos/ssa-direct-deposit/runbook.md)
+On public repository [Settings → Pages](https://github.com/bradlaw76/bradlaw76-demopresenter/settings/pages), select **Deploy from a branch**, **main**, **/(root)**, then Save. Verify GitHub's deployment success and the public site. A pushed commit alone does not establish that Pages is running.
