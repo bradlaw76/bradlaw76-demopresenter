@@ -8,6 +8,8 @@ This is an assessment of the **source-supported public presenter and runbook set
 
 **Latest content review:** The November 12 portal/chat supplement adds two copyable customer messages, agent-tool highlights including the screenshot-verified Intent-based suggestion, Case Management Agent creation still conditional, and Contact Timeline/chat history. The 40-minute budget is preserved. **B+ / 89% remains unchanged** without new browser and accessibility evidence.
 
+**Final workspace ordering review:** The representative segment now ends with the custom SSA Agent Support sidebar and shared my Social Security Assistant, after contextual Intent-based guidance. This wording change does not alter the validated source boundary or the 89% / B+ artifact grade.
+
 ## Grade derivation
 
 Under the library's [A+ through F standard](../../docs/ARTIFACT_QUALITY_STANDARD.md), **B+ is 87–89% inclusive**. The current [P010-S machine-readable score](p010-s-score.json) totals 89 earned points from 100 possible across seven defined categories, so the exact letter grade is **B+**.
