@@ -1,19 +1,19 @@
-> **Historical rehearsal reference:** This alternative predates the current seven-section flow. Follow P010-4 for current speaker/feature acceptance boundaries.
+> **Historical rehearsal reference:** This alternative predates the current seven-section flow. Follow P010-B for current speaker/feature acceptance boundaries.
 
-> **P010-6 · 13-minute version notes.** [Open this presenter](p010-2-presenter-13min.html) · [Canonical P010-4 runbook](p010-4-runbook.md) · [SSA collection](index.html) · [P010-8 score](p010-8-quality.md).
+> **P010-6 · 13-minute version notes.** [Open this presenter](p010-2-presenter-13min.html) · [Canonical P010-B runbook](p010-b-runbook.md) · [SSA collection](index.html) · [P010-Q quality](p010-q-quality.md) · [P010-G grade](p010-g-grade.md) · [P010-S score](p010-s-score.json).
 
 # H083 — SSA Direct Deposit Demo: 13-Minute Dry-Run Guide
 
-> Public, historical rehearsal variant. The seven-section [current presenter](p010-1-presenter-40min.html) and [runbook](p010-4-runbook.md) take precedence on status and transitions.
+> Public, historical rehearsal variant. The seven-section [current presenter](p010-1-presenter-40min.html) and [runbook](p010-b-runbook.md) take precedence on status and transitions.
 
-**Owner:** Presenter · **Date:** November 11, 2026 · **Scope:** Presenter rehearsal, no Dynamics writes · **Source of truth for the full presentation:** [November 10 master runbook](p010-4-runbook.md)
+**Owner:** Presenter · **Date:** November 11, 2026 · **Scope:** Presenter rehearsal, no Dynamics writes · **Source of truth for the full presentation:** [November 10 master runbook](p010-b-runbook.md)
 
 ## Open the interactive guide
 
 **[SSA Direct Deposit — Dry-Run Playbook (standalone HTML)](p010-2-presenter-13min.html)**  
 The HTML file opens locally in any modern browser. It contains seven guided scenes, a timer, presenter talk track, exact clicks, safe fallback, handoff language, printable notes, and locally saved checklist marks. It does **not** connect to Dynamics or change data.
 
-The [full 17-scene playbook in PR #2](p010-4-runbook.md) remains intact. This dry-run version is deliberately not a replacement.
+The [full 17-scene playbook in PR #2](p010-b-runbook.md) remains intact. This dry-run version is deliberately not a replacement.
 
 ## Today's objective
 
@@ -81,4 +81,4 @@ Seven chapters can still require roughly 10–12 actual Dynamics/portal views. T
 
 After Brad shares the built screens, reconcile this seven-chapter route against **actual screenshot order** and the full runbook. Reduce screen changes by clustering Contact features, Case/banking features and reporting, without changing protected behavior or inventing integrations. The dry-run guide should not be expanded into another feature backlog.
 
-**References:** [Master runbook PR #11](p010-4-runbook.md) · [Full playbook PR #2](p010-4-runbook.md) · [Elena portal PR #20](p010-4-runbook.md) · [Banking field PR #26](p010-4-runbook.md) · [TED integration PR #29](p010-4-runbook.md)
+**References:** [Master runbook PR #11](p010-b-runbook.md) · [Full playbook PR #2](p010-b-runbook.md) · [Elena portal PR #20](p010-b-runbook.md) · [Banking field PR #26](p010-b-runbook.md) · [TED integration PR #29](p010-b-runbook.md)
