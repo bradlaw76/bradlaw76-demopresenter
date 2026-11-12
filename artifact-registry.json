@@ -1,105 +1,89 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-12",
-  "base_url": "https://bradlaw76.github.io/bradlaw76-demopresenter/",
-  "p_id_pattern": "P[0-9]{3,}",
+  "library_title": "Demo Presenters",
+  "canonical_format": "P### (at least three digits)",
   "next_available_id": "P021",
   "collections": [
     {
-      "collection_id": "P010",
+      "id": "P010",
       "slug": "ssa-direct-deposit",
-      "name": "SSA Direct Deposit",
-      "state": "public-content-committed",
-      "source_readiness": "READY",
-      "quality": {
+      "folder": "p010-ssa-direct-deposit",
+      "title": "SSA Direct Deposit",
+      "canonical_url_path": "demos/p010-ssa-direct-deposit/",
+      "default_presenter_id": "P011",
+      "runbook_id": "P014",
+      "quality_id": "P018",
+      "assessment": {
         "percentage": 89,
-        "letter": "B+",
-        "scorecard_id": "P018"
+        "letter_grade": "B+",
+        "date": "2026-11-12",
+        "meaning": "presentation artifact quality, not live-integration acceptance"
       },
-      "canonical_presenter_id": "P011",
-      "canonical_runbook_id": "P014",
+      "source_readiness": "READY",
+      "public_release": "committed",
+      "live_integration": "partially verified in originating source; not certified by public library",
       "artifacts": [
         {
           "id": "P010",
           "type": "collection",
-          "path": "demos/p010-ssa-direct-deposit/",
-          "status": "current",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/"
+          "path": "demos/p010-ssa-direct-deposit/index.html"
         },
         {
           "id": "P011",
-          "type": "presenter-40min",
-          "path": "demos/p010-ssa-direct-deposit/p011-presenter-40min.html",
-          "status": "current",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p011-presenter-40min.html"
+          "type": "presenter-current",
+          "path": "demos/p010-ssa-direct-deposit/p011-presenter-40min.html"
         },
         {
           "id": "P012",
-          "type": "presenter-13min",
-          "path": "demos/p010-ssa-direct-deposit/p012-presenter-13min.html",
-          "status": "historical",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p012-presenter-13min.html"
+          "type": "presenter-historical-13min",
+          "path": "demos/p010-ssa-direct-deposit/p012-presenter-13min.html"
         },
         {
           "id": "P013",
-          "type": "presenter-52min",
-          "path": "demos/p010-ssa-direct-deposit/p013-presenter-52min.html",
-          "status": "historical",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p013-presenter-52min.html"
+          "type": "presenter-historical-52min",
+          "path": "demos/p010-ssa-direct-deposit/p013-presenter-52min.html"
         },
         {
           "id": "P014",
           "type": "runbook",
-          "path": "demos/p010-ssa-direct-deposit/p014-runbook.md",
-          "status": "current",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p014-runbook.md"
+          "path": "demos/p010-ssa-direct-deposit/p014-runbook.md"
         },
         {
           "id": "P015",
           "type": "notes-40min",
-          "path": "demos/p010-ssa-direct-deposit/p015-presenter-40min.md",
-          "status": "current",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p015-presenter-40min.md"
+          "path": "demos/p010-ssa-direct-deposit/p015-presenter-40min.md"
         },
         {
           "id": "P016",
           "type": "notes-13min",
-          "path": "demos/p010-ssa-direct-deposit/p016-presenter-13min.md",
-          "status": "historical",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p016-presenter-13min.md"
+          "path": "demos/p010-ssa-direct-deposit/p016-presenter-13min.md"
         },
         {
           "id": "P017",
           "type": "notes-52min",
-          "path": "demos/p010-ssa-direct-deposit/p017-presenter-52min.md",
-          "status": "historical",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p017-presenter-52min.md"
+          "path": "demos/p010-ssa-direct-deposit/p017-presenter-52min.md"
         },
         {
           "id": "P018",
-          "type": "quality",
-          "path": "demos/p010-ssa-direct-deposit/p018-quality.md",
-          "status": "current",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p018-quality.md"
+          "type": "scorecard",
+          "path": "demos/p010-ssa-direct-deposit/p018-quality.md"
         },
         {
           "id": "P019",
           "type": "manifest",
-          "path": "demos/p010-ssa-direct-deposit/p019-manifest.json",
-          "status": "current",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p019-manifest.json"
+          "path": "demos/p010-ssa-direct-deposit/p019-manifest.json"
         },
         {
           "id": "P020",
-          "type": "collection-notes",
-          "path": "demos/p010-ssa-direct-deposit/p020-README.md",
-          "status": "current",
-          "url": "https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p020-README.md"
+          "type": "collection-readme",
+          "path": "demos/p010-ssa-direct-deposit/p020-README.md"
         }
-      ]
+      ],
+      "legacy_aliases": []
     }
   ],
-  "no_automatic_public_sync": true,
-  "redirects_required": false,
-  "canonical_folder_policy": "P-numbered URLs only; unnumbered copies retired without redirects"
+  "policy": "docs/ARTIFACT_QUALITY_STANDARD.md",
+  "source_review": "docs/SOURCE_REVIEW.md",
+  "registry_markdown": "docs/P_REGISTRY.md",
+  "automatic_private_repository_sync": false
 }
