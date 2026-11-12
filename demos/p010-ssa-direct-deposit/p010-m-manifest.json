@@ -155,11 +155,28 @@
   },
   "presentation_revision": {
     "date": "2026-11-12",
+    "portal_path": [
+      "Overview",
+      "Direct Deposit",
+      "Chat"
+    ],
+    "customer_copy_messages": 2,
+    "agent_controls": true,
+    "intent_and_case_agents": "conditional_pending_verification",
+    "contact_timeline_chat": "show actual stored history when present",
     "case_reference": "CAS-01523-T1R7X6",
     "related_request": "DD-DEMO-H095-01523",
-    "narrative": "Daniel flexible handoff; chat to Dynamics; same Contact in two forms; Case and CRM dashboards; Brad to Beth",
-    "owner_questions_per_chapter": true,
-    "prior_version_branch": "backup/p010-pre-final-talk-track-2026-11-12",
+    "timing_minutes": [
+      5,
+      5,
+      4,
+      8,
+      10,
+      4,
+      4
+    ],
+    "question_checkpoints_per_section": true,
+    "prior_version_branch": "backup/p010-before-portal-chat-copy-2026-11-12",
     "grade_unchanged": true
   }
 }
