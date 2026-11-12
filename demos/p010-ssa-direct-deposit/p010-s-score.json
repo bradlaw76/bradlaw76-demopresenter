@@ -148,6 +148,13 @@
       4
     ],
     "score_change": 0,
-    "browser_validation": "NOT_VERIFIED"
+    "browser_validation": "NOT_VERIFIED",
+    "intent_agent": {
+      "observed": "Intent-based suggestions displayed in Copilot pane",
+      "issue_label": "SSA FAQ",
+      "agent_control": "Suggested text can be reviewed and adapted in the left-hand chat composer",
+      "case_management_agent": "creation_not_verified",
+      "reference": "owner screenshot 2026-11-12"
+    }
   }
 }
