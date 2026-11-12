@@ -1,157 +1,325 @@
-# P010-B · SSA Direct Deposit — Master Presenter Runbook
+# P010-B · SSA Direct Deposit — Master Demo Runbook
 
-**Primary duration:** 40 minutes · **Alternative versions:** [13-minute rehearsal](p010-2-presenter-13min.html) · [52-minute detailed walkthrough](p010-3-presenter-52min.html)
+**Version:** November 12, 2026 · **Primary duration:** 40 minutes (including Daniel's independent slot, Brad's live CRM walkthrough, questions, and the Beth handoff) · **Status:** Presentation script finalized; technical integration acceptance is separate.
 
-[Open main interactive presenter](p010-1-presenter-40min.html) · [Demo catalog](../../index.html)
+**Main presenter:** [P010-1 interactive HTML](p010-1-presenter-40min.html) · **Speaking notes:** [P010-5](p010-5-presenter-40min.md) · [Collection home](index.html) · [P010-Q quality](p010-q-quality.md) · [P010-G grade](p010-g-grade.md) · [P010-S score](p010-s-score.json) · [P010-I improvements](p010-i-improvements.md)
 
-> **Presentation-only example.** Sofía Reyes and Elena Martinez are fictional personas. This public copy includes no live Dynamics link, customer identity, protected banking data, real government system connection, or instructions to perform a transaction. Current deployment and acceptance status must be checked privately by the demo owner before use.
+> **Public-safe demonstration:** Fictional constituent Elena Martinez and synthetic Case/transaction. The file has no private Dynamics URL or live banking actions. Its business examples do not establish operational SSA deployment or authority to change benefits or bank information.
 
-## Speaker and scenario overview
+## Executive storyline — a consistent service experience
 
-Daniel demonstrates Sofía's Spanish benefit-letter voice scenario in his **own environment**. Brad then introduces a separate customer, Elena, through an illustrative portal verification alert and conversational assistance. Brad moves from the agent conversation to the exact linked Contact, then the Case, reports, and Beth's governance walkthrough. No actual voice-to-chat transfer or bank change is inferred.
+**Main point:** Chat is **another entry point into a consistent customer-service experience**, not simply another channel or disconnected chatbot application. Channel context can lead to an agent conversation, a Contact, Case work, relevant information from other systems, and operational visibility. The demonstration uses Dynamics 365 and **Dataverse as a proposed common customer-service data foundation**; SSA's authoritative benefit and payment systems are not replaced or represented as production-connected.
 
-## P010 collection quality and source integrity
+**Confirmed presentation boundaries:**
+- **Daniel:** Independent section; Brad has no visibility into Daniel's exact script, voice features, or environment. Script only Brad's flexible handoff.
+- **Brad:** Live chat handoff to Dynamics Customer Service workspace, two forms on the **same Elena Contact**, synthetic Direct Deposit Case and banking record, AI Recommendation Center, CRM agent/supervisor dashboards.
+- **Primary Case:** **CAS-01523-T1R7X6**, marked **In Progress**. Linked synthetic banking request **DD-DEMO-H095-01523**, showing **Verification Required: Yes** and **Pending Authorization**. The Case summary may omit values shown on the banking form; do not claim a fully synchronized projection.
+- **Constituent review:** The SSA-specific Contact form visibly shows a Direct Deposit verification warning; this is evidence of a rendered alert, not proof of every source/relationship or completed identity checks.
+- **Recommendations:** Explain actual provenance (e.g. rule-based fallback) and representative decision support, never autonomous transaction authorization.
+- **Reporting:** These are **CRM Case and activity dashboards**, not the live contact-center channel metrics Beth will cover. Demo numbers are not SSA operational totals.
+- **Extensibility:** Brief reference to mobile-capable Dynamics/portals and optional configured channels such as Facebook; no Alexa example, no claim that every custom form has passed mobile acceptance.
 
-**Assessment:** [P010-Q — Quality scorecard](p010-q-quality.md) · **Artifact score:** **89% · B+** · **Source content readiness:** READY (presenter artifact standard; not a live system deployment certification).
+## Seven-section agenda
 
-**Public audience-safe authority:** this P010-B runbook governs the seven-section, 40-minute P010-1 presenter. P010-2 (13 minutes) and P010-3 (52 minutes) are preserved **historical rehearsal variants**, not proof of current Dynamics/portal functionality. Each variant links back here.
+| # | Presenter | Section | Time | Objective |
+| --- | --- | --- | ---: | --- |
+| 1 | Daniel (independent) → Brad | Daniel → Brad · Omnichannel bridge | **5 min** | Bridge into Brad's separate chat demonstration without presuming what Daniel showed. |
+| 2 | Brad · digital engagement | Elena · Digital portal and Copilot chat | **5 min** | Explain why Elena needs help and show a short chat-to-human request. |
+| 3 | Brad · Customer Service workspace | Dynamics · Live representative conversation | **4 min** | Demonstrate the working handoff and connect conversation to persistent service information. |
+| 4 | Brad · Contact | Contact · Standard and SSA-specific experiences | **7 min** | Demonstrate the same Contact record through two different forms and highlight the role-based service experience. |
+| 5 | Brad · Case | Case · Cross-system information and controlled decisions | **11 min** | Show how the Case consolidates related information, recommendations and next actions while authorization remains pending. |
+| 6 | Brad · CRM reporting | CRM dashboards · Agent and supervisor work | **4 min** | Show agent and supervisor visibility into everyday Case and activity work, not contact-center performance metrics. |
+| 7 | Brad → Beth | Omnichannel close · Hand off to Beth | **4 min** | Close Brad's service journey and introduce possible channel extensibility without scripting Beth's part. |
+| | | **Total** | **40 min** | Allow brief audience-question pauses within each allocation |
 
-**P-numbered presenter versions:** [P010-1 main (40 min)](p010-1-presenter-40min.html) · [P010-2 rehearsal (13 min)](p010-2-presenter-13min.html) · [P010-3 detailed (52 min)](p010-3-presenter-52min.html).
+**Presenter rhythm:** In each of Brad's sections: goal → one or two relevant highlights → actual screen actions → brief questions → exact next-section transition. Ask questions without inviting an extended technical design session. If a question requires source-specific discovery, acknowledge it for follow-up and keep the demonstration moving.
 
-## Approved seven-section customer storyline and transitions — 40-minute core
+### 1. Daniel → Brad · Omnichannel bridge — 5 minutes
 
-**Current presenter spine (November 11):** The customer hears an independent voice example from Daniel, then Brad starts **Elena's separate portal inquiry**. Elena asks for help with a direct-deposit review alert; a representative handles the protected service process in Dynamics. Brad shows **Conversation → Contact → existing Case → reporting** before handing to Beth. Sections 6–12 below are detailed reference material and fallbacks, **not additional timed presentation sections**. For the live show follow this section's order and handoffs.
+**Owner:** Daniel (independent) → Brad  
+**Goal:** Bridge into Brad's separate chat demonstration without presuming what Daniel showed.  
+**On screen:** Daniel concludes → Brad opens Elena's portal
 
-**Critical storytelling distinction:** Elena's chat request is about a direct-deposit issue **outside the demonstrated chatbot's approved automated transaction scope**. Copilot Studio may recognize and explain the intent when configured, but cannot independently verify identity, authorize a banking update, or guarantee a payment-date result. Do not claim a bot failure or that a message, portal alert or prior transcript was automatically delivered to Dynamics unless a real channel/transport proves it. **Actual chat-to-live-agent routing is conditional; a prepared switch is the current safe fallback.**
+**One message to land:** Chat is another entry point into a consistent customer-service experience—not an additional disconnected application.
 
-| Section | Presenter | Target | Audience's question and destination |
-| --- | --- | ---: | --- |
-| **1. Daniel's independent voice demonstration** | Daniel | **5 min** | How does voice-based service guidance work? Sofía benefit-letter inquiry in **Daniel's separate environment** |
-| **2. Elena's portal and chat widget** | Brad | **5 min** | Why does Elena need assistance? Show review-required notice, explain Copilot benefits, request a person |
-| **3. Conversation arrives at representative** | Brad | **4 min** | What does the agent know and what must be verified? Dynamics chat/Active Conversation, real only if received |
-| **4. Contact 360 and verification** | Brad | **7 min** | Who is Elena and what account/service history exists? Exact linked Contact, benefits, proposed related-record alert, Super Six, Timeline |
-| **5. Case management and protected banking review** | Brad | **11 min** | What work is pending and why isn't it resolved? Existing Case, activities, documents, checklist, banking, Review & Resolution |
-| **6. Operational reporting** | Brad | **4 min** | Who owns the work and what should a supervisor see? Customer 360 → Agent Workload → Supervisor Operations |
-| **7. Administration and close** | Beth / executive | **4 min** | How is this governed? Routing, agents, roles, solution, controls and pilot acceptance |
-| **Core total** | | **40 min** | Seven sections, no extra application tour |
+**Spoken talk track**
 
-### 1. Daniel's independent voice demonstration — 5 minutes
+> Thanks, Daniel. I'm going to switch to a different constituent scenario, this time using chat. The point is not simply to add another way to contact SSA; chat is another entry point into a consistent customer-service experience. Whether someone begins through voice, a website or another appropriate channel, the goal is to give representatives the relevant service information and a process for continuing the work. We'll follow Elena's request from her digital experience through the representative's conversation, her Contact record, the Case and operational reporting. This is a different person and a different session from Daniel's example.
 
-**Goal:** Set a short cross-channel service context, **without** transferring Sofía's call to Brad's environment. **Show:** Sofía Reyes's Spanish benefit-verification-letter question, Daniel's configured voice assistant, and a verified voice communication panel in **Daniel's own environment** if available. Daniel owns migrating/configuring/testing his voice items. Use an authorized labeled recording or screenshots if live voice transfer is unverified. Finish the voice experience there; Brad does not need to open a voice panel.
+**What to show (in order)**
 
-**Suggested opener:** “We'll begin with a separate Spanish voice service example. Daniel will show how a benefit-letter inquiry is understood and guided in his voice environment. Then we'll move to Elena, who has a different direct-deposit issue in the digital channel.”
+1. Allow Daniel to complete his own segment without assuming or describing his details.
+2. Brad delivers only the high-level architecture bridge.
+3. Open Elena's independent portal and introduce the Direct Deposit issue.
 
-**Transition — Daniel → Brad:** “That completes Sofía's voice example in my environment. Brad will now open a different constituent's my Social Security portal and show how a direct-deposit verification issue leads to representative assistance. No call or account context transfers between our environments.”
+**High-level screen beats**
 
+- **Speaker transition:** Daniel owns his content; Brad does not recap its implementation.
+- **Omnichannel theme:** Different channels can feed a consistent service process, even when scenarios are separate.
 
-**Evidence/status and fallback:** Daniel's voice agent runs only in his independently configured environment. If phone routing, real agent transfer or call controls are not accepted, show an approved labeled recording or genuine static capture; no context is transferred to Brad.
-### 2. Elena's portal and chat widget — 5 minutes
+**Audience checkpoint**
 
-**Goal:** Explain **why Elena asks for help**, not showcase every chatbot topic. **Show:** the deployed Elena demonstration portal / Preview, visible Review required alert **DD-DEMO-1042**, masked bank destination and the chat widget. Click chat once. Briefly relate it to what Copilot Studio can do: natural-language service guidance, prior-context continuity **only where actually connected**, self-service and appropriate human escalation. There is no need to spend time configuring the bot or playing back an unrelated earlier conversation.
+> Any quick questions about the broader idea of multiple service entry points before we move into Elena's journey?
 
-**Suggested script:** “Elena sees that her direct-deposit change needs additional verification. The assistant gives her a natural-language way to ask about the notice. This demo does not give the chatbot an approved way to process a protected direct-deposit transaction, so it should guide her and offer a human representative rather than pretend it has verified the banking change.”
+**Transition to next section**
 
-**Elena's question:** “My direct deposit change says additional verification is required. Can someone help me before my next payment?”
+> Let's start where Elena is already engaged—with her digital experience.
 
-**Boundary:** The actual Preview Preview has owner-reported **basic chat working**, not established authenticated bank-flag context, bot escalation, session transcript transfer or automatic Case creation. Portal alert/status is not automatically sent into chat. Use an actual safe answer if visible; otherwise label the intended dialogue as scripted.
+**Demonstration boundary:** Do not imply that Daniel's voice session, caller, transcript or tenant is transferred to Brad.
 
-**Transition — portal → Dynamics:** “The assistant can explain what the issue means, but protected verification belongs to a person. Let's move to the representative's workspace to see how that request is handled.”
-
-
-**Evidence/status and fallback:** The portal's example alert is fictional; basic chat has owner-observed evidence, but protected identity linkage and real bot-to-human routing are not accepted. If the widget fails, use a labeled example conversation rather than simulating success.
-### 3. Conversation and live-agent intake in Dynamics — 4 minutes
-
-**Goal:** Make the **handoff between channels visible and credible**, then move promptly into CRM. **Show:** an actually received Dynamics chat notification and Active Conversation, communication panel and any observed intent/context. If there is no tested chat-to-agent route, use a clearly labeled prepared agent interaction; do **not** show a fabricated transfer success or claim the portal message, verified identity, transcript or Case was passed through. Mention optional Customer Intent, Case Management or Service Agents only if their actual outputs can be observed.
-
-**Suggested script:** “This is the service representative's workspace. The interaction tells us Elena is asking about additional direct-deposit verification. Here the channel handles the conversation, while Dynamics helps the representative navigate the constituent and Case information. The intended benefit is less re-entry, not an unverified assumption that every field arrived automatically.”
-
-**Case policy:** Check for a genuinely created and linked Case only if the actual agent flow produced one. **Otherwise open Elena's existing Case later; do not create a duplicate Case just to simulate automation.**
-
-**Transition — conversation → Contact:** “We understand why Elena contacted us. Before working a protected request, the representative needs to know which Contact is associated with the service record and what history is available.”
-
-
-**Evidence/status and fallback:** An actual incoming Dynamics chat is shown **only if observed**. Otherwise use a clearly labeled prepared representative view; no transcript, identity, screen-pop or new Case is claimed.
-### 4. Contact 360 and human-controlled constituent verification — 7 minutes
-
-**Goal:** Establish the constituent's available, authorized context **before** opening her Case. **Show once:** the Contact linked to the selected Case (not a name-only selection, because multiple Elena Contacts exist), available profile/benefits and payment fields, supported Super Six controls, Customer Activity Timeline and optionally the visibly labeled H081 **RuleBasedFallback** recommendation. H072 native fields and H080 Timeline have accepted scoped evidence; Super Six workstream focused context tests pass but the full form/owner walkthrough and unsupported identity-answer sources remain open. A visible verification panel is not proof of verified identity.
-
-**Proposed Contact alert (not yet implemented/accepted):** Add one **read-only, record-derived** status strip on the Contact form using the related Direct Deposit Demo Record's record-level verification-required attribute Boolean. Show “Direct deposit verification required” and the safe reference only for a uniquely identified, authorized related banking row. A missing/multiple/denied record displays unavailable, **never** a fictional Contact flag or a copied Boolean. **Do not add a second Contact Boolean.** The banking source-of-truth field already exists; its secure Contact-form read/display requires a separate confirmed implementation. Until then show the actual bank record later or describe this strip as a planned experience.
-
-**Suggested script:** “The Contact brings together who Elena is, what benefits are recorded and what service history we can legitimately access. This is also the logical place to surface a read-only indication that a related direct-deposit request needs attention. We can now review what information is available for human verification, without turning the screen into automatic identity proofing.”
-
-**Transition — Contact → Case:** “We've established Elena's context and the history available to the representative. Now we'll open her service Case to manage the actual direct-deposit issue, its outstanding steps and resolution decision.”
+**If a view is unavailable:** If Daniel's topic changes, simply say: Thanks, Daniel. I'll show another channel and how that interaction fits into a consistent service process.
 
 
-**Evidence/status and fallback:** Contact Timeline and supported Super Six fields have scoped evidence; complete identity verification and a Contact-bank-status banner are unaccepted. Use only the correct linked Contact and show a proposed alert as a verbal future capability.
-### 5. Enhanced Case management and protected banking review — 11 minutes
+### 2. Elena · Digital portal and Copilot chat — 5 minutes
 
-**Goal:** Make the **enhanced Case form the centerpiece**, answering what happened, what evidence exists, what remains and whether the request may be resolved. **Open Elena's existing Case CASE-DEMO-01526**; if the live interaction genuinely created another eligible Case, establish the correct relationship first rather than silently changing demonstration records.
+**Owner:** Brad · digital engagement  
+**Goal:** Explain why Elena needs help and show a short chat-to-human request.  
+**On screen:** Elena portal → review notice → Copilot Studio chat
 
-**Case screen path — spend time where value is visible:**
+**One message to land:** Verification notice → brief natural-language guidance → live representative handoff.
 
-1. **Case Overview:** customer, reference, service reason, owner, status and separate banking record. The Case handles service work; verification-required remains on the Direct Deposit Demo Record, not on Case.
-2. **Case Activity Center:** use the actual H079/H080 Case activity view with owner-accepted refresh/reopen behavior. This is distinct from Contact Timeline PCF.
-3. **Documents / TED:** show already available SharePoint documents and the H082 published TED Integration tab. Owner's Contact/benefits display check remains outstanding; the tab is not proof of a live external SSA/TED system.
-4. **Checklist / Direct Deposit:** show Elena's three existing Checklist Response records and the masked DD-DEMO-1042 bank row. H085 response controls were published, but physical Related-grid filtering and GUI save remain unaccepted; H082 Case/Contact checklist-host continuation is not deployed as fully trusted.
-5. **Agent Workbench / recommendations:** preserve the currently selected earnings/fraud web resource on the Case form; H087's new SSA workbench is published but **not** installed into that slot. H081 recommendations are labeled **RuleBasedFallback**, not generated AI. H088 center is source-only.
-6. **Review & Resolution — close the chapter here:** Review & Resolution workstream is **deployed and owner-verified inside the enhanced Case form**. Elena currently has **three applicable responses, zero complete**, verification pending and both authorization fields blank. “Not Ready” and **“Return for Verification”** are the correct supervisor guidance, **not** an approval or Case closure.
+**Spoken talk track**
 
-**Suggested script:** “We can see the Case history, supporting documents, the related banking issue and the three independent human-review requirements. Because none of the three checklist responses is completed and there is no recorded authorization, Dynamics correctly identifies the request as not ready. We're not going to change a protected payment destination or close the Case just to turn the demonstration green.”
+> Elena Martinez has a Direct Deposit change that needs additional verification. Rather than finding a phone number or figuring out which office handles the request, she can ask for help from her current portal experience. I'll ask one question through Copilot Studio and request a representative; I'm not going to spend time demonstrating every bot topic. The value is how this digital interaction becomes part of a broader service process. Because this request involves protected banking information, a human must handle the appropriate verification and authorization. The chatbot isn't changing payment details or confirming an unverified transaction.
 
-**Conditional future complete path (do not execute without actual authority):** Approved human review → separate authorized destination update → independent destination readback → same-row verification flag clear/readback → authenticated Contact-bound portal refresh → proper Case resolution. If those controls aren't live, **leave the real Case and banking flag pending**, with any imagined after-state labeled as illustration.
+**What to show (in order)**
 
-**Transition — Case → reporting:** “We've seen how one constituent's request is managed and why the service remains pending. Now let's see how this structured work can support frontline workload and supervisor decisions across Cases.”
+1. Point out Elena's fictional verification-required portal notice and launch chat.
+2. Ask a concise question about the verification notice; avoid a chatbot feature tour.
+3. Use the configured live chat escalation to request a representative in Dynamics Customer Service workspace.
 
+**High-level screen beats**
 
-**Evidence/status and fallback:** Case Activity Center and embedded Review & Resolution have owner acceptance. H085 response-form GUI save, TED Contact rendering, H087 replacement, bank authorization and clearance are still conditional. If a tab is unavailable, remain on accepted Case screens, keeping the Case pending.
-### 6. Operational reporting — 4 minutes
+- **The service need:** Elena sees a Direct Deposit verification alert.
+- **Copilot guidance:** One question and then a human-help request.
+- **Why escalate:** Protected payment changes remain governed by human review.
 
-**Goal:** Move from **one Case** to **service insight** without a second technical tour. Show **Customer 360** (constituent and history), **Agent Workload** (owner, status and follow-up) and **Supervisor Operations** (queue, aging and metrics) in that order. Spend roughly a minute per report and reserve time for the next presenter. H071 resources are deployed/published, but authenticated generation-scoped extraction returned zero scoped Contacts/Cases; populated charts, non-admin role access and live browser behavior are not fully accepted. Zero returned **for that query** does not establish zero agency workload.
+**Audience checkpoint**
 
-**Suggested script:** “Customer 360 connects individual context; Agent Workload organizes who is responsible for pending actions; Supervisor Operations helps leaders identify demand and aging. These are three perspectives on the same governed service process. We only treat numbers as real operational measures when the source, time window and user access are verified.”
+> Any questions about the digital entry experience before we follow the conversation to a representative?
 
-**Transition — Brad → Beth:** “We've shown the constituent journey, the representative's Case work and the reporting opportunity. Beth will close by showing how channels, agents, roles and solution changes are configured and governed.”
+**Transition to next section**
 
+> Elena has asked for help. Let's follow the interaction into Dynamics and see what the representative receives.
 
-**Evidence/status and fallback:** H071 reports have published assets but scoped data and representative access are not fully accepted. Show accurate empty/unavailable states or labeled preview figures—never an invented agency-wide zero.
-### 7. Administration, governance and executive close — 4 minutes
+**Demonstration boundary:** Do not claim a portal notice was automatically passed as trusted, authenticated Dataverse context or that the bot authorized banking changes.
 
-**Goal:** End with confidence in the platform and honest pilot gates. Beth opens **one** approved read-only administration view for queues/workstreams, permissions and deployment governance; avoid a second tour of Case/Contact forms. Daniel's voice agent/routing belongs to his separate environment. TED and other legacy SSA systems are informational integrations unless explicitly validated. The executive closes by identifying the next accepted integration gates: verified human chat routing, record-derived Contact alert, fully accepted Contact questionnaire, trusted checklist/transaction, source-matched reports and role coverage.
-
-**Suggested close:** “We showed why Elena needs help, how the representative can review her context and Case, and how the system avoids premature banking changes. Dynamics organizes this service process while human verification and authorization remain explicit controls. The same information model supports reporting and governed improvement as each remaining integration is tested.”
-
-**Final handoff:** “That completes the service journey and its governance view. The remaining pilot decisions are which live integrations and role-based validations must pass before this becomes an accepted end-to-end demonstration.”
-
-**15-minute executive cut (same seven sections):** Daniel 2:00; portal 2:00; Dynamics conversation 1:30; Contact 2:30; Case 4:00; reporting 1:30; administration/close 1:30. **Total 15:00.** Use pre-opened tabs and only already verified screens; don't attempt a new chat route, Case creation or banking authorization inside the cut.
+**If a view is unavailable:** If the live route stalls on stage, identify a prepared agent view as the backup instead of simulating a successful transfer.
 
 
+### 3. Dynamics · Live representative conversation — 4 minutes
+
+**Owner:** Brad · Customer Service workspace  
+**Goal:** Demonstrate the working handoff and connect conversation to persistent service information.  
+**On screen:** Dynamics Customer Service workspace → live chat / Active Conversation
+
+**One message to land:** Accept the incoming chat and show the actual issue/context before navigating to Contact.
+
+**Spoken talk track**
+
+> Here I'm in Dynamics 365 Customer Service workspace, accepting Elena's conversation. The representative can continue the interaction, see the message and work with the context that actually arrived. More importantly, this is where an engagement channel connects to the rest of the service process. We don't need separate customer-service databases or back-office applications for every channel. The representative can move from the conversation to customer information, activities and casework in Dynamics. I'll show that continuity rather than tour the communication controls.
+
+**What to show (in order)**
+
+1. Accept the actual incoming chat and point to Elena's question.
+2. Show one or two relevant items in Active Conversation and only the context actually delivered.
+3. Navigate to the exact Case-linked Elena Contact; do not invent automatic Case creation.
+
+**High-level screen beats**
+
+- **Live chat acceptance:** Follow the human handoff into Customer Service workspace.
+- **Context:** Only describe delivered conversation details.
+- **Service continuity:** Move into the correct Contact.
+
+**Audience checkpoint**
+
+> Any questions about the representative's conversation experience before we open the customer record?
+
+**Transition to next section**
+
+> We know why Elena reached out. Now let's see how the same customer data supports a standard Contact experience and a purpose-built SSA one.
+
+**Demonstration boundary:** Successful live chat arrival does not establish verified identity, a trusted portal alert payload or automatic Case creation.
+
+**If a view is unavailable:** If the chat is not visible during the meeting, say the route was tested and clearly show a prepared agent conversation.
 
 
-**Evidence/status and fallback:** Beth uses a read-only approved admin surface. If it is unavailable, use a labeled governance capture. Do not imply a separate voice environment or external SSA legacy system is integrated.
-## Other presenter lengths
+### 4. Contact · Standard and SSA-specific experiences — 7 minutes
 
-| Variant | File | Intended use |
+**Owner:** Brad · Contact  
+**Goal:** Demonstrate the same Contact record through two different forms and highlight the role-based service experience.  
+**On screen:** Same Elena Contact → standard Customer Insights form → SSA service form
+
+**One message to land:** Contact – Customer Insights – SSA → SSA | Constituent Verification & Direct Deposit: same record, tailored experience.
+
+**Spoken talk track**
+
+> First, this is Contact – Customer Insights – SSA. It's a standard Dynamics 365 customer view with core customer information and interaction history. I'll highlight the profile and Timeline without walking through every field. Now I'll switch to SSA | Constituent Verification & Direct Deposit. This is still the same Elena Contact and underlying data and security, but organized around an SSA representative's responsibilities. We can see a Direct Deposit verification alert, the Super Six review experience, related request information and activities. This isn't another copy of the customer. Dataverse is the proposed common customer-service data foundation, while authoritative benefit and payment systems can remain in their existing systems and supply relevant information through integration.
+
+**What to show (in order)**
+
+1. Open the Elena Contact linked to Case CAS-01523-T1R7X6; avoid a first-by-name duplicate.
+2. Show Contact – Customer Insights – SSA briefly: standard customer fields and Timeline.
+3. Switch forms on the SAME Contact to SSA | Constituent Verification & Direct Deposit.
+4. Highlight the visible Direct Deposit warning, available Super Six, related banking context and activities—one takeaway per tab.
+
+**High-level screen beats**
+
+- **Standard Contact:** Customer Insights – SSA: profile and interaction history.
+- **Form switch:** Same Contact record, no duplicate customer.
+- **SSA Contact:** Verification alert, Super Six, related Direct Deposit and activities.
+- **Data foundation:** Dataverse as proposed common customer-service foundation, source systems stay authoritative.
+
+**Audience checkpoint**
+
+> Any questions about tailoring the representative's experience while maintaining the same underlying Contact record?
+
+**Transition to next section**
+
+> Now that we've seen Elena's customer context and outstanding verification needs, let's open the Case that organizes the work.
+
+**Demonstration boundary:** Visible alert is evidence of a displayed status, not necessarily a proven synchronized field projection; Super Six display does not prove verified identity. Dataverse is proposed for service information, not SSA's benefit-system source of truth.
+
+**If a view is unavailable:** If form switching is slow, use two pre-opened views of the exact same Contact and explain the form change.
+
+
+### 5. Case · Cross-system information and controlled decisions — 11 minutes
+
+**Owner:** Brad · Case  
+**Goal:** Show how the Case consolidates related information, recommendations and next actions while authorization remains pending.  
+**On screen:** Elena Case CAS-01523-T1R7X6 / request DD-DEMO-H095-01523
+
+**One message to land:** CAS-01523-T1R7X6 → Direct Deposit → synthetic bank record → supporting system information → AI recommendations → review.
+
+**Spoken talk track**
+
+> Here's Elena's in-progress Case, CAS-01523-T1R7X6. Case Overview gives us the request, owner, status and recent activity; I'll keep that high level rather than walk through every widget. The Direct Deposit tab brings in the associated request. The synthetic banking record shows Verification Required and Pending Authorization. That tells us what remains, not that any banking change is approved. We can also bring information from benefits, payment or document systems into a consolidated service experience; I'll use one supporting view to illustrate the pattern without claiming a production SSA integration. The AI Recommendation Center can present guidance and possible next steps. If its provenance is labeled rule-based fallback, we'll say that rather than claiming an autonomous AI decision. Finally, Review & Resolution helps the representative assess outstanding work. This request remains pending; we do not change account details or close it prematurely.
+
+**What to show (in order)**
+
+1. Open Case CAS-01523-T1R7X6 and highlight Overview, In Progress, owner, description and Timeline.
+2. Open Direct Deposit; locate request DD-DEMO-H095-01523. Highlight pending verification and authorization.
+3. Briefly open the related banking record; do not assume its fields and the Case summary show identical data.
+4. Show ONE relevant supporting view: Benefits & Payments, TED or documents, describing source integration at a high level.
+5. Show AI Recommendation Center with actual recommendation provenance, then Review & Resolution as available for this Case.
+6. Leave the Case and banking request pending; don't repeat the old Case's checklist counts or supervisor recommendation.
+
+**High-level screen beats**
+
+- **Case Overview:** Status, ownership and recent service activity.
+- **Direct Deposit:** H095 synthetic request and verification-required status.
+- **Other systems:** One benefits/TED/document example; label integration boundaries.
+- **AI Recommendation Center:** Assisted guidance, with rule-based provenance where shown.
+- **Review & Resolution:** Outstanding work and human-controlled decision, not premature closure.
+
+**Audience checkpoint**
+
+> Any questions about how the Case brings together information and guides the next action before we move to operational dashboards?
+
+**Transition to next section**
+
+> We've seen the work involved in one constituent request. Let's widen the view to the day-to-day CRM workload for agents and supervisors.
+
+**Demonstration boundary:** The synthetic Case and banking form can show different completeness of saved fields; do not imply full synchronization. No bank write, authorization, verification clearance, automatic resolution or externally verified SSA integration.
+
+**If a view is unavailable:** If an embedded tab is slow, state its role at a high level and continue with the saved Case and pending state; do not troubleshoot on stage.
+
+
+### 6. CRM dashboards · Agent and supervisor work — 4 minutes
+
+**Owner:** Brad · CRM reporting  
+**Goal:** Show agent and supervisor visibility into everyday Case and activity work, not contact-center performance metrics.  
+**On screen:** Dynamics CRM Agent Dashboard and Supervisor Dashboard
+
+**One message to land:** Agent Dashboard / My Workload → Supervisor Operations: workload, aging and follow-up.
+
+**Spoken talk track**
+
+> Let's step back from one constituent's Case. An agent needs to know what work is assigned, which requests are open and where follow-up is required. The Agent Dashboard and My Workload help organize that day-to-day work. A supervisor needs a broader view of Case ownership, workload distribution and aging. That's what Supervisor Operations can provide. This is CRM service information: customer records, Cases and activities. It's a different perspective from the contact-center channel and performance metrics Beth will cover. The values shown here are from our demonstration data, not official SSA operational totals.
+
+**What to show (in order)**
+
+1. Open Agent Dashboard/My Workload and highlight one pending-work or ownership insight.
+2. Open Supervisor Operations and Customer 360/My Workload as appropriate; describe one supervisory insight.
+3. Distinguish CRM Case/activity operations from Beth's contact-center performance scope. Avoid every graph and filter.
+
+**High-level screen beats**
+
+- **Agent operations:** Assignments and follow-ups.
+- **Supervisor operations:** Open work, aging and Case-level oversight.
+- **Reporting boundary:** CRM operational view, not contact-center performance.
+
+**Audience checkpoint**
+
+> Any questions about CRM workload visibility before I close my portion with the broader architecture?
+
+**Transition to next section**
+
+> The same organized service data supports the constituent and the people managing the work. Let me close on how that extends to other engagement channels.
+
+**Demonstration boundary:** Dashboard values are demonstration/scope-specific and not government production service metrics.
+
+**If a view is unavailable:** If a chart is empty, describe the operational perspective instead of inventing a number.
+
+
+### 7. Omnichannel close · Hand off to Beth — 4 minutes
+
+**Owner:** Brad → Beth  
+**Goal:** Close Brad's service journey and introduce possible channel extensibility without scripting Beth's part.  
+**On screen:** Brad ends CRM walkthrough → Beth begins her own contact-center section
+
+**One message to land:** Voice, chat, web and mobile-capable Dynamics/portals are ways to engage with a consistent service experience; Facebook is only a future configured option.
+
+**Spoken talk track**
+
+> To close my portion: chat isn't a standalone solution. It's an entry point into a consistent customer-service experience. We saw Elena move from digital engagement into a representative conversation, two views of the same Contact, a Case with related information and operational reporting. Dynamics 365 and Dataverse provide a proposed common foundation for customer-service records, while SSA's benefit and payment systems may remain authoritative. The platform supports mobile experiences and additional web or configured engagement channels, potentially including social messaging such as Facebook if appropriate. I am not saying SSA has implemented every channel or that every custom screen has passed mobile testing. That completes my section. Beth will cover the contact-center capabilities and operations.
+
+**What to show (in order)**
+
+1. Finish from the CRM dashboard without opening unrelated administrative settings.
+2. Briefly mention mobile-capable platform experiences and future channel extensibility; avoid Alexa and detailed voice topics.
+3. Invite final questions on Brad's section, then hand over to Beth without prescribing her material.
+
+**High-level screen beats**
+
+- **Consistent service:** Chat is one entry point into customer-service information.
+- **Common data:** Dataverse proposed for service; authoritative SSA systems remain distinct.
+- **Extensibility:** Web/mobile and social channels as optional options.
+- **Handoff:** Ask for questions, then give Beth the floor.
+
+**Audience checkpoint**
+
+> Before I hand over, any final questions about the constituent, representative and CRM experience?
+
+**Transition to next section**
+
+> Beth, I'll turn it over to you for the contact-center capabilities and operational view.
+
+**Demonstration boundary:** Facebook is an optional future channel, not an SSA requirement or live demonstration; don't imply all custom pages are mobile-validated or that Dataverse is SSA's adopted authoritative system.
+
+**If a view is unavailable:** Use the short close: Different entry points can contribute to a consistent service experience, with common customer-service information. Beth will take us through the contact-center operations.
+
+## Show-day preparation and decision boundaries
+
+- Daniel owns his independent portion. Brad prepares the opening bridge regardless of the voice scenario.
+- Pre-open Elena's portal, a tested live chat-to-human route, and Dynamics Customer Service workspace. Prepare a **clearly labeled** representative fallback.
+- Identify the specific Contact linked to Case **CAS-01523-T1R7X6** and open both form views on that **same record**. Form labels: **Contact – Customer Insights – SSA** and **SSA | Constituent Verification & Direct Deposit**.
+- Have Elena's synthetic Direct Deposit request **DD-DEMO-H095-01523** available in the Case and banking record. The bank detail may contain values which the Case summary displays as *not recorded*; avoid describing those fields as fully synchronized.
+- Keep Case Overview high-level. Show Direct Deposit, ONE other-system view, AI Recommendation Center, then Review & Resolution only as actually available for this Case. **Do not import checklist counts or a supervisor recommendation from a different Case**.
+- Open Agent Dashboard and Supervisor Operations for CRM work-management reporting. Do not conflate them with Beth's contact-center reporting.
+- No real bank edits, identity claims, authorization, transaction execution, verification flag clearance, or Case closure.
+- Each section includes one contextual question checkpoint; allow a brief pause and defer detailed ISD/integration discovery.
+- End Brad's section with a concise omnichannel/mobile-capable architecture statement, then Beth's handoff. **Beth's content is her own** and is not scripted here.
+
+## Versions and publishing boundaries
+
+| P ID | Artifact | Use |
 | --- | --- | --- |
-| 13-minute rehearsal | [Interactive presenter](p010-2-presenter-13min.html) · [Cue notes](p010-6-presenter-13min.md) | Fast practice and fallback checks; preserves an earlier presentation layout |
-| 40-minute current flow | [Interactive presenter](p010-1-presenter-40min.html) · [Cue notes](p010-5-presenter-40min.md) | Recommended customer demonstration; seven sections and current handoffs |
-| 52-minute detailed reference | [Interactive presenter](p010-3-presenter-52min.html) · [Scene map](p010-7-presenter-52min.md) | Long-form and additional scene detail; older copy may contain superseded statuses |
+| [P010-1](p010-1-presenter-40min.html) | 40-minute current interactive | Canonical seven-section storyline in this runbook |
+| [P010-5](p010-5-presenter-40min.md) | Current speaker notes | Compact, ready-to-use highlights/checkpoints and transitions |
+| [P010-2](p010-2-presenter-13min.html) · [P010-6 notes](p010-6-presenter-13min.md) | Historical 13-minute rehearsal | Earlier story, not fully restaged to this Case |
+| [P010-3](p010-3-presenter-52min.html) · [P010-7 notes](p010-7-presenter-52min.md) | Historical 52-minute walkthrough | Prior detailed material, may contain superseded evidence |
 
-**Publication boundary:** Updates to the private demo project do not automatically become public. The presenter owner must approve each sanitized library update.
+**Publication:** The public presenter source is versioned in GitHub. Public publication and operational/live integration acceptance remain separate. The prior talk track is preserved on backup branch `backup/p010-pre-final-talk-track-2026-11-12`.
 
-## Run-of-show preflight and safe close
-
-- Confirm Daniel's independent voice demonstration or labeled fallback, Elena's fictional portal status, accepted Dynamics user permissions, a real or prepared conversation, the correct Case-linked Elena Contact, the enhanced Case, three incomplete responses, published report fallback screens and Beth's administration view.
-- Ensure no actual bank-change, identity secret, verification flag clearance, Case close or other live operation is attempted by the presentation.
-- The accepted **presentation ending** is that an outstanding protected request remains **Not Ready / Return for Verification** until human checks and authorization are completed. This is a legitimate business control outcome, not a demonstration failure.
-
-**Canonical public artifact:** P010-B. **Grading record:** [P010-Q · 89% / B+](p010-q-quality.md). Last static review: November 12, 2026. Browser acceptance and live integration acceptance are separately documented as incomplete where applicable.
-
-## Improvement plan
-
-[P010-I · Seven concise criteria improvements](p010-i-improvements.md) records why points were deducted and the next corrections.
-
-## Standard document references
-
-[P010-R — Collection README](p010-r-readme.md) · [P010-Q — Quality](p010-q-quality.md) · [P010-G — Grade](p010-g-grade.md) · [P010-S — Numeric score](p010-s-score.json) · [P010-M — Manifest](p010-m-manifest.json).
-
-The A–F assessment refers only to source-supported presenter quality, not to live integration acceptance.
+**Quality:** [P010-Q](p010-q-quality.md) / [P010-G](p010-g-grade.md) / [P010-S](p010-s-score.json) and [P010-I next improvements](p010-i-improvements.md) are evaluated separately from this content update. No grade increase is implied without revalidation.
