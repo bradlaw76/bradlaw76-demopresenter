@@ -35,6 +35,6 @@ This is the public, sanitized **standard example** for reusable demo-presenter p
 | 7 | Beth | 4 min | Read-only administration and executive close |
 | **Total** | | **40 min** | |
 
-All three presenter's HTML versions link to the canonical P014 runbook. The public artifact copies contain no private source-repository links or live Dynamics environment URL. The older `demos/ssa-direct-deposit/` folder remains available as a **legacy alias** for earlier bookmarks; use these P-numbered URLs for future references.
+All three presenter's HTML versions link to the canonical P014 runbook. The public artifact copies contain no private source-repository links or live Dynamics environment URL. Only these P-numbered paths are canonical. No old unnumbered aliases or redirects are maintained.
 
 **Maintenance:** Follow the [mandatory source and quality standard](../../docs/ARTIFACT_QUALITY_STANDARD.md). Public updates require explicit owner approval and source-fidelity, privacy, link, version, duration and grade review.
