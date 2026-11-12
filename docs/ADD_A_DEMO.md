@@ -1,62 +1,76 @@
-# Add a new P-numbered demo collection
+# Add a demo to the Demo Presenters library
 
-Read [AGENTS.md](../AGENTS.md), the [quality/source standard](ARTIFACT_QUALITY_STANDARD.md), [global registry](../artifact-registry.json) and [source-repo agent template](../templates/AGENTS.demo-presenter.md).
+This is the standard process for a **new source repository**. Start with [AGENTS.md](../AGENTS.md), [the source-readiness and grading standard](ARTIFACT_QUALITY_STANDARD.md), and [source review instructions](SOURCE_REVIEW.md).
 
-## 1. Verify source readiness before generating public content
+## 1. Review the originating repository — read-only
 
-The originating repository must already contain a credible, complete source storyline—not merely a project name. Check the **eight mandatory gates** in the quality standard: source revision; audience/persona/problem; actual or proposed screen sequence; owners/durations; speaker words and transitions; truthful capability/fallback status; public-safe extraction; **explicit approval to publish the sanitized material**.
+- Use an authorized GitHub connection to read the source repo's current `README`, source runbook, demo storyline, and latest implementation/acceptance evidence.
+- Or use the local `scripts/review-source.cjs` with a locally supplied **read-only** GitHub token. The public Pages site cannot authenticate to private repositories.
+- Confirm all **eight source-readiness inputs** from the [standard](ARTIFACT_QUALITY_STANDARD.md): origin, scenario, ordered walkthrough, owners/timebox, scripts/transitions, actual/conditional status, privacy review, and owner permission to publish.
+- If a gate is missing, record `SOURCE_NOT_READY`; do not create a guessed presentation.
+- Private links, tokens and operational logs remain **in the source repo/private handoff**, never in the public library.
 
-If a required item is absent, **stop public artifact creation** and report the specific gap to the source owner. Do not invent persona details, demo screens, claims, integrations or spoken transitions. Avoid copying the full private operational/deployment runbook.
+## 2. Allocate ONE demo ID and timeboxed child IDs
 
-## 2. Obtain unique P IDs from the owner and registry
+- The parent ID identifies the entire demo. SSA is **P010**. The next distinct demo is **P011** if still available.
+- A presenter, alternate timebox and numbered notes get child IDs such as `P011-1`, `P011-2` and `P011-3`. Revisions of the same artifact keep their ID.
+- Read [the registry](P_REGISTRY.md) and [machine-readable registry](../artifact-registry.json); obtain the owner's P parent allocation and avoid duplicates.
+- Create the collection at `demos/p011-<slug>/` (subject to actual assigned ID). The folder `index.html` is a landing page, not an alternative timebox.
 
-The owner assigns the **collection ID** and **one permanent ID per artifact**. Check [artifact-registry.json](../artifact-registry.json) to avoid overlap. Use a stable kebab-case slug and folder:
+## 3. Generate the standard files
+
+Every demo collection must contain:
 
 ```text
-demos/pNNN-<subject-slug>/
-    index.html                          # Collection home, belongs to collection P ID
-    pAAA-presenter-<minutes>min.html    # Current main presenter
-    pBBB-presenter-<minutes>min.html    # Each alternative
-    pCCC-runbook.md                    # Current public narrative source of truth
-    pDDD-presenter-<minutes>min.md     # Notes for each version, unique P ID
-    pEEE-quality.md                    # A+/A/…/F + score %
-    pFFF-manifest.json                 # IDs, filenames, grade and state
-    pGGG-README.md                     # Collection guide
+demos/pNNN-<slug>/
+  index.html                            # PNNN collection landing
+  pNNN-1-presenter-<minutes>min.html   # Numeric child ID for current presenter
+  pNNN-2-presenter-<minutes>min.html   # Optional alternate timebox
+  pNNN-3-presenter-<minutes>min.md     # A distinct child ID for a notes artifact
+  pNNN-b-runbook.md                    # PNNN-B mandatory full runbook
+  pNNN-q-quality.md                    # PNNN-Q mandatory qualitative assessment
+  pNNN-g-grade.md                      # PNNN-G mandatory letter grade
+  pNNN-s-score.json                    # PNNN-S mandatory numeric score
+  pNNN-i-improvements.md               # PNNN-I mandatory action plan
+  pNNN-r-readme.md                     # PNNN-R mandatory per-demo README
+  pNNN-m-manifest.json                 # PNNN-M mandatory artifact/variant manifest
 ```
 
-The [P010 SSA example](../demos/p010-ssa-direct-deposit/) and its [P019 manifest](../demos/p010-ssa-direct-deposit/p019-manifest.json) are the canonical reference. **No redirects or unnumbered mirrored copies are needed.**
+Numeric children are examples; allocate only actual needed files. The fixed **B/Q/G/S/I/R/M** suffixes are used for every collection and do not consume numeric child IDs. Use [SSA P010](../demos/p010-ssa-direct-deposit/) as the reference.
 
-## 3. Build the exact runbook and HTML presenters
+## 4. Runbook and HTML requirements
 
-The numbered **runbook** must specify audience, objective, initiating problem, story conclusion, source evidence, time-summed section agenda, and per-section presenter, duration, goal, what is shown, click path, copy-ready spoken lines, **exact transition**, limitations, and fallback. Include version links and quality/source states.
+- **B runbook:** audience, business problem, fictional/sanitized personas, source-readiness boundary, exact current story, one timed section per stage, each section's goal, audience highlight, click path, spoken words, next-speaker transition, fallback, and real/preview status. All chapter times must sum to the declared main duration.
+- **Every HTML:** self-contained HTML5, mobile-friendly, keyboard-usable, actual section duration, speaker words, visible highlights, next/previous navigation, fallbacks, and direct visible links to **B** runbook and its own numbered notes. Link to the collection's **Q quality**, **G grade**, **S score** and **I plan**.
+- Alternative timeboxed versions must be coherent; historical scripts should be labeled and should never silently overwrite the current story.
+- No live system integrations, writes, credentials, customer records or private source links in the public content.
 
-Every numbered **HTML** must be standalone and usable on mobile/desktop, display its P ID and timing, contain navigable timed sections and print/copy notes, show presenter-specific transitions, and link prominently to its **numbered runbook** and own numbered speaker notes. Alternate timeboxes must come from the actual source and be clearly historical where their storyline predates the current one. Do not treat mock/test evidence as live system acceptance.
+## 5. Score and propose improvements
 
-## 4. Redact, verify and score before release
+Use the [100-point seven-category A+ through F rubric](ARTIFACT_QUALITY_STANDARD.md#100-point-scoring). A new collection needs source READY and at least **80% / B−** before public publication.
 
-- Remove private source-repo URLs, Microsoft environment addresses/IDs, secrets, actual personal/customer/banking data and restricted screenshots.
-- Validate HTML/JS parse, unique IDs, links, timebox sums, manifest/registry matches, relevant accessibility and mobile behavior when tools allow.
-- Score the seven [rubric categories](ARTIFACT_QUALITY_STANDARD.md) out of **100**; record earned/max, evidence and deductions in the numbered quality report. Convert to percentage and A+–F with plus/minus as documented.
-- A new collection is publishable only if **source readiness is READY** and artifact score is **80% (B−) or higher**; a passing grade does not mean bot routing, transaction or production service is accepted.
-- Check all file URLs and score values from the public chart and manifest, keeping unverified browser tests explicitly unverified.
+- **Q:** category earned/max, evidence and deductions, review limitations.
+- **G:** letter grade and exact band.
+- **S:** category scores, total earned/max and percentage as machine-readable JSON.
+- **I:** **exactly two short bullets under each of seven categories**: **Why** points were earned/lost; **Improve** one concrete action. Also separate any proposed improvements to the original demo implementation from updates to the HTML/runbook. No essay or unverified fix claims.
+- Ensure Q, G, S, I and M link to the same reviewed version. Any rescore must be evidence-based, not automatic inflation.
 
-## 5. Publish only after owner authorization
+## 6. Get approval for the PUBLIC release
 
-Confirm which sanitized files will become public. Require owner permission for this specific public change, not just permission to edit the private source project. Commit only authorized files, read them back, update the catalog and registry, and report whether GitHub Pages is live **separately** from source publication.
+Show the owner what will be public, the redactions, IDs, timebox URLs, source-readiness and score. Require explicit permission **for that exact public delta**, even when the underlying source work was previously authorized. Never automatically mirror private repos or deploy original project resources.
 
-No automatic cross-repo mirroring or deployment.
+After approval, commit sanctioned content, read it back, validate relative links, update the global catalog and both registries. GitHub Pages activation/live-site behavior must be checked separately.
 
-## 6. Link from originating private repositories
+## 7. Link from the originating private repository
 
-After permission, point their README/demo guide at the P-numbered public collection and presenter. Do not link publicly back into private code. Example:
+With permission, link **out** from the private repo's README/runbook to the public library. Do not publish a link back to a private source repo. Example:
 
-```md
-- [Demo presenter library](https://bradlaw76.github.io/bradlaw76-demopresenter/)
+- [Demo catalog](https://bradlaw76.github.io/bradlaw76-demopresenter/)
 - [SSA collection P010](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/)
-- [SSA 40-minute P011](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p011-presenter-40min.html)
-- [SSA runbook P014](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p014-runbook.md)
-```
+- [SSA presenter P010-1](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p010-1-presenter-40min.html)
+- [SSA runbook P010-B](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p010-b-runbook.md)
+- [SSA improvement plan P010-I](https://bradlaw76.github.io/bradlaw76-demopresenter/demos/p010-ssa-direct-deposit/p010-i-improvements.md)
 
-## 7. GitHub Pages activation
+## 8. Activate Pages
 
-On public repository [Settings → Pages](https://github.com/bradlaw76/bradlaw76-demopresenter/settings/pages), select **Deploy from a branch**, **main**, **/(root)**, then Save. Verify GitHub's deployment success and the public site. A pushed commit alone does not establish that Pages is running.
+On [GitHub Pages settings](https://github.com/bradlaw76/bradlaw76-demopresenter/settings/pages), select `Deploy from a branch` → `main` → `/(root)`, then Save. Verify an actual deployment before stating the site is live.
