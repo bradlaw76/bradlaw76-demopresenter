@@ -12,7 +12,7 @@ The improvements below concern **presentation quality**, not whether Dynamics, c
 
 ### 2. Storyline, goals and transitions — 19/20
 - **Why:** The chat handoff, two Contact forms and seven question cues are scripted; the new Copy buttons and chat-history drill-in lack browser validation.
-- **Improve:** Test both Copy buttons, the live handoff, optional Intent/Case Agent cues and the Contact chat-history drill-in.
+- **Improve:** Rehearse the visible Intent-based suggestion, editing guidance in chat, the Copy buttons and the Contact chat-history drill-in. Keep Case creation conditional.
 
 ### 3. Runbook completeness and presenter utility — 13/15
 - **Why:** HTML, runbook and notes now match the portal/chat and current Case storyline; historical variants remain separate.
@@ -42,7 +42,7 @@ The improvements below concern **presentation quality**, not whether Dynamics, c
 - **Case resolution:** Keep Case CAS-01523-T1R7X6 open and distinguish pending authorization from the older Case's Review & Resolution example.
 
 **Public presenter HTML / talk track (library changes)**
-- **Script:** Rehearse two pasted customer lines, agent controls, Timeline/chat-history highlight and standard-to-SSA form switch.
+- **Script:** Rehearse the two pasted citizen messages, right-side Intent suggestion to left-side editable reply, Timeline history and two Contact forms.
 - **Timeboxes:** Align historical 13- and 52-minute notes with the current seven-section narrative, or label differences explicitly.
 - **QA:** Check the two copy buttons, mobile layout, keyboard controls, timers and all public runbook/notes links.
 
