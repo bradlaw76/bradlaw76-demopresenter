@@ -1,29 +1,28 @@
-# Reusable demo-presenter integration — add to a SOURCE repository's AGENTS.md
+# Source-repository agent guidance — Demo Presenter library
 
-> **Template only.** Merge these instructions into the source repository's existing `AGENTS.md` or linked agent policy; never replace current security, production deployment, or handoff instructions.
+Add this guidance to the **existing** source repository agent policy. Preserve any stronger security, approval, handoff or deployment controls.
 
-## Public presenter library
+## Canonical library and quality contract
 
-The external public presenter library lives at:
+- Public library: `bradlaw76/bradlaw76-demopresenter`
+- Website (when enabled): `https://bradlaw76.github.io/bradlaw76-demopresenter/`
+- Source-readiness, HTML/runbook requirements and grading rubric: `docs/ARTIFACT_QUALITY_STANDARD.md` in the library repository.
+- Example: P010 SSA Direct Deposit collection with P011 presenter, P014 runbook, P018 **89% · B+** quality assessment.
 
-- Repository: `bradlaw76/bradlaw76-demopresenter`
-- Site (when Pages is enabled): `https://bradlaw76.github.io/bradlaw76-demopresenter/`
+## Mandatory workflow for a new source project
 
-This project may have a private source demo script/runbook. The **public** presenter uses a sanitized, presentation-only copy under `demos/<slug>/` in the library repo.
+1. Keep the originating repository **authoritative** for demo implementation, detailed source status and private technical evidence.
+2. Confirm the source has the full approved story: audience, business use case, persona, goal, screen sequence, speaker owners, actual clicks, spoken lines, exact transitions, truthful integration limitations, fallback and desired timed variants. **No public artifact generation before all eight source-readiness checks pass.**
+3. Request a unique permanent **P collection ID and artifact IDs from the owner**; check the library registry. Do not select/reuse an ID autonomously.
+4. Prepare **sanitized** standalone HTML presenter(s), a complete section-by-section Markdown runbook, named timed notes, a P-numbered manifest, a P-numbered quality scorecard and a P-numbered collection guide.
+5. Every HTML version must **visibly link to its own P-numbered runbook and its own numbered speaker notes**; its sections/length must match the approved source. Historical variants must be labeled.
+6. Remove source-private GitHub URLs, environment/domain IDs, credentials, real data and implementation details before preparing a public preview. Never promote a staged capability into an asserted live success.
+7. Calculate grade using the library's **100-point seven-category rubric**, showing exact points, percentage and A+–F +/- letter; new public content needs at least **80% (B−)** and source READY.
+8. Obtain the owner's explicit approval for the **specific public release**, then update only the approved files and library catalog/registry. **No automatic public sync or live environment writes.**
+9. After public publication, link to the permanent P-numbered URLs from the private README/runbook when permitted.
 
-## Publishing contract for this source repository
+## Agent prompt for a new demo
 
-1. Keep this source project as the authority for implementation status, scripts, review evidence, approvals and full operational runbooks.
-2. For any new presenter or update, first identify the canonical source revision and the requested demo slug.
-3. Prepare public-safe static HTML and public runbook without publishing secrets, app/tenant IDs, real data, Dynamics/Power Pages environment URLs or internal project links.
-4. Use standard library names: `index.html`, `runbook.md`, `README.md`, `manifest.json`, `presenter-<N>min.html` and `presenter-<N>min.md`.
-5. Preserve the verified actual story, section goals, speaking notes and transitions. For unaccepted integrations, include clearly labeled rehearsal fallbacks.
-6. Provide the owner with a short source revision + public-content/redaction summary and request **explicit permission to update the public library**.
-7. After approval, publish only the sanctioned public copy to the library and verify readback. No automatic cross-repo publishing or syncing without separately authorized process.
-8. Update this private repo's README/runbook links to the public presenter only with owner permission; don't insert private repo links into public HTML.
+“Read this repository's own AGENTS and its authoritative demo source, then apply the Demo Presenters public-library quality and P-number requirements. First prove all eight source-readiness inputs exist; if not, report gaps without inventing a demo. Ask the owner to allocate unique P IDs. Build a sanitized, source-faithful public runbook and static timed HTML variants with clear goals, clicks, scripts, transitions, fallbacks and linked notes. Score the artifact set with the A+–F 100-point rubric. Request explicit public-release approval before committing anything to the public library.”
 
-## Prompt for a new demo agent
-
-"Read the current source repo AGENTS and demo runbook, then follow the central Demo Presenters library contract. Prepare a sanitized public presentation folder for `<demo-slug>` with current `index.html`, `runbook.md`, `manifest.json`, and requested `presenter-<N>min` timeboxes. Do not expose private source or perform live operations. Validate links and syntax. Show the publication/redaction summary and request explicit owner approval before committing into the public library."
-
-Project deployment permissions never imply permission to publish source artifacts publicly.
+Do not replace existing project security or source ownership rules.
