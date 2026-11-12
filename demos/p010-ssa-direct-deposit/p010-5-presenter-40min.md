@@ -20,7 +20,7 @@ Download/open the HTML in a modern browser; it works offline except for links to
 - Explicit conditional/live boundaries and a safe fallback for each chapter.
 - Preflight checklist, printable presenter notes and copyable cue sheet.
 
-The **original full playbook** in [PR #2](p010-b-runbook.md), November 11 [master runbook](p010-b-runbook.md), and the **H083 13-minute dry-run** in [PR #30](p010-b-runbook.md) are preserved and unchanged. This is a separate day-of-demonstration tool.
+The [P010-B master runbook](p010-b-runbook.md) is the current public reference. Earlier source playbooks and PR evidence remain in the originating project; the [historical 13-minute presenter](p010-2-presenter-13min.html) is retained here for rehearsal.
 
 ## Seven-chapter show order — November 11 revised
 
@@ -97,4 +97,4 @@ Don't create a duplicate Case for the presentation or claim the protected bank u
 
 Capture evidence and questions separately from the presentation guide. Future work can reconcile actual screenshots into the seven-chapter click path. Do not treat this guide as another requirements backlog, an installation package or deployment authorization.
 
-**Reference links:** [Full 17-scene H034 playbook](p010-b-runbook.md) · [Master runbook PR #11](p010-b-runbook.md) · [H083 dry-run PR #30](p010-b-runbook.md) · [H079 banking PR #26](p010-b-runbook.md) · [H071 reports PR #16](p010-b-runbook.md) · [H082 TED PR #29](p010-b-runbook.md)
+**Public reference links:** [P010-B current runbook](p010-b-runbook.md) · [P010-2 historical rehearsal](p010-2-presenter-13min.html) · [P010-3 detailed historical walkthrough](p010-3-presenter-52min.html) · [P010-I improvements](p010-i-improvements.md). Original implementation and PR references are not part of this public library.

@@ -19,7 +19,7 @@ The public GitHub Pages site **cannot** fetch private repo files directly; it ha
 
 ## Required source-readiness evidence
 
-Before producing an artifact, confirm all eight [source-readiness gates](ARTIFACT_QUALITY_STANDARD.md#source-readiness-gate): authoritative origin/revision; business scenario; ordered walkthrough; speaker ownership and timeboxes; presenter words and transitions; implementation/live-acceptance truth; public privacy; and explicit permission to publish the sanitized copy.
+Before producing an artifact, confirm all eight [source-readiness gates](ARTIFACT_QUALITY_STANDARD.md#2-source-readiness-gate-no-empty-or-invented-presentations): authoritative origin/revision; business scenario; ordered walkthrough; speaker ownership and timeboxes; presenter words and transitions; implementation/live-acceptance truth; public privacy; and explicit permission to publish the sanitized copy.
 
 Keep private links, source commit IDs and any sensitive review notes **in the originating repository or private handoff**, not in public manifest, presenter, quality scorecard or catalog. Public grading may describe source **types** and assurance limits without exposing private URLs or records.
 
@@ -34,6 +34,6 @@ Provide a private owner-facing summary that includes:
 - Public-redaction checklist and publication-ready artifact mapping
 - Approval status for the **exact public change**
 
-After the owner approves sanitized publication, create or update only canonical `demos/pNNN-slug/pNNN-...` artifacts and update the [P registry](P_REGISTRY.md). Run static checks and score the public artifacts using the [100-point rubric](ARTIFACT_QUALITY_STANDARD.md#100-point-scoring).
+After the owner approves sanitized publication, create or update only canonical `demos/pNNN-slug/pNNN-...` artifacts and update the [P registry](P_REGISTRY.md). Run static checks and score the public artifacts using the [100-point rubric](ARTIFACT_QUALITY_STANDARD.md#5-the-per-demo-score-grade-and-improvements).
 
 **No automatic mirroring:** changes to a source repo are not permission to update the public library. No scheduled private repo monitoring or cross-repo sync should be installed by default.

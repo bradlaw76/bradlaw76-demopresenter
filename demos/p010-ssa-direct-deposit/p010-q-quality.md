@@ -40,7 +40,7 @@ The originating SSA demo project supplied the complete master storyline, detaile
 | Visual design and accessibility | **11** | 15 | Standalone responsive CSS and keyboard-related controls present; no independent full visual, mobile, contrast or keyboard acceptance of public copies |
 | Technical integrity and variants | **9** | 10 | 3 HTML scripts parsed, 40-minute main durations sum, variant notes/runbook links checked; live browser navigation not rerun |
 | Public privacy and no-false-claim safeguards | **9** | 10 | Sanitized project URLs and internal identifiers, fictional names, no live writes; independent broad privacy review not performed |
-| Maintainability and reusable standards | **4** | 5 | Permanent P010–P010-R registry, canonical filenames, manifest and aliases; future automatic link validation not yet established |
+| Maintainability and reusable standards | **4** | 5 | Permanent P010 collection and fixed-suffix registry, canonical filenames and manifest; future automatic link validation not yet established |
 | **Total** | **89** | **100** | **89% · B+** |
 
 **Calculation:** 24 + 19 + 13 + 11 + 9 + 9 + 4 = **89 / 100 = 89%**, mapping to **B+ (87–89)** under the [A+ through F rubric](../../docs/ARTIFACT_QUALITY_STANDARD.md).

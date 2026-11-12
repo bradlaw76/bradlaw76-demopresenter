@@ -21,7 +21,10 @@ This is the public, sanitized **standard example** for reusable demo-presenter p
 | **P010-6** | Short rehearsal notes | [p010-6-presenter-13min.md](p010-6-presenter-13min.md) | 13 min |
 | **P010-7** | Detailed rehearsal notes | [p010-7-presenter-52min.md](p010-7-presenter-52min.md) | 52 min |
 | **P010-Q** | Graded artifact scorecard | [p010-q-quality.md](p010-q-quality.md) | **89% · B+** |
-| **P010-M** | Machine-readable manifest | [p010-m-manifest.json](p010-m-manifest.json) | Schema v2 |
+| **P010-G** | Letter grade | [p010-g-grade.md](p010-g-grade.md) | B+ |
+| **P010-S** | Numeric score | [p010-s-score.json](p010-s-score.json) | 89/100 |
+| **P010-I** | Improvement plan | [p010-i-improvements.md](p010-i-improvements.md) | Seven Why / Improve pairs |
+| **P010-M** | Machine-readable manifest | [p010-m-manifest.json](p010-m-manifest.json) | Schema v4 |
 | **P010-R** | This collection documentation | [p010-r-readme.md](p010-r-readme.md) | Current |
 
 ## Current seven-section journey
@@ -47,6 +50,7 @@ All three presenter's HTML versions link to the canonical P010-B runbook. The pu
 - [P010-Q — Quality review](p010-q-quality.md)
 - [P010-G — Letter grade](p010-g-grade.md)
 - [P010-S — Numeric score](p010-s-score.json)
+- [P010-I — Improvement plan](p010-i-improvements.md)
 - [P010-M — Manifest](p010-m-manifest.json)
 
 All standard artifacts are **children of collection P010**, not independent demo IDs. Future demo P011 follows the same suffix contract.

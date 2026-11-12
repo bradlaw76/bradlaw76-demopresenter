@@ -13,7 +13,7 @@
 **[SSA Direct Deposit — Dry-Run Playbook (standalone HTML)](p010-2-presenter-13min.html)**  
 The HTML file opens locally in any modern browser. It contains seven guided scenes, a timer, presenter talk track, exact clicks, safe fallback, handoff language, printable notes, and locally saved checklist marks. It does **not** connect to Dynamics or change data.
 
-The [full 17-scene playbook in PR #2](p010-b-runbook.md) remains intact. This dry-run version is deliberately not a replacement.
+The [P010-B current runbook](p010-b-runbook.md) governs the approved seven-section storyline. This historical dry-run is not its replacement; the original 17-scene source playbook remains with the originating project.
 
 ## Today's objective
 
@@ -81,4 +81,4 @@ Seven chapters can still require roughly 10–12 actual Dynamics/portal views. T
 
 After Brad shares the built screens, reconcile this seven-chapter route against **actual screenshot order** and the full runbook. Reduce screen changes by clustering Contact features, Case/banking features and reporting, without changing protected behavior or inventing integrations. The dry-run guide should not be expanded into another feature backlog.
 
-**References:** [Master runbook PR #11](p010-b-runbook.md) · [Full playbook PR #2](p010-b-runbook.md) · [Elena portal PR #20](p010-b-runbook.md) · [Banking field PR #26](p010-b-runbook.md) · [TED integration PR #29](p010-b-runbook.md)
+**Public references:** [P010-B current runbook](p010-b-runbook.md) · [P010-1 main presenter](p010-1-presenter-40min.html) · [P010-I improvements](p010-i-improvements.md). Detailed source PRs and implementation evidence remain with the originating project.

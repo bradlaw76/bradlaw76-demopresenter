@@ -47,7 +47,7 @@ Numeric children are examples; allocate only actual needed files. The fixed **B/
 
 ## 5. Score and propose improvements
 
-Use the [100-point seven-category A+ through F rubric](ARTIFACT_QUALITY_STANDARD.md#100-point-scoring). A new collection needs source READY and at least **80% / B−** before public publication.
+Use the [100-point seven-category A+ through F rubric](ARTIFACT_QUALITY_STANDARD.md#5-the-per-demo-score-grade-and-improvements). A new collection needs source READY and at least **80% / B−** before public publication.
 
 - **Q:** category earned/max, evidence and deductions, review limitations.
 - **G:** letter grade and exact band.
