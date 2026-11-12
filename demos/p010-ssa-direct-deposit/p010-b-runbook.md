@@ -34,6 +34,8 @@
 
 **Presenter rhythm:** One or two important capabilities per screen, actual actions, a brief question checkpoint and the next spoken transition. Do not tour every portal tab or workspace option.
 
+**On-stage P010-1 layout:** Read the new spoken section introduction, use the highlighted talk-track bullets, then deliver the expanded spoken audience takeaway. The next-section transition precedes the invitation for questions. Live-path fallback and truth-boundary guidance remain available in collapsed disclosures at the bottom of the respective content areas; the truth boundary is below the next-chapter controls. The original fuller scripts and safety context in this runbook remain available for rehearsal.
+
 **Two citizen chat messages:** P010-1 has dedicated Copy buttons. Only the customer sentence is copied, with normal ASCII punctuation and no “You said” label or formatting.
 
 > I see a notice when logged into the mySSA portal that my direct deposit change needs additional verification. Can you explain what that means?
