@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Demo Presenters | Presentation Library</title>
+<meta name="description" content="Interactive presenter walkthroughs, time-boxed demos and speaker runbooks.">
+<style>
+:root{--navy:#102d4d;--blue:#1269ad;--ink:#203246;--muted:#63758a;--line:#dce5ef;--soft:#edf5fb;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:#f6f9fc;color:var(--ink);font:16px/1.55 system-ui,"Segoe UI",sans-serif}
+header{background:linear-gradient(120deg,#0b2644,#185580);color:#fff;padding:56px 24px 66px}
+.container{width:min(1100px,calc(100% - 40px));margin:auto}.kicker{font-size:12px;font-weight:750;letter-spacing:.15em;text-transform:uppercase;color:#99d6ff}
+h1{font-size:clamp(30px,5vw,53px);line-height:1.12;letter-spacing:-.035em;margin:10px 0 18px}
+header p{max-width:700px;color:#d8eafb;font-size:18px;margin:0}
+main{margin-top:-24px;padding-bottom:60px}h2{font-size:24px;margin:34px 0 15px;letter-spacing:-.02em}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+article{background:#fff;border:1px solid var(--line);border-radius:17px;padding:25px;box-shadow:0 7px 24px #123c640c}
+.pill{display:inline-block;font-weight:750;font-size:12px;color:#16557e;background:var(--soft);padding:5px 10px;border-radius:100px}
+h3{margin:17px 0 7px;font-size:22px}p{margin:8px 0;color:var(--muted)}
+a{color:var(--blue)}a:focus-visible{outline:3px solid #f2b942;outline-offset:3px}
+.primary{display:inline-block;background:var(--blue);color:white;border-radius:9px;text-decoration:none;font-weight:700;padding:11px 17px;margin:14px 0 8px}
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}.links a{font-weight:650;font-size:14px}
+.meta{font-size:13px;color:#496680}.info{margin-top:32px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:17px 20px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:#687888;font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="container"><div class="kicker">Reusable demo presentation library</div><h1>Demo Presenters</h1><p>Interactive walkthroughs with presenter scripts, guided transitions, timed versions and ready-to-use runbooks. Choose a demo below.</p></div></header>
+<main class="container">
+<h2>Available demos</h2>
+<div class="grid">
+<article>
+<span class="pill">Dynamics 365 · Copilot Studio</span>
+<h3>SSA Direct Deposit</h3>
+<p>Fictional constituent journey from a portal verification alert through chat, Contact, Case review, reporting and governance.</p>
+<a class="primary" href="demos/ssa-direct-deposit/">Open 40-minute presenter</a>
+<div class="meta">Other walkthroughs</div>
+<div class="links"><a href="demos/ssa-direct-deposit/presenter-13min.html">13-minute rehearsal</a><a href="demos/ssa-direct-deposit/presenter-52min.html">52-minute detailed walkthrough</a><a href="demos/ssa-direct-deposit/runbook.md">Full presenter runbook</a></div>
+</article>
+</div>
+<section class="info"><strong>A repeatable structure for future demonstrations</strong><p>Each demo has a stable folder, a main presenter, optional time-boxed versions and a standalone runbook. New demo projects can use the repository's agent instructions and publishing template.</p><div class="links"><a href="README.md">Library guide</a><a href="docs/ADD_A_DEMO.md">Add a new demo</a></div></section>
+</main>
+<footer><div class="container">Presentation examples only. They are not connected to live agency, identity, banking or CRM systems.</div></footer>
+</body></html>
