@@ -129,5 +129,22 @@
     "id": "P010-I",
     "path": "p010-i-improvements.md",
     "format": "per-rubric short why-and-improve bullets"
+  },
+  "narrative_revision": {
+    "reviewed_on": "2026-11-12",
+    "artifacts": [
+      "P010-1",
+      "P010-B",
+      "P010-5"
+    ],
+    "updates": [
+      "owner-confirmed live chat path",
+      "two Contact forms",
+      "Case CAS-01523-T1R7X6",
+      "seven section Q&A cues",
+      "CRM reporting vs contact-center reporting"
+    ],
+    "score_change": 0,
+    "reason": "browser/mobile/accessibility validation and historical alternatives still pending"
   }
 }
