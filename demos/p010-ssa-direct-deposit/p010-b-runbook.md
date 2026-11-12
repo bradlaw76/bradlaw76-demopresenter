@@ -23,18 +23,18 @@
 
 | # | Presenter | Section | Minutes | Objective |
 | --- | --- | --- | ---: | --- |
-| 1 | Daniel (independent) → Brad | Daniel → Brad · Omnichannel bridge | **5** | Bridge into Brad's separate chat demonstration without presuming what Daniel showed. |
-| 2 | Brad · digital engagement | Elena · Digital portal and Copilot chat | **5** | Show the Overview verification notice, briefly visit Direct Deposit, then send two copyable constituent messages and request a human representative. |
-| 3 | Brad · Customer Service workspace | Dynamics · Live representative conversation | **4** | Accept the live chat and briefly introduce the representative's summary, response, consult and transfer controls, without a feature-by-feature tour. |
+| 1 | Daniel (independent) → Brad | Daniel → Brad · Omnichannel bridge | **2** | Bridge into Brad's separate chat demonstration without presuming what Daniel showed. |
+| 2 | Brad · digital engagement | Elena · Digital portal and Copilot chat | **6** | Show Overview, the verification notice, Direct Deposit context, two constituent messages and human assistance. |
+| 3 | Brad · Customer Service workspace | Dynamics · Live representative conversation | **8** | Point to communication controls, summaries, response tools, Intent guidance, custom sidebar and reused assistant. |
 | 4 | Brad · Contact | Contact · Standard and SSA-specific experiences | **8** | Show the same Elena Contact in two forms, emphasizing the Timeline and a stored chat activity if one actually exists. |
 | 5 | Brad · Case | Case · Cross-system information and controlled decisions | **10** | Keep the Case within ten minutes by emphasizing the overview, Direct Deposit status, one external-information example, recommendations and human review. |
 | 6 | Brad · CRM reporting | CRM dashboards · Agent and supervisor work | **4** | Show agent and supervisor visibility into everyday Case and activity work, not contact-center performance metrics. |
-| 7 | Brad → Beth | Omnichannel close · Hand off to Beth | **4** | Close Brad's service journey and introduce possible channel extensibility without scripting Beth's part. |
+| 7 | Brad → Beth | Omnichannel close · Hand off to Beth | **2** | Close Brad's service journey and introduce possible channel extensibility without scripting Beth's part. |
 | | | **Total** | **40** | Brief audience questions are included |
 
 **Presenter rhythm:** One or two important capabilities per screen, actual actions, a brief question checkpoint and the next spoken transition. Do not tour every portal tab or workspace option.
 
-**On-stage P010-1 layout:** Read the new spoken section introduction, use the highlighted talk-track bullets, then deliver the expanded spoken audience takeaway. The next-section transition precedes the invitation for questions. Live-path fallback and truth-boundary guidance remain available in collapsed disclosures at the bottom of the respective content areas; the truth boundary is below the next-chapter controls. The original fuller scripts and safety context in this runbook remain available for rehearsal.
+**On-stage P010-1 layout:** Begin with the spoken introduction, then follow each timed **Point / click / show → Say this → Why it matters** stop. Each target duration includes real navigation, observation pauses, transitions and brief questions—not simply reading a script aloud. The older narrative is collapsed as an optional rehearsal reference. Deliver the expanded spoken takeaway and next-section transition before the audience checkpoint. Live-path fallback and truth-boundary guidance remain collapsed. The original fuller scripts and safety context in this runbook remain available for rehearsal.
 
 **Two citizen chat messages:** P010-1 has dedicated Copy buttons. Only the customer sentence is copied, with normal ASCII punctuation and no “You said” label or formatting.
 
@@ -44,7 +44,7 @@
 
 The configured chat assistant responds automatically; do not type a redundant agent reply to fill airtime.
 
-### 1. Daniel → Brad · Omnichannel bridge — 5 minutes
+### 1. Daniel → Brad · Omnichannel bridge — 2 minutes
 
 **Owner:** Daniel (independent) → Brad  
 **Goal:** Bridge into Brad's separate chat demonstration without presuming what Daniel showed.  
@@ -80,7 +80,7 @@ The configured chat assistant responds automatically; do not type a redundant ag
 **Fallback:** If Daniel's topic changes, simply say: Thanks, Daniel. I'll show another channel and how that interaction fits into a consistent service process.
 
 
-### 2. Elena · Digital portal and Copilot chat — 5 minutes
+### 2. Elena · Digital portal and Copilot chat — 6 minutes
 
 **Owner:** Brad · digital engagement  
 **Goal:** Show the Overview verification notice, briefly visit Direct Deposit, then send two copyable constituent messages and request a human representative.  
@@ -132,7 +132,7 @@ The configured chat assistant responds automatically; do not type a redundant ag
 **Fallback:** If the assistant response or transfer is delayed, show the intended response as a labeled rehearsal example; switch to a prepared representative only after identifying the fallback.
 
 
-### 3. Dynamics · Live representative conversation — 4 minutes
+### 3. Dynamics · Live representative conversation — 8 minutes
 
 **Owner:** Brad · Customer Service workspace  
 **Goal:** Use the live chat scenario to showcase the broader agent workspace: support for chat and telephony, practical productivity tools, and embedded Copilot assistance.
@@ -306,7 +306,7 @@ The configured chat assistant responds automatically; do not type a redundant ag
 **Fallback:** If a chart is empty, describe the operational perspective instead of inventing a number.
 
 
-### 7. Omnichannel close · Hand off to Beth — 4 minutes
+### 7. Omnichannel close · Hand off to Beth — 2 minutes
 
 **Owner:** Brad → Beth  
 **Goal:** Close Brad's service journey and introduce possible channel extensibility without scripting Beth's part.  
