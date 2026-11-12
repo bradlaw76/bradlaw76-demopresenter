@@ -34,7 +34,7 @@ The P010-1 HTML, P010-B runbook and P010-5 speaker notes now follow the same cas
 
 [P010-I · Per-criterion improvement plan](p010-i-improvements.md) — seven concise reasons and corrective actions, one per rubric category.
 
-**Portal/chat supplement (November 12):** The current P010-1/B/5 set now includes Overview → Direct Deposit → chat; two ASCII citizen prompts with individual Copy controls; automatic assistant reply; a representative-workspace control summary; conditional Intent and Case Management Agent cues; and Contact Timeline history with an optional actual stored chat record. The Contact and Case sections rebalance to 8 and 10 minutes, keeping the total at 40. The 89% / B+ grade is unchanged pending browser/mobile validation.
+**Portal/chat supplement (November 12):** The current P010-1/B/5 set now includes Overview → Direct Deposit → chat; two ASCII citizen prompts with individual Copy controls; automatic assistant reply; a representative-workspace control summary; an observed right-side Intent-based suggestion (Issue: SSA FAQ), editable representative response guidance, conditional Case Management Agent creation; and Contact Timeline history with an optional actual stored chat record. The Contact and Case sections rebalance to 8 and 10 minutes, keeping the total at 40. The 89% / B+ grade is unchanged pending browser/mobile validation.
 
 ## Graded categories
 
