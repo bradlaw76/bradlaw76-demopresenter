@@ -34,7 +34,7 @@
 
 **Presenter rhythm:** One or two important capabilities per screen, actual actions, a brief question checkpoint and the next spoken transition. Do not tour every portal tab or workspace option.
 
-**On-stage P010-1 layout:** Begin with the spoken introduction, then follow each timed **Point / click / show → Say this → Why it matters** stop. Each target duration includes real navigation, observation pauses, transitions and brief questions—not simply reading a script aloud. The older narrative is collapsed as an optional rehearsal reference. Deliver the expanded spoken takeaway and next-section transition before the audience checkpoint. Live-path fallback and truth-boundary guidance remain collapsed. The original fuller scripts and safety context in this runbook remain available for rehearsal.
+**On-stage P010-1 layout:** Begin with the spoken introduction, then follow each timed **Point / click / show → Say this → Why it matters** stop. The individual **DONE** buttons retain stop completion in that browser only. The next-section transition sits directly below the walkthrough; the audience takeaway and question checkpoint remain below. In Chapter 3, short workspace talking points are incorporated into the appropriate stops, not duplicated in another card. Each target duration includes navigation, observation pauses, transitions and brief questions—not simply reading a script aloud. The older narrative, live-path fallback and truth-boundary guidance remain collapsed for optional reference.
 
 **Two citizen chat messages:** P010-1 has dedicated Copy buttons. Only the customer sentence is copied, with normal ASCII punctuation and no “You said” label or formatting.
 
