@@ -88,7 +88,7 @@ Grade the **collection's presenter/runbook artifact set** out of **100**, not it
 **-Q Quality:** record earned/max and one brief reason for each category, evidence, test caveats and linked corrective actions.  
 **-G Grade:** display letter/percentage and explain the deterministic percentage band. **Must link to -I.**  
 **-S Score:** JSON numeric total, per-criterion earned/max and `improvements.path` linked to the fixed -I Markdown.  
-**-I Improvements (mandatory):** exactly **one "Why" bullet and one "Improve" bullet for each of seven criteria**, both concise and actionable. Link -I from -Q, -G, -S, collection -R, collection homepage and root tracking chart. Don't duplicate full explanations across the score and improvement documents.
+**-I Improvements (mandatory):** exactly **one "Why" bullet and one "Improve" bullet for each of seven criteria**, both concise and actionable. Link -I from -Q, -G, -S, collection -R, collection homepage and root tracking chart. Don't duplicate full explanations across the score and improvement documents. After the seven scored criteria, provide two short groups of bullets: **Originating demo / workflow improvements** (source-system suggestions only) and **HTML presenter / runbook improvements** (talk track, timing, usability and file links). Recommendations do not authorize deployment or publication.
 
 ### Grade conversion
 
