@@ -1,9 +1,11 @@
-# Demo Presenters repository — read first
+# Demo Presenters — source-ready, graded, P-numbered
 
-Read [AGENTS.md](../AGENTS.md) and [docs/ADD_A_DEMO.md](../docs/ADD_A_DEMO.md) before working on this repository.
+Before working, read root [AGENTS.md](../AGENTS.md), [docs/ARTIFACT_QUALITY_STANDARD.md](../docs/ARTIFACT_QUALITY_STANDARD.md), [docs/ADD_A_DEMO.md](../docs/ADD_A_DEMO.md), and [artifact-registry.json](../artifact-registry.json).
 
-**This repository is public.** Never sync private project content, tenant/organization IDs, credentials, environment URLs, actual citizen data, internal GitHub links or backend deployment artifacts without a sanitized preview and explicit approval to publish publicly.
+This is a **public presentation-only** repository. Never copy private project URLs, tenant/app/user IDs, credentials, protected data, real customer account details or technical deployment history into public files. Source-change permission does not imply public-release permission.
 
-Use the standard `demos/<slug>/` layout, preserve the primary `index.html`, timeboxed `presenter-<N>min.html` and `.md`, `runbook.md`, and `manifest.json`. Keep catalog links correct.
+**P IDs are mandatory for every demo collection and artifact.** The first completed example is `demos/p010-ssa-direct-deposit/` (P010), with current P011 presenter, P014 runbook and P018 quality report. New IDs are assigned by the owner only; do not assign/recycle them yourself.
 
-No automatic private-to-public sync, no background publishing and no live external-system changes. Source changes and public presentation updates are distinct approvals.
+Use P-numbered canonical files and URLs—no unnumbered copies or redirects. Every HTML presenter must link visibly to its P-numbered runbook and own numbered notes. Generate only after the originating repository satisfies the eight-item source-readiness gate, then produce source-faithful storyline, section-level goals/screens/clicks/scripts/transitions/fallbacks, timed variants and a 100-point A+–F grade/percentage scorecard.
+
+Keep `README.md` Current demo library chart, `index.html` catalog, `artifact-registry.json` and the collection manifest synchronized. Validate syntax, duration sums, link targets and privacy; disclose missing browser visual acceptance. Do not auto-sync private sources, publish privately sourced data without explicit owner authorization, or perform live external-system changes.
