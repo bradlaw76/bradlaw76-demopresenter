@@ -6,7 +6,7 @@ This is an assessment of the **source-supported public presenter and runbook set
 
 [P010-I · Improvement plan](p010-i-improvements.md) — one short “why” and “improve” pair for each scoring category.
 
-**Latest content review:** The November 12 portal/chat supplement adds two copyable customer messages, agent-tool highlights, conditional Case Management/Intent Agent cues, and Contact Timeline/chat history. The 40-minute budget is preserved. **B+ / 89% remains unchanged** without new browser and accessibility evidence.
+**Latest content review:** The November 12 portal/chat supplement adds two copyable customer messages, agent-tool highlights including the screenshot-verified Intent-based suggestion, Case Management Agent creation still conditional, and Contact Timeline/chat history. The 40-minute budget is preserved. **B+ / 89% remains unchanged** without new browser and accessibility evidence.
 
 ## Grade derivation
 
