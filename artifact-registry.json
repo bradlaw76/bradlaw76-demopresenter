@@ -99,6 +99,7 @@
       ]
     }
   ],
-  "previous_unversioned_urls_remain": "legacy-aliases",
-  "no_automatic_public_sync": true
+  "no_automatic_public_sync": true,
+  "redirects_required": false,
+  "canonical_folder_policy": "P-numbered URLs only; unnumbered copies retired without redirects"
 }
