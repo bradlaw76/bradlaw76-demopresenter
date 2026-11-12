@@ -189,6 +189,16 @@
       "visual_pane": "right-side Copilot",
       "use": "representative may adapt suggested guidance in left-side conversation before sending",
       "capture_status": "owner screenshot"
+    },
+    "custom_agent_sidebar": {
+      "section": 3,
+      "sequence": [
+        "Intent-based suggestions near end",
+        "Custom SSA Agent Support sidebar",
+        "my Social Security Assistant final highlight"
+      ],
+      "same_public_agent": "owner-confirmed designation; source-specific access not implied",
+      "case_management_agent_creation": "conditional"
     }
   }
 }
