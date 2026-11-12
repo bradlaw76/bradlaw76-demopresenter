@@ -1,10 +1,10 @@
-> **Historical rehearsal reference:** This alternative predates the current seven-section flow. Follow P010-4 for current speaker/feature acceptance boundaries.
+> **Historical rehearsal reference:** This alternative predates the current seven-section flow. Follow P010-B for current speaker/feature acceptance boundaries.
 
-> **P010-7 · 52-minute version notes.** [Open this presenter](p010-3-presenter-52min.html) · [Canonical P010-4 runbook](p010-4-runbook.md) · [SSA collection](index.html) · [P010-8 score](p010-8-quality.md).
+> **P010-7 · 52-minute version notes.** [Open this presenter](p010-3-presenter-52min.html) · [Canonical P010-B runbook](p010-b-runbook.md) · [SSA collection](index.html) · [P010-Q quality](p010-q-quality.md) · [P010-G grade](p010-g-grade.md) · [P010-S score](p010-s-score.json).
 
 # SSA Direct Deposit — 52-minute Detailed Presenter Notes
 
-[Open 52-minute interactive walkthrough](p010-3-presenter-52min.html) · [Return to the current 40-minute presenter](p010-1-presenter-40min.html) · [Public runbook](p010-4-runbook.md)
+[Open 52-minute interactive walkthrough](p010-3-presenter-52min.html) · [Return to the current 40-minute presenter](p010-1-presenter-40min.html) · [Public runbook](p010-b-runbook.md)
 
 > **Historical detailed reference.** This version preserves additional original scenes for exploration. Use the seven-section current runbook for the live order and the correct Daniel-own-environment boundary. Some implementation-status notes in the older presentation may be superseded.
 
