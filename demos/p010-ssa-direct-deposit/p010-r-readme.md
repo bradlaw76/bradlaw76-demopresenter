@@ -1,5 +1,7 @@
 # P010-R · SSA Direct Deposit Collection README
 
+[P010-I · Suggested improvements](p010-i-improvements.md)
+
 **Collection ID:** P010 · **Source readiness:** READY · **Artifact quality:** **89% · B+** · **Assessment:** 2026-11-12
 
 [Open P010 demo collection](index.html) · [P010-B runbook](p010-b-runbook.md) · [P010-Q scorecard](p010-q-quality.md) · [Central catalog](../../index.html)
