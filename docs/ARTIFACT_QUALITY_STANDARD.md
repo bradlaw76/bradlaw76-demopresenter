@@ -1,100 +1,98 @@
-# Demo Presenter Quality and Source-Readiness Standard
+# Demo Presenter — Source, Runbook, HTML and Quality Standard
 
-**Standard version:** 1.2 · **Updated:** November 12, 2026
+**Version 2.0 — November 12, 2026**  
+**Applies to every demo in the public presenter library.** This is the normative publishing contract. [P010 SSA example](../demos/p010-ssa-direct-deposit/) is the reference set.
 
-This policy governs each public `demos/pNNN-<slug>/` collection. Its letter grade measures **presenter and runbook quality**, not the success of live Dynamics, banking, telephony, AI or government integrations.
+## 1. Numbering: one parent P ID per demo
 
-## Source-readiness gate
+The **demo collection** has one permanent P number: `P010` for SSA, `P011` for the next demo, etc. Its folder is `demos/p010-ssa-direct-deposit/`.
 
-A public artifact set is **SOURCE READY** only after the originating repository has all eight inputs, grounded in its source files or owner-approved material:
+- **Timeboxed or nonstandard artifacts:** unique numeric children within the same parent, e.g. `P010-1`, `P010-2`, `P010-5`. Numbers are never reassigned; gaps after a retired numbering scheme may remain.
+- **Standard documents:** fixed letter suffixes, always exactly one per demo:
 
-| # | Required source | Evidence |
+| Suffix | Canonical example | Purpose |
 | --- | --- | --- |
-| 1 | Authoritative origin | Identified repository/project, source revision and current approved storyline |
-| 2 | Business scenario | Audience, fictional/sanitized persona, business problem, boundaries and intended outcome |
-| 3 | Walkthrough | Ordered screens and actual or explicitly proposed click path |
-| 4 | Owners/timing | Speakers, handoffs, main duration and requested alternative timeboxes |
-| 5 | Presenter words | Opening, each section's goal, narration, visible highlights and **spoken transition** to the next |
-| 6 | Truth/status | Implemented vs deployed vs verified vs staged; fallback at every unverified integration |
-| 7 | Public safety | Private URLs/IDs/credentials/customer data removed or proved unnecessary |
-| 8 | Publication authority | Explicit owner permission to publish the exact sanitized source-derived materials |
+| **-B** | `p010-b-runbook.md` | Complete public demo runbook; authoritative storyline and transitions |
+| **-Q** | `p010-q-quality.md` | Evidence-backed scoring rubric, deductions and validation state |
+| **-G** | `p010-g-grade.md` | Letter grade, percentage range and derivation |
+| **-S** | `p010-s-score.json` | Numeric 0–100 score and per-category earned/max points |
+| **-R** | `p010-r-readme.md` | Collection guide and artifact directory |
+| **-M** | `p010-m-manifest.json` | Version inventory, IDs, paths, source state, quality |
+| **-I** | `p010-i-improvements.md` | **Mandatory short improvement plan**, one why-and-improve pair per grade criterion |
 
-If **any** input is missing, record `NOT READY` in the source project or private review, identify missing information and **do not create or publicly release** a guessed or filler demo. This gate concerns **source content**, not whether a simulated demo's integrations are fully operational.
+The folder `index.html` belongs to the parent P010 and lists artifacts. The global library `index.html`, root `README.md`, this policy and the global registry are infrastructure, not P-numbered artifacts.
 
-## Demo IDs, standard artifacts and canonical URLs
+**URL requirement:** Every demo artifact has its identifier in its URL: `.../demos/p010-ssa-direct-deposit/p010-1-presenter-40min.html`. Fixed letters likewise appear in document URLs. No redirects, duplicate unnumbered copies or alias URLs are required. The [global registry](../artifact-registry.json) is authoritative for parent IDs and paths. Do not reuse an ID or rename an existing public artifact without explicit owner direction. A source revision normally updates the same existing artifact ID and is tracked in Git history.
 
-**One parent P ID per demo.** SSA Direct Deposit is **P010** at `demos/p010-ssa-direct-deposit/`; the next independent demo is **P011**, regardless of how many files SSA contains. Each timed HTML presenter and its separate notes use numbered child IDs such as `P010-1`, `P010-2` or `P010-5`. A revision of the same artifact retains its assigned ID.
+## 2. Source-readiness gate: no empty or invented presentations
 
-Every demo collection must produce these **fixed-suffix standard artifacts**. These IDs do not consume numeric child IDs:
+Before creating any **public** presenter/runbook, the originating repository must provide **all eight**:
 
-| Suffix ID (SSA example) | Required canonical filename | Purpose |
-| --- | --- | --- |
-| **P010-B** | `p010-b-runbook.md` | Full public runbook: scenario, sections, on-screen actions, spoken lines, handoffs and fallbacks |
-| **P010-Q** | `p010-q-quality.md` | Seven-category qualitative review, source grounding, earned/max, evidence and deductions |
-| **P010-G** | `p010-g-grade.md` | Letter grade with A+ through F interpretation and limitations |
-| **P010-S** | `p010-s-score.json` | Machine-readable percentage, category earned/max and total |
-| **P010-R** | `p010-r-readme.md` | Demo-specific README, catalog and timebox navigation |
-| **P010-M** | `p010-m-manifest.json` | All canonical IDs, file paths, versions and status |
-| **P010-I** | `p010-i-improvements.md` | **Mandatory** short, actionable plan for improving the demo and talk track |
+1. **Authority:** Current approved source branch/revision, existing runbook or detailed source material.
+2. **Business story:** Intended audience, fictional/sanitized customer, problem, value and in/out-of-scope decisions.
+3. **Navigation:** Ordered screens, actual or clearly intended clicks, beginning and meaningful ending.
+4. **People and time:** Speaker ownership, exact transition points, main duration and any requested timeboxed variants.
+5. **Spoken script:** Presenter highlights, usable narration, specific question/dialogue and next-section transition for every section.
+6. **Evidence and fallback:** Source vs deployed vs accepted boundaries, known errors, safe fallback and conditional features.
+7. **Public-safety review:** Review of every file/image/link for private URLs, real customer data, auth keys, environment identifiers, record GUIDs and sensitive implementation material.
+8. **Publication authority:** Explicit approval to release the **specific sanitized content** publicly. Private source editing approval is not a public-release approval.
 
-The suffixes **B/Q/G/S/R/M/I** apply identically to **every** future demo: P011-B, P011-Q, P011-G, P011-S, P011-R, P011-M, P011-I, and so on.
+If any gate is absent, report **NOT READY** and gaps in private/source context; do not publish invented scripts, placeholder runbooks or silent private-to-public sync. Source READY certifies sufficient demo source **content**, not that Dynamics, an AI agent or a bank transaction works live.
 
-Canonical parent path: `demos/pNNN-<stable-kebab-slug>/`. Numeric child paths: `pNNN-<child>-presenter-<minutes>min.html` and `pNNN-<child>-presenter-<minutes>min.md`. Each HTML links visibly to **that demo's B runbook**, its own numbered notes, and the quality/improvement references. The collection `index.html` is its landing page, not a second HTML presenter ID.
+## 3. Exact public runbook requirements (-B)
 
-**P010 current allocation:** P010-1 (40-minute HTML), P010-2 (13-minute HTML), P010-3 (52-minute HTML), P010-5 (40-minute notes), P010-6 (13-minute notes), P010-7 (52-minute notes), plus B/Q/G/S/R/M/I. Older numbers P010-4, P010-8, P010-9 and P010-10 are retired superseded file IDs; they are **not** available for reassignment. New child IDs must be checked against the registry and existing Git history before allocation.
+Every `pNNN-b-runbook.md` must have:
 
-The owner allocates each new **demo parent ID**. Agents check [P registry](P_REGISTRY.md), [global JSON registry](../artifact-registry.json), and that demo's M manifest before assigning child IDs. Do not silently renumber, duplicate, or invent new demo collections. No redirects or compatibility aliases are required for this new public library.
+1. Title, parent ID, use case, audience, date/revision, duration, sanitized/fictional disclaimer.
+2. Source evidence and status, without exposing private repository URLs or deployment secrets.
+3. Business problem, persona, objective, desired or intentionally unresolved outcome.
+4. Timed agenda table: section, presenter, goal, screen, duration, **exact sum** equal to primary presenter.
+5. **For each section**: owner, duration, **goal**, audience-visible highlight, start/end screen, concrete clicks, copy-ready spoken words, **exact transition**, honest status and fallback.
+6. Preflight and contingency instructions, authorized data/roles, and a safe stopping condition.
+7. Links to current and timeboxed HTML presenters and their numbered notes, with historical variants labeled.
+8. Links to **-Q quality, -G grade, -S numeric score and -I improvements**.
+9. Close: what the audience learned, what is verified, what remains gated, and speaker handoff.
 
-## Exact runbook requirements
+The runbook governs the storyline for current HTML. Historical timeboxes may preserve older ordering, but must visibly identify that fact and refer to the current runbook.
 
-Every current numbered runbook must be the public narrative authority for the demo and contain:
+## 4. Exact standalone HTML presenter requirements (-1, -2, etc.)
 
-1. **Title, P ID, target audience, use case, primary duration, version/assessment date and public-safe disclaimer.**
-2. **Origin/source-readiness summary:** what originating artifact types exist and what was verified, without disclosing the private repo URL or environment.
-3. **Business problem, persona and desired ending:** explicitly distinguish a safe unresolved ending from a completed transaction.
-4. **Timed agenda:** one row per section containing section number, owner, goal, screen, duration; sum exactly equals primary timebox.
-5. **Full section-by-section plan:** for **every section**, goal, what audience sees, actual click/navigation, copy-ready speaker words, exact transition/handoff, fallback, and implemented/deployed/accepted boundary.
-6. **Operator/preflight:** who opens tabs and roles, recorded statuses and what to do if a required demo step fails.
-7. **All versions and their P URLs:** HTML, timed companion notes and whether a variant is historical.
-8. **Quality evaluation:** link to the fixed-suffix Q, G, S and **I improvement plan**, with grade, percentage and named gaps.
-9. **Business close:** verified outcome, what remains conditional, next speaker/customer action.
+Every timed presenter (e.g. `p010-1-presenter-40min.html`) must:
 
-Do not promote a prepared feature to a live claim, invent an auto-generated Case or clear a banking verification indicator without evidence. For a historical version, preserve it with an obvious date/status warning and point to the current runbook.
+- Be UTF-8 HTML5, static/self-contained, responsive and usable without a build tool or private authentication.
+- Display its **P ID, title, declared duration, current/historical status and safe-demo disclaimer**.
+- Display a **visible link** to the canonical `pNNN-b-runbook.md` plus its own numeric-child speaker notes. Show the parent collection and other available timeboxes.
+- Preserve source-backed section count/order and a duration sum equal to the manifest's version. Each section needs a goal, presenter, visual highlight, clickable actions, speakable narration, next transition, and fallback/claim boundary.
+- Offer previous/next section navigation and current-section indication, speaker notes that can be copied or printed, and timer or exact time budget.
+- Provide readable contrast and focus, keyboard navigation, mobile-friendly layout, and meaningful visual alternatives when applicable.
+- Make no protected API writes, banking operations, identity checks, privileged Dataverse calls, or unapproved external requests.
+- Label unverified chatbot transfer, Contact matching, Case creation, human approval, payment change, or report data as conditional/simulated; never fabricate a completed result.
 
-## Exact HTML presenter requirements
+**Tests:** parse HTML/inline JavaScript; check unique element IDs, local links, section IDs/order, time totals, notes/runbook links, manifest/registry consistency and public privacy; test navigation and mobile/keyboard/contrast in a real browser when available. Mark browser and accessibility **NOT VERIFIED** if not executed.
 
-Every `p<demo>-<child>-presenter-<minutes>min.html` must be:
+## 5. The per-demo score, grade and improvements
 
-- Self-contained, valid UTF-8 HTML5, mobile-friendly, readable and keyboard-usable; avoid a build step or secrets.
-- Clearly titled with the **P ID, demo, duration and version/historical status**.
-- A **working, visible link to the same demo's fixed-suffix `pNNN-b-runbook.md` on every page**, and a link to the collection/home catalog.
-- Linked to its **own numbered Markdown notes** and the other timebox options.
-- Accurate to the originating runbook for its declared duration: section titles/order, owners, goals, audience highlights, click steps, speaker text, transitions and acceptance boundaries.
-- Timed so all section minutes sum to its manifest duration. If a historical presenter uses another storyline, label it historical, do not silently claim equivalence.
-- Navigable with Previous/Next and an active-section indicator; support print/copy of notes, explicit fallback and accessibility (contrast, focus and mobile).
-- Static and presentation-only; do not execute Dataverse, banking, SSA, portal or live-system writes.
-- Clear when chat routing, AI, Contact context, Case creation, human verification, banking, reports or other capability is prepared rather than verified.
+Grade the **collection's presenter/runbook artifact set** out of **100**, not its live application or each individual file by assumption:
 
-**Required validation before publication:** HTML/inline-JS syntax, unique section IDs, duration sum, every numbered runbook/notes link, registry/manifest alignment, public safety scan, and desktop/mobile/keyboard tests when available. Mark visual/browser checks `NOT VERIFIED` if not performed; never fabricate passing QA.
-
-## 100-point scoring
-
-Grade each **current public runbook/artifact set** using actual source-and-output evidence. Record earned/max points and supporting justification.
-
-| Dimension | Max |
+| Criterion | Max |
 | --- | ---: |
-| Origin/source fidelity and evidence | 25 |
-| Storyline, clear goals and transitions | 20 |
+| Source fidelity and evidence | 25 |
+| Storyline, goals and exact speaker transitions | 20 |
 | Runbook completeness and presenter usefulness | 15 |
-| Design, mobile accessibility and visual quality | 15 |
-| Technical integrity, links, durations and variants | 10 |
-| Public privacy and no-false-claims safeguards | 10 |
-| Reusability, P registry, naming and maintenance | 5 |
-| **TOTAL** | **100** |
+| Visual design, responsiveness and accessibility | 15 |
+| Technical integrity, links and timebox variants | 10 |
+| Public privacy and truthful capability claims | 10 |
+| Maintainability, manifest/registry and standards | 5 |
+| **Total** | **100** |
 
-**Score = sum of category earned points / 100 × 100%.** Round to the nearest whole percentage (for the fixed 100-point rubric, the sum is already an integer). Unverified browser/accessibility tests or old variants must reduce applicable points. A publication can meet the source gate while still needing artifact improvements.
+**-Q Quality:** record earned/max and one brief reason for each category, evidence, test caveats and linked corrective actions.  
+**-G Grade:** display letter/percentage and explain the deterministic percentage band. **Must link to -I.**  
+**-S Score:** JSON numeric total, per-criterion earned/max and `improvements.path` linked to the fixed -I Markdown.  
+**-I Improvements (mandatory):** exactly **one "Why" bullet and one "Improve" bullet for each of seven criteria**, both concise and actionable. Link -I from -Q, -G, -S, collection -R, collection homepage and root tracking chart. Don't duplicate full explanations across the score and improvement documents.
 
-| Percentage | Letter | Percentage | Letter |
+### Grade conversion
+
+| Percent | Grade | Percent | Grade |
 | ---: | :---: | ---: | :---: |
 | 97–100 | A+ | 93–96 | A |
 | 90–92 | A− | 87–89 | B+ |
@@ -104,28 +102,28 @@ Grade each **current public runbook/artifact set** using actual source-and-outpu
 | 63–66 | D | 60–62 | D− |
 | 0–59 | F | | |
 
-**Minimum grade for a newly published collection: B− (80%).** Below 80%, improve the artifact before public release. A deployed/accepted system and a grade are separate concepts.
+Show percentage and letter together, e.g. **89% · B+**. Grade F does not have plus/minus. Round percentage to nearest whole percent; with a fixed 100-point rubric, this is the earned-point sum.
 
-## Required I improvement plan — one document per demo
+New public demo collections require **source READY** and **at least 80% / B−** artifact quality. Unverified browser tests or historical variants reduce relevant category points. This grade is **not** evidence of operational readiness.
 
-Every Q quality review, G letter grade and S numeric score **must link directly to the same demo's** `pNNN-i-improvements.md`. The collection index and R overview must also link it. The M manifest and global registry store its canonical path.
+## 6. Manifest and global library consistency
 
-**Exact format for PNNN-I:** one section per each of the seven graded criteria, in rubric order. Each must show the criterion name and `earned/max`, followed by **exactly two concise bullets**:
-- **Why:** One short sentence describing specific source evidence, point deduction or outstanding validation.
-- **Improve:** One actionable sentence identifying what to change or test.
+- Use a parent `P###` ID and fixed document IDs `-B/-Q/-G/-S/-R/-M/-I`; numeric children only for variable artifacts such as timed HTML and notes.
+- `pNNN-m-manifest.json` tracks the parent, all timed versions, numeric-child IDs, all standard document links, grade, percentage, source-readiness and validation status.
+- The root `README.md` **Current demo library** contains a collection summary and artifact chart, including a link to **-I improvements**.
+- The global `artifact-registry.json` holds the next unallocated **parent** ID and all canonical relative paths. For SSA, parent P010; **next demo P011**.
+- Each material update triggers source-fidelity review, score recalculation and seven short improvement bullets as needed.
+- Keep approved URLs stable and preserve source-repo ownership. **No redirects or alias copies** are needed in this new library.
 
-The plan may also contain a compact *demo itself* section for improvements belonging to the originating application or scenario, clearly distinguishing them from **HTML/talk-track improvements**. Each action is advisory, not deployment permission. Avoid long essays and repeated status logs.
+## 7. Public release and status reporting
 
-For a criterion with full points, write **Why: Full points earned because ...** and **Improve: Preserve ... / optional refinement ...**, not invented deficiencies. The seven section scores must match Q and S; total and G must reconcile to the A–F scale. Grade/score/source and live-integration acceptance are independent.
+Only sanitized and explicitly approved content may enter this public repository. Do not auto-mirror a private source repo, change a live environment or assume any private source approval extends to public release. Report separately:
 
-On each materially approved public update, **refresh Q, G, S, I and M together**, preserve previous grade history, and require new owner approval for source-derived publication. If source cannot be reviewed, mark `SOURCE_NOT_VERIFIED` without manufacturing a grade.
+- `source_readiness`: READY / NOT_READY
+- `artifact_validation`: STATIC_VERIFIED / BROWSER_VERIFIED / INCOMPLETE
+- `public_publication`: COMMITTED / PAGES_LIVE / NOT_PUBLISHED
+- `live_integration`: NOT_APPLICABLE / PARTIAL / ACCEPTED / NOT_VERIFIED
 
-## Scorecard content and periodic reviews
+A GitHub commit is **not** proof that Pages is live. Keep browser/accessibility limitations and unresolved integration claims visible.
 
-The scorecard must show: P ID, source-readiness state (READY/NOT READY), assessment date, source artifacts assessed, a graded 7-row rubric totaling 100 possible points, **percentage AND letter**, explicit deductions, testing caveats, improvement actions and 4 separate statuses: `source_readiness`, `artifact_validation`, `public_publication`, `live_integration`.
-
-Every materially edited presenter/runbook or new timebox requires a source-fidelity refresh and rescoring. A Git commit alone does not certify a published website.
-
-## Authority and public release
-
-This repository is public. Prepare a redaction report and obtain the owner's **explicit approval** for any future private-source-derived public release. Do not enable automated sync or treat source-repo approval as automatic publishing approval. The SSA collection here serves as the **completed presenter-content reference standard**, regardless of incomplete live integration steps.
+**Reference set:** [P010 SSA](../demos/p010-ssa-direct-deposit/) · [P010-B runbook](../demos/p010-ssa-direct-deposit/p010-b-runbook.md) · [P010-Q quality](../demos/p010-ssa-direct-deposit/p010-q-quality.md) · [P010-I improvements](../demos/p010-ssa-direct-deposit/p010-i-improvements.md).
