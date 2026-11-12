@@ -133,43 +133,42 @@ The configured chat assistant responds automatically; do not type a redundant ag
 ### 3. Dynamics · Live representative conversation — 4 minutes
 
 **Owner:** Brad · Customer Service workspace  
-**Goal:** Accept Elena's live chat, show the Intent-based suggestion in Copilot, and explain how a representative can adapt the proposed answer before responding.  
-**Primary screen:** Dynamics Customer Service workspace → accept chat → conversation panel → Elena Contact
+**Goal:** Briefly show the live conversation tools and intent guidance, then finish the workspace tour with the custom SSA Agent Support sidebar and my Social Security Assistant.  
+**Primary screen:** Customer Service workspace → chat and summary → Intent-based suggestion → SSA Agent Support → my Social Security Assistant → Contact
 
-**Key highlight:** Right-hand Copilot Intent-based suggestions identify a topic such as SSA FAQ and provide guidance; the representative reviews and edits a response in the left-hand conversation.
+**Key highlight:** The representative can use contextual Intent suggestions and can also access the same public-facing Copilot Studio assistant from a custom internal sidebar.
 
 **Say**
 
-> Now the live chat has arrived in Dynamics 365 Customer Service workspace. I'll accept Elena's conversation and highlight how the representative can continue helping her. In the right-hand Copilot pane, Intent-based suggestions are identifying the topic as SSA FAQ and offering a suggested response and recommended path. This gives the agent a useful starting point rather than requiring a new answer from scratch. I can take relevant wording into the chat composer on the left, adjust it for Elena's situation, and decide whether to send it. The representative remains accountable for what goes back to the customer, and the suggestion doesn't complete identity verification or authorize a banking change. We also have conversation summaries, quick replies, consultation and transfer tools available. I'll mention those briefly before moving to Elena's Contact and her history.
+> The live conversation has arrived in Customer Service workspace. I'll highlight the conversation summary, quick replies and consultation or transfer controls, all without touring every option. Near the end, notice the Intent-based suggestion in the Copilot pane. It identifies the issue as SSA FAQ and gives the representative a suggested response and recommended path. I can take useful wording into the chat on the left, edit it and decide whether to send it. Finally, I want to show our custom SSA Agent Support sidebar. It can make multiple Copilot Studio agents available within this workspace for different service needs. I'll finish by selecting my Social Security Assistant, the same configured assistant Elena used in the public portal. When connected to approved published SSA website information, it can help with general questions here as well. That reuse illustrates consistent guidance across the citizen and representative experiences, but it does not transfer Elena's authenticated session or authorize a banking change.
 
 **What to show**
 
-1. Accept Elena's actual live chat in Customer Service workspace; highlight the customer request and conversation on the left.
-2. Show the available conversation summary and point out how it helps the representative get oriented.
-3. Intent Agent: In the right-hand Copilot pane, highlight Intent-based suggestions, the visible Issue: SSA FAQ classification, suggested response and recommended path. Use relevant guidance in the left-side chat composer, edit it as needed, and send only after review.
-4. Briefly mention Quick Replies such as /q hello when configured, text prediction, consultation/transfer and the other communication controls from the workspace.
-5. Keep Case Management Agent Case creation conditional on a verified result. Do not treat the Case shown alongside the conversation as proof the agent created it.
-6. Navigate to the exact Elena Contact linked to the chosen existing Case and show her Timeline next.
+1. Accept Elena's actual live chat and briefly highlight the customer request in the communication panel.
+2. Show the conversation summary, then mention Quick Replies, consultation and transfer, and other available communication options at a high level.
+3. Near the end, show Copilot Intent-based suggestions on the right: Issue: SSA FAQ, suggested response and recommended path. Explain how the representative can adapt wording in the left chat before sending.
+4. Open the custom SSA Agent Support sidebar and briefly identify that several linked Copilot Studio agents can be exposed in the agent workspace.
+5. As the LAST sidebar highlight, select my Social Security Assistant. Show the actual response and explain it is the same configured assistant used through the public-facing portal, for general published SSA guidance where configured.
+6. Then navigate to the correct Elena Contact and Timeline. Case Management Agent creation remains conditional and should be claimed only if verified.
 
 **Agent tools — one sentence each**
 
-- **Intent-based suggestions (Copilot pane):** The right-side panel shows Issue: SSA FAQ, a suggested response and a recommended path based on the conversation. The representative may use the content as an editable draft in the chat on the left before sending.
-- **Chat and conversation summary:** Continue Elena's live request and review the available conversation recap without searching older messages manually.
-- **Quick Replies and text prediction:** Use repeatable responses such as /q hello when configured, and optional draft assistance.
-- **Consultation and transfer:** Request help from a colleague or transfer the conversation through the appropriate supported path.
-- **Voice and video call:** Other communication options in the workspace; Daniel's voice demo remains separate.
-- **Attachments, links, notes and rich messages:** Share relevant content and retain context where these controls are configured.
-- **Translation and compliance nudges:** Optional language and guidance tools; an absence of nudges is not a blanket compliance approval.
-- **Case Management Agent:** Case creation is a separate capability. Show an automatically created Case only if its creation is actually verified.
+- **Live chat and conversation summary:** Continue Elena's request and review the available conversation recap.
+- **Quick Replies and consult/transfer:** Use configured response shortcuts or request help from another representative when needed.
+- **Other workspace tools:** Voice/video, attachments, notes, rich messages, translation, text prediction and compliance nudges are options to mention, not individually demonstrate.
+- **Case Management Agent:** Any automatically created Case must be independently verified; otherwise continue to the existing Case.
+- **Intent-based suggestions — near the end:** The right-side Copilot pane displays Issue: SSA FAQ and guidance the representative can review, edit in the left chat and choose whether to send.
+- **Custom SSA Agent Support sidebar:** Multiple linked Copilot Studio assistants can be surfaced within the representative workspace for different needs.
+- **my Social Security Assistant — final highlight:** Select the same configured assistant used in Elena's public-facing experience. General published SSA guidance can be reused, without claiming shared authentication or protected account access.
 
 **Key beats**
 
-- **Live chat:** Accept Elena's conversation on the left.
-- **Conversation summary:** Point to the brief recap when available.
-- **3 · Intent-based suggestion:** Show Issue: SSA FAQ and the right-side suggestion; adapt relevant wording in the left chat before sending.
-- **Representative control:** The agent reviews, edits and chooses the response; no autonomous banking action.
-- **Other tools:** Quick replies, consultation, transfer, and other configured controls get a short mention.
-- **Contact history:** Continue to the same Case-linked Contact and Timeline.
+- **Live conversation:** Show the incoming request and conversation summary.
+- **Productivity controls:** Briefly mention Quick Replies, consult/transfer and other agent options.
+- **Intent guidance:** Show the right-hand SSA FAQ suggestion, then the editable response in left-side chat.
+- **Custom sidebar:** Show linked Copilot Studio assistants in SSA Agent Support.
+- **Final workspace highlight:** Open my Social Security Assistant to show the same assistant across public and internal experiences.
+- **Contact transition:** Continue to Elena's Contact and Timeline; do not imply an automatic Case was created.
 
 **Questions**
 
@@ -177,11 +176,11 @@ The configured chat assistant responds automatically; do not type a redundant ag
 
 **Transition**
 
-> The representative has the conversation and can use contextual suggestions while keeping control of the response. Now let's look at Elena's interaction history and the customer information available on her Contact.
+> We've seen the conversation, contextual guidance, and the same public-facing assistant available to the representative through a custom sidebar. Now let's open Elena's Contact to see the customer history behind the interaction.
 
-**Do not overstate:** The screenshot proves an Intent-based suggestion is displayed for the conversation, not that a precise Direct Deposit intent, one-click suggestion insertion, automated Case creation or approved banking update occurred. Human review is required before sending.
+**Do not overstate:** The sidebar identifies my Social Security Assistant as the public-facing agent reused internally; this does not establish inherited portal authentication, a shared session or protected-record access. Public SSA website grounding requires an approved configured knowledge source. The SSA FAQ suggestion is observed; one-click insertion and Case Management Agent creation are not independently proven.
 
-**Fallback:** If the suggestion has not loaded during the live demonstration, use the already observed screenshot as an explicitly labeled example and continue to the existing Contact. Case Management Agent creation remains conditional.
+**Fallback:** If Intent suggestions do not appear, describe the observed guidance briefly. If the custom assistant is slow, show the configured sidebar and avoid claiming an answer was generated. Continue to the Contact without troubleshooting.
 
 
 ### 4. Contact · Standard and SSA-specific experiences — 8 minutes
