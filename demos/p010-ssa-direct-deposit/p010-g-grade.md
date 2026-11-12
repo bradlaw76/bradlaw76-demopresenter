@@ -6,6 +6,8 @@ This is an assessment of the **source-supported public presenter and runbook set
 
 [P010-I · Improvement plan](p010-i-improvements.md) — one short “why” and “improve” pair for each scoring category.
 
+**Latest content review:** The November 12 portal/chat supplement adds two copyable customer messages, agent-tool highlights, conditional Case Management/Intent Agent cues, and Contact Timeline/chat history. The 40-minute budget is preserved. **B+ / 89% remains unchanged** without new browser and accessibility evidence.
+
 ## Grade derivation
 
 Under the library's [A+ through F standard](../../docs/ARTIFACT_QUALITY_STANDARD.md), **B+ is 87–89% inclusive**. The current [P010-S machine-readable score](p010-s-score.json) totals 89 earned points from 100 possible across seven defined categories, so the exact letter grade is **B+**.
