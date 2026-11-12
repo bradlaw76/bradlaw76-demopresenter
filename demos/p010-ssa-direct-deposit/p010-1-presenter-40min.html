@@ -86,7 +86,7 @@ h1{font-size:clamp(22px,2.4vw,32px);letter-spacing:-.025em;line-height:1.2;margi
 .chip{border:1px solid #b5d1e8;background:#fff;color:#255e85;font-size:11px;font-weight:750;border-radius:99px;padding:4px 9px}
 .chapter-clock{font-variant-numeric:tabular-nums;font-weight:800;color:var(--navy)}
 .stage-body{padding:24px 32px;display:grid;gap:20px}
-.script{border-left:5px solid var(--blue2);border-radius:0 12px 12px 0;background:#edf6fd;padding:21px 23px}
+.chat-copy{margin-bottom:16px;padding:17px;border:1px solid #bfd8eb;border-radius:12px;background:#edf6fd}.chat-copy .copy-row{padding:12px 0;border-top:1px solid #caddec;display:flex;gap:12px;align-items:center;justify-content:space-between}.chat-copy .copy-row:first-of-type{border-top:0}.chat-copy .copy-row p{margin:0;flex:1;overflow-wrap:anywhere}.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.tool-grid .tool{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fafcff}.tool-grid .tool strong{display:block;color:#194b72}.tool-grid .tool p{font-size:13px;margin:6px 0 0}.script{border-left:5px solid var(--blue2);border-radius:0 12px 12px 0;background:#edf6fd;padding:21px 23px}
 .label{font-size:11px;letter-spacing:.12em;color:#326e9c;text-transform:uppercase;font-weight:850;margin:0 0 7px}
 .script blockquote{font-size:18px;line-height:1.55;margin:0;color:#143a5d}
 .grid2{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:17px}
@@ -282,34 +282,62 @@ body.focus .script blockquote{font-size:22px}
     "min": 5,
     "original": "aligned to 17-scene source",
     "status": "mixed",
-    "objective": "Explain why Elena needs help and show a short chat-to-human request.",
-    "highlight": "Verification notice → brief natural-language guidance → live representative handoff.",
-    "screen": "Elena portal → review notice → Copilot Studio chat",
-    "say": "Elena Martinez has a Direct Deposit change that needs additional verification. Rather than finding a phone number or figuring out which office handles the request, she can ask for help from her current portal experience. I'll ask one question through Copilot Studio and request a representative; I'm not going to spend time demonstrating every bot topic. The value is how this digital interaction becomes part of a broader service process. Because this request involves protected banking information, a human must handle the appropriate verification and authorization. The chatbot isn't changing payment details or confirming an unverified transaction.",
+    "objective": "Show the Overview verification notice, briefly visit Direct Deposit, then send two copyable constituent messages and request a human representative.",
+    "highlight": "The portal makes the issue visible; chat is another entry point into consistent service, not a separate chatbot experience.",
+    "screen": "Elena portal → Overview → Direct Deposit → Copilot chat",
+    "say": "Elena is in a demonstration of a my Social Security-style portal. On Overview, she sees that her Direct Deposit change needs additional verification. I'll briefly open Direct Deposit so you can see the protected request, then use chat to ask for help. This is not a separate chatbot application or a production SSA mySSA environment. It illustrates another way to enter a consistent customer-service process. I'll send two short questions; the configured assistant will respond automatically. We don't need to type or disclose full banking information, passwords, Social Security numbers, or verification codes. Because this is a protected payment issue, we will request a human representative rather than use the chat to authorize a change.",
     "clicks": [
-      "Point out Elena's fictional verification-required portal notice and launch chat.",
-      "Ask a concise question about the verification notice; avoid a chatbot feature tour.",
-      "Use the configured live chat escalation to request a representative in Dynamics Customer Service workspace."
+      "Open portal Overview and highlight Elena's Direct Deposit verification notice; no detailed portal tour.",
+      "Open Direct Deposit for one high-level highlight; return to the available chat widget.",
+      "Use the two Copy Message buttons below to paste only the citizen messages into chat, sending Message 1 before Message 2. The assistant responds automatically.",
+      "Request escalation to a live representative; do not supply sensitive banking or identity details.",
+      "Benefits, Messages, Profile and Help Center may be mentioned as possible service experiences, but are not extra presentation stops."
     ],
     "checkpoint": "Any questions about the digital entry experience before we follow the conversation to a representative?",
-    "handoff": "Elena has asked for help. Let's follow the interaction into Dynamics and see what the representative receives.",
-    "guard": "Do not claim a portal notice was automatically passed as trusted, authenticated Dataverse context or that the bot authorized banking changes.",
-    "fallback": "If the live route stalls on stage, identify a prepared agent view as the backup instead of simulating a successful transfer.",
+    "handoff": "Elena has asked for human assistance. Let's follow the conversation into Dynamics and see how the representative continues her service request.",
+    "guard": "The portal is a fictional demonstration. Its DD-DEMO-1042 example is distinct from the Case's DD-DEMO-H095-01523. Do not claim bank authorization, verified portal-to-Case linkage or an automatically created Case.",
+    "fallback": "If the assistant response or transfer is delayed, show the intended response as a labeled rehearsal example; switch to a prepared representative only after identifying the fallback.",
     "beats": [
       [
-        "The service need",
-        "Elena sees a Direct Deposit verification alert."
+        "Overview",
+        "Verification alert and citizen service need."
       ],
       [
-        "Copilot guidance",
-        "One question and then a human-help request."
+        "Direct Deposit",
+        "Human review is needed."
       ],
       [
-        "Why escalate",
-        "Protected payment changes remain governed by human review."
+        "Message 1",
+        "Ask what the notice means; let the configured assistant respond."
+      ],
+      [
+        "Message 2",
+        "Request a human agent before the holidays."
+      ],
+      [
+        "Escalation",
+        "Follow the actual human-assistance route to Dynamics."
       ]
     ],
-    "value": "Verification notice → brief natural-language guidance → live representative handoff."
+    "value": "Verification notice → brief natural-language guidance → live representative handoff.",
+    "customerLines": [
+      "I see a notice that my direct deposit change needs additional verification. Can you explain what that means?",
+      "Can I speak to an agent about my direct deposit? I really need to get it corrected before the holidays."
+    ],
+    "screenHighlights": [
+      [
+        "Overview",
+        "Point to the example verification-required alert and briefly explain the service need."
+      ],
+      [
+        "Direct Deposit",
+        "Show the request's review status and explain that a protected change requires human verification."
+      ],
+      [
+        "Chat",
+        "Open the widget, send the two copyable citizen messages, allow the automatic reply, and request a representative."
+      ]
+    ]
   },
   {
     "id": "conversation",
@@ -319,19 +347,21 @@ body.focus .script blockquote{font-size:22px}
     "min": 4,
     "original": "aligned to 17-scene source",
     "status": "mixed",
-    "objective": "Demonstrate the working handoff and connect conversation to persistent service information.",
-    "highlight": "Accept the incoming chat and show the actual issue/context before navigating to Contact.",
-    "screen": "Dynamics Customer Service workspace → live chat / Active Conversation",
-    "say": "Here I'm in Dynamics 365 Customer Service workspace, accepting Elena's conversation. The representative can continue the interaction, see the message and work with the context that actually arrived. More importantly, this is where an engagement channel connects to the rest of the service process. We don't need separate customer-service databases or back-office applications for every channel. The representative can move from the conversation to customer information, activities and casework in Dynamics. I'll show that continuity rather than tour the communication controls.",
+    "objective": "Accept the live chat and briefly introduce the representative's summary, response, consult and transfer controls, without a feature-by-feature tour.",
+    "highlight": "A real chat enters Customer Service workspace; one workspace offers conversation history, summaries, response tools and appropriate escalation options.",
+    "screen": "Dynamics Customer Service workspace → accept chat → conversation panel → Elena Contact",
+    "say": "Now the live chat arrives in Dynamics 365 Customer Service workspace. I'll accept the interaction and show the context that actually came across. We can use conversation summaries, quick replies, consultation and transfer controls to help the representative manage the request. The current agent is configured to respond automatically, so I don't need to type out a second conversation. Other options include voice or video, file attachments, notes, rich messages, translation and text suggestions. I'll mention these briefly rather than demonstrate them all. If the Intent Agent provides a verified suggestion, or Case Management Agent actually creates a Case, I'll show the observed output. Those are being tested, not assumed. Now let's open the related Contact and look at the customer's history.",
     "clicks": [
-      "Accept the actual incoming chat and point to Elena's question.",
-      "Show one or two relevant items in Active Conversation and only the context actually delivered.",
-      "Navigate to the exact Case-linked Elena Contact; do not invent automatic Case creation."
+      "Accept the actual inbound chat and show the message and conversation window.",
+      "Highlight conversation summary or Summarize Conversation, where available; avoid claiming a summary was generated if none exists.",
+      "Mention Quick Replies such as /q hello if configured, consult/transfer, and other message options briefly; the agent's configured response arrives automatically.",
+      "Show Intent Agent suggestions or Case Management Agent creation only if the relevant output is verified and actually appears; otherwise omit these optional steps.",
+      "Navigate to the exact Case-linked Elena Contact before opening the Case."
     ],
     "checkpoint": "Any questions about the representative's conversation experience before we open the customer record?",
-    "handoff": "We know why Elena reached out. Now let's see how the same customer data supports a standard Contact experience and a purpose-built SSA one.",
-    "guard": "Successful live chat arrival does not establish verified identity, a trusted portal alert payload or automatic Case creation.",
-    "fallback": "If the chat is not visible during the meeting, say the route was tested and clearly show a prepared agent conversation.",
+    "handoff": "We understand Elena's issue. Now let's look at the customer history a representative can access instead of having to navigate another system.",
+    "guard": "The agent responds automatically in the configured path, but chat delivery does not establish authenticated identity or automatically created Case. Intent and Case Management Agent results are conditional until verified.",
+    "fallback": "Use a clearly labeled prepared conversation if showtime routing fails. If Intent/Case Agent output is not yet ready, continue to the established Contact and saved Case.",
     "beats": [
       [
         "Live chat acceptance",
@@ -346,46 +376,77 @@ body.focus .script blockquote{font-size:22px}
         "Move into the correct Contact."
       ]
     ],
-    "value": "Accept the incoming chat and show the actual issue/context before navigating to Contact."
+    "value": "Accept the incoming chat and show the actual issue/context before navigating to Contact.",
+    "toolHighlights": [
+      [
+        "Chat and conversation summary",
+        "Continue Elena's issue and use the recorded or generated conversation summary when it is available."
+      ],
+      [
+        "Quick Replies and text prediction",
+        "Reusable responses, including /q hello when configured, and optional typing assistance."
+      ],
+      [
+        "Consultation and transfer",
+        "Request help from another representative or transfer the interaction when the flow allows."
+      ],
+      [
+        "Voice and video call",
+        "Additional agent communication options; Daniel owns the separate voice demonstration."
+      ],
+      [
+        "Attachments, links, notes and rich messages",
+        "Tools to share content or record service context, subject to configuration and permissions."
+      ],
+      [
+        "Translation and compliance nudges",
+        "Configurable language support and guidance; a no-nudge message does not certify overall compliance."
+      ],
+      [
+        "Intent and Case Management Agents",
+        "Show only observed suggestions or actual Case creation after verification; never assume an automated result."
+      ]
+    ]
   },
   {
     "id": "contact",
     "number": "04",
     "title": "Contact · Standard and SSA-specific experiences",
     "owner": "Brad · Contact",
-    "min": 7,
+    "min": 8,
     "original": "aligned to 17-scene source",
     "status": "mixed",
-    "objective": "Demonstrate the same Contact record through two different forms and highlight the role-based service experience.",
-    "highlight": "Contact – Customer Insights – SSA → SSA | Constituent Verification & Direct Deposit: same record, tailored experience.",
+    "objective": "Show the same Elena Contact in two forms, emphasizing the Timeline and a stored chat activity if one actually exists.",
+    "highlight": "Standard Contact → service Timeline and possible chat history → SSA-specific Contact form with verification and related Direct Deposit context.",
     "screen": "Same Elena Contact → standard Customer Insights form → SSA service form",
-    "say": "First, this is Contact – Customer Insights – SSA. It's a standard Dynamics 365 customer view with core customer information and interaction history. I'll highlight the profile and Timeline without walking through every field. Now I'll switch to SSA | Constituent Verification & Direct Deposit. This is still the same Elena Contact and underlying data and security, but organized around an SSA representative's responsibilities. We can see a Direct Deposit verification alert, the Super Six review experience, related request information and activities. This isn't another copy of the customer. Dataverse is the proposed common customer-service data foundation, while authoritative benefit and payment systems can remain in their existing systems and supply relevant information through integration.",
+    "say": "This is Contact – Customer Insights – SSA. Alongside the usual profile information, I want to emphasize the Timeline. Today representatives may need to open another system to find prior conversations. When customer interactions are recorded or integrated into Dynamics, that history can be surfaced on the Contact. If we have a chat activity here, I'll open it and show the history actually stored. We don't need to claim a complete transcript exists if the record only shows an activity or summary. Now I'll switch to SSA | Constituent Verification & Direct Deposit, remaining on the same Elena Contact. It's a purpose-built view for constituent verification, a visible Direct Deposit warning, Super Six, related records and activities—all against the same underlying customer-service data, not a duplicate customer. Dataverse is the proposed service-information foundation while SSA's authoritative benefit and payment systems remain distinct.",
     "clicks": [
-      "Open the Elena Contact linked to Case CAS-01523-T1R7X6; avoid a first-by-name duplicate.",
-      "Show Contact – Customer Insights – SSA briefly: standard customer fields and Timeline.",
-      "Switch forms on the SAME Contact to SSA | Constituent Verification & Direct Deposit.",
-      "Highlight the visible Direct Deposit warning, available Super Six, related banking context and activities—one takeaway per tab."
+      "Open the Contact linked to CAS-01523-T1R7X6, using Contact – Customer Insights – SSA.",
+      "Highlight the Timeline and explain how one customer record can surface interaction history that might otherwise require switching systems.",
+      "If a real chat record is visible in the Timeline, open it and show its actual saved messages, transcript or summary. If not, explain the intended capability using existing activities only.",
+      "Switch to SSA | Constituent Verification & Direct Deposit on the SAME Contact.",
+      "Highlight the displayed verification alert, available Super Six, Direct Deposit related context and activity history without visiting every field."
     ],
-    "checkpoint": "Any questions about tailoring the representative's experience while maintaining the same underlying Contact record?",
-    "handoff": "Now that we've seen Elena's customer context and outstanding verification needs, let's open the Case that organizes the work.",
-    "guard": "Visible alert is evidence of a displayed status, not necessarily a proven synchronized field projection; Super Six display does not prove verified identity. Dataverse is proposed for service information, not SSA's benefit-system source of truth.",
-    "fallback": "If form switching is slow, use two pre-opened views of the exact same Contact and explain the form change.",
+    "checkpoint": "Any questions about consolidating interaction history and tailoring the Contact experience without duplicating the customer record?",
+    "handoff": "We've seen the same customer record supporting historical interactions and an SSA-specific experience. Now let's open Elena's Case and review the work behind the Direct Deposit request.",
+    "guard": "A Timeline is a service-history surface, not proof that all live chat transcripts are automatically retained. Show stored chat details only if accessible on this Contact; do not invent evidence or imply identity verification was completed.",
+    "fallback": "If the chat record isn't available, show actual Timeline activities and describe retained conversations as a possible configured capability. Use two pre-opened views of the same Contact if needed.",
     "beats": [
       [
         "Standard Contact",
-        "Customer Insights – SSA: profile and interaction history."
+        "Core profile and consolidated Timeline."
       ],
       [
-        "Form switch",
-        "Same Contact record, no duplicate customer."
+        "Chat history",
+        "Open a stored interaction record only if the underlying messages are accessible."
       ],
       [
-        "SSA Contact",
-        "Verification alert, Super Six, related Direct Deposit and activities."
+        "SSA form",
+        "Same Contact, role-specific verification and Direct Deposit layout."
       ],
       [
-        "Data foundation",
-        "Dataverse as proposed common customer-service foundation, source systems stay authoritative."
+        "Dataverse",
+        "Proposed shared service data; authoritative SSA source systems remain separate."
       ]
     ],
     "value": "Contact – Customer Insights – SSA → SSA | Constituent Verification & Direct Deposit: same record, tailored experience."
@@ -395,10 +456,10 @@ body.focus .script blockquote{font-size:22px}
     "number": "05",
     "title": "Case · Cross-system information and controlled decisions",
     "owner": "Brad · Case",
-    "min": 11,
+    "min": 10,
     "original": "aligned to 17-scene source",
     "status": "mixed",
-    "objective": "Show how the Case consolidates related information, recommendations and next actions while authorization remains pending.",
+    "objective": "Keep the Case within ten minutes by emphasizing the overview, Direct Deposit status, one external-information example, recommendations and human review.",
     "highlight": "CAS-01523-T1R7X6 → Direct Deposit → synthetic bank record → supporting system information → AI recommendations → review.",
     "screen": "Elena Case CAS-01523-T1R7X6 / request DD-DEMO-H095-01523",
     "say": "Here's Elena's in-progress Case, CAS-01523-T1R7X6. Case Overview gives us the request, owner, status and recent activity; I'll keep that high level rather than walk through every widget. The Direct Deposit tab brings in the associated request. The synthetic banking record shows Verification Required and Pending Authorization. That tells us what remains, not that any banking change is approved. We can also bring information from benefits, payment or document systems into a consolidated service experience; I'll use one supporting view to illustrate the pattern without claiming a production SSA integration. The AI Recommendation Center can present guidance and possible next steps. If its provenance is labeled rule-based fallback, we'll say that rather than claiming an autonomous AI decision. Finally, Review & Resolution helps the representative assess outstanding work. This request remains pending; we do not change account details or close it prematurely.",
@@ -517,7 +578,7 @@ body.focus .script blockquote{font-size:22px}
     "value": "Voice, chat, web and mobile-capable Dynamics/portals are ways to engage with a consistent service experience; Facebook is only a future configured option."
   }
 ];
- const PREP=["Daniel's voice details are unknown; Brad's flexible transition is ready.","Elena portal alert and live chat-to-agent routing are ready; prepare a labeled fallback.","Customer Service workspace receives chat; exact Elena Contact is identified.","Both Contact forms are available for the SAME Elena record; highlight alert, Super Six and Timeline at a high level.","Case CAS-01523-T1R7X6 and DD-DEMO-H095-01523 remain pending verification and authorization.","One supporting source-data pane, AI Recommendation Center, Review & Resolution and CRM dashboards are pre-opened.","Brad's section checkpoints and architecture close are prepared; Beth's content is owned by Beth."];
+ const PREP=["Daniel's voice details are unknown; Brad's flexible transition is ready.","Portal Overview → Direct Deposit → live chat. Two copyable ASCII citizen messages are ready; chatbot responds automatically.","Live agent handoff works; point out summary, quick replies, consult/transfer and optional Intent/Case Agent outputs only if verified.","One Elena Contact, two forms; standard-form Timeline and stored chat details only when present. SSA-specific form follows.","Case CAS-01523-T1R7X6 remains pending; keep Case section to ten minutes.","One supporting source-data pane, AI Recommendation Center, Review & Resolution and CRM dashboards are pre-opened.","Brad's section checkpoints and architecture close are prepared; Beth's content is owned by Beth."];
  const $=id=>document.getElementById(id);
  const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  let stored={};try{stored=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(_){}
@@ -540,6 +601,9 @@ body.focus .script blockquote{font-size:22px}
    '<div class="stage-body">'+
    '<section class="box"><div class="label">Speaker highlight · what is shown</div><p>'+esc(c.highlight)+'</p></section>'+
    '<section class="script"><div class="label">Presenter talk track · say this</div><blockquote>“'+esc(c.say)+'”</blockquote></section>'+
+   (c.customerLines?'<section class="chat-copy"><div class="label">You said · copy only the citizen message</div>'+c.customerLines.map((x,i)=>'<div class="copy-row"><p><strong>Message '+(i+1)+':</strong> '+esc(x)+'</p><button type="button" class="btn small" data-copy-citizen="'+i+'">Copy message '+(i+1)+'</button></div>').join('')+'<p>Paste the copied line into chat. No label or formatting is included.</p></section>':'')+
+   (c.screenHighlights?'<section class="box"><div class="label">Portal screen highlights</div>'+ordered(c.screenHighlights.map(x=>x[0]+': '+x[1]))+'</section>':'')+
+   (c.toolHighlights?'<section class="box"><div class="label">Agent workspace · short talking points</div><div class="tool-grid">'+c.toolHighlights.map(x=>'<div class="tool"><strong>'+esc(x[0])+'</strong><p>'+esc(x[1])+'</p></div>').join('')+'</div></section>':'')+
    '<div class="grid2"><section class="box"><h3>What to click / show</h3>'+ordered(c.clicks)+'</section><section class="box alt"><div class="label">Audience takeaway</div><p style="font-weight:700;color:#194b72;margin:0 0 19px">'+esc(c.value)+'</p><div class="label">If the live path is not ready</div><p style="margin:0;font-size:13px">'+esc(c.fallback)+'</p></section></div>'+
    '<div class="guard"><div class="label">Truth boundary · do not claim</div><p>'+esc(c.guard)+'</p></div>'+
    '<div class="box"><div class="label">Audience checkpoint · invite questions</div><p>“'+esc(c.checkpoint)+'”</p></div>'+
@@ -550,6 +614,7 @@ body.focus .script blockquote{font-size:22px}
   $("prev").onclick=()=>go(state.index-1);
   $("next").onclick=()=>go(state.index===6?0:state.index+1);
   $("mark").onclick=()=>{state.done[c.id]=!state.done[c.id];save();renderRoute();renderStage();updateClocks()};
+  document.querySelectorAll('[data-copy-citizen]').forEach(b=>b.onclick=()=>{const i=Number(b.getAttribute('data-copy-citizen'));if(c.customerLines&&c.customerLines[i])copyText(c.customerLines[i],'Citizen message '+(i+1)+' copied.');});
   $("copyChapter").onclick=()=>copyText(c.title+"\nGoal: "+c.objective+"\nHighlight: "+c.highlight+"\nTalk track: "+c.say+"\nClicks:\n"+c.clicks.map((v,i)=>(i+1)+". "+v).join("\n")+"\nCheckpoint: "+c.checkpoint+"\nNext: "+c.handoff);
   $("deepToggle").onclick=()=>{state.deep[c.id]=!state.deep[c.id];save();renderStage();updateClocks()};
   updateClocks();
@@ -577,11 +642,11 @@ body.focus .script blockquote{font-size:22px}
   if(i<0||i>=7)return;
   state.index=i;chapterElapsed=0;save();renderRoute();renderStage();window.scrollTo({top:0,behavior:"smooth"});
  }
- async function copyText(value){
+ async function copyText(value,successMessage="Presenter notes copied."){
   try{
    if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(value)}
    else{const t=document.createElement("textarea");t.value=value;document.body.appendChild(t);t.select();const success=document.execCommand("copy");t.remove();if(!success)throw new Error("Clipboard unavailable")}
-   $("copyStatus").textContent="Presenter notes copied.";
+   $("copyStatus").textContent=successMessage;
   }catch(_){$("copyStatus").textContent="Clipboard was unavailable. Use Print / PDF to save the cue sheet."}
  }
  $("timerButton").onclick=()=>{
