@@ -25,7 +25,7 @@
         "scope": "presentation/source artifact quality; not live integrations"
       },
       "source_readiness": "READY",
-      "publication": "committed; Pages status unverified",
+      "publication": "GitHub Pages live; HTTP 200 verified 2026-11-12 for homepage and all P010 registered artifacts",
       "artifacts": [
         {
           "id": "P010",

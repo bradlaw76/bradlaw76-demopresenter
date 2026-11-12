@@ -130,7 +130,7 @@
     "inline_javascript": "passed",
     "link_targets": "source_verified",
     "browser_visual": "not_verified",
-    "pages_live": "not_verified"
+    "pages_live": "http_200_verified_2026-11-12"
   },
   "redirects_required": false,
   "grade": {

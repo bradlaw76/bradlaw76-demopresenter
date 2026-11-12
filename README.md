@@ -3,8 +3,9 @@
 Reusable, **public presentation-only** walkthroughs created from source-repository materials after authorized read-only review, privacy review and explicit approval to publish.
 
 **Repository:** [bradlaw76/bradlaw76-demopresenter](https://github.com/bradlaw76/bradlaw76-demopresenter)  
-**Planned GitHub Pages home:** https://bradlaw76.github.io/bradlaw76-demopresenter/  
-**Important:** Committed HTML is not proof that GitHub Pages has been enabled or deployed.
+**Live GitHub Pages home:** https://bradlaw76.github.io/bradlaw76-demopresenter/
+
+**Verified:** November 12, 2026 — homepage and all 14 P010 registry-listed artifacts returned HTTP 200. Future commits still require fresh Pages readback; a GitHub commit alone is not deployment proof.
 
 ## Current demo
 
@@ -89,4 +90,4 @@ New releases require at least **80% / B−** on the [grading rubric](docs/ARTIFA
 - [P registry](docs/P_REGISTRY.md)
 - [Reusable source-repo agent instructions](templates/AGENTS.demo-presenter.md)
 
-**Pages activation:** [Settings → Pages](https://github.com/bradlaw76/bradlaw76-demopresenter/settings/pages) → Deploy from a branch → `main` / `(root)`. Verify the actual live URL after deployment.
+**Pages status:** Live as checked November 12, 2026. For configuration, use [Settings → Pages](https://github.com/bradlaw76/bradlaw76-demopresenter/settings/pages); verify each new update at the live URL.

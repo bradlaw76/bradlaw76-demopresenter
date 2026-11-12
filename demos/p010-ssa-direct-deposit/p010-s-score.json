@@ -116,7 +116,7 @@
     "html_js_static": "PASS",
     "browser_visual": "NOT_VERIFIED",
     "keyboard_accessibility": "NOT_VERIFIED",
-    "pages_live": "NOT_VERIFIED",
+    "pages_live": "HTTP_200_VERIFIED_2026-11-12",
     "live_integration": "PARTIAL_NOT_GRADED"
   },
   "scoring_note": "This score measures source-grounded public presenter quality, not live operational, financial, identity or agency integration acceptance.",

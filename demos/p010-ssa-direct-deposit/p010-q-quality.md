@@ -68,13 +68,13 @@ The originating SSA demo project supplied the complete master storyline, detaile
 | Source readiness | **READY** | All required storyline, source and owner-input categories present |
 | Artifact static validation | **STATIC_VERIFIED** | Main HTML and two alternatives parsed; duration/links and safety scans checked |
 | Browser/mobile/accessibility validation | **NOT VERIFIED** | No complete independent public-site cross-browser/keyboard/mobile run |
-| Public GitHub publication | **COMMITTED** | Public repository file readbacks passed; GitHub Pages activation must be independently confirmed |
+| Public GitHub publication | **PAGES_LIVE** | On November 12, 2026, the homepage and all 14 registered P010 artifact URLs returned HTTP 200; live browser interaction is still unverified |
 | Live integration acceptance | **PARTIAL / NOT ASSESSED FOR GRADE** | Presenter explicitly distinguishes fully demonstrated Case panels from unaccepted protected transaction and chat routing |
 
 ## Improvements before a higher grade
 
 1. Run actual browser/mobile focus, keyboard and contrast checks on all P010-1–P010-3 public presenter URLs.
-2. Run a site-wide link test and verify GitHub Pages deployment, not merely successful Git commits.
+2. Test live Pages navigation and interactive controls in a browser, and rerun public link checks after future changes.
 3. Rehearse P010-2 and P010-3 against the current P010-B seven-section flow or preserve their historical designation permanently.
 4. Reassess after any substantive presenter, runbook, timebox or public-safety change. Record new evidence and a revised score with the date; do not silently inflate the grade.
 
