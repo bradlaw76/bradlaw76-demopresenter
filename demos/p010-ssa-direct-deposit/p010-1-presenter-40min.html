@@ -92,6 +92,17 @@ h1{font-size:clamp(22px,2.4vw,32px);letter-spacing:-.025em;line-height:1.2;margi
 .spoken-points{margin:0;padding-left:22px;display:grid;gap:13px;font-size:17px;line-height:1.55;color:#143a5d}
 .spoken-points li{padding-left:4px}
 .spoken-points strong{color:#075b9b;font-weight:850}
+.demo-stop{border:1px solid #c6ddeb;border-radius:12px;background:#fff;overflow:hidden}
+.demo-stop-head{display:flex;align-items:center;gap:11px;padding:12px 15px;background:#ebf5fc;border-bottom:1px solid #d6e7f3}
+.demo-stop-number{background:#075b9b;color:white;border-radius:8px;min-width:30px;text-align:center;padding:4px;font-weight:800}
+.demo-stop-title{flex:1;font-weight:800;color:#143d63}
+.demo-stop-time{font-size:12px;font-weight:800;color:#315f80;white-space:nowrap}
+.demo-stop-body{padding:14px 17px;display:grid;gap:10px}
+.demo-stop-body p{margin:0;line-height:1.55}
+.demo-stop-body .cue{color:#075b9b;font-size:11px;text-transform:uppercase;font-weight:850;letter-spacing:.09em}
+.demo-stop-body .words{font-size:16px;color:#173d60}
+.demo-stop-body .why{font-size:13px;color:#41647b;background:#f3f9fd;border-radius:7px;padding:8px 10px}
+.demo-stop-list{display:grid;gap:12px}
 .takeaway-script{font-size:17px;line-height:1.55;font-weight:650;color:#194b72;margin:0}
 .compact-details{border:1px solid var(--line);border-radius:10px;background:#f7fafd;font-size:12px;color:#536b83}
 .compact-details summary{cursor:pointer;padding:8px 11px;font-weight:750;color:#59718a}
@@ -256,7 +267,7 @@ body.focus .script blockquote{font-size:22px}
     "number": "01",
     "title": "Daniel → Brad · Omnichannel bridge",
     "owner": "Daniel (independent) → Brad",
-    "min": 5,
+    "min": 2,
     "original": "aligned to 17-scene source",
     "status": "conditional",
     "objective": "Bridge into Brad's separate chat demonstration without presuming what Daniel showed.",
@@ -289,7 +300,7 @@ body.focus .script blockquote{font-size:22px}
     "number": "02",
     "title": "Elena · Digital portal and Copilot chat",
     "owner": "Brad · digital engagement",
-    "min": 5,
+    "min": 6,
     "original": "aligned to 17-scene source",
     "status": "mixed",
     "objective": "Show the Overview verification notice, briefly visit Direct Deposit, then send two copyable constituent messages and request a human representative.",
@@ -354,7 +365,7 @@ body.focus .script blockquote{font-size:22px}
     "number": "03",
     "title": "Dynamics · Live representative conversation",
     "owner": "Brad · Customer Service workspace",
-    "min": 4,
+    "min": 8,
     "original": "aligned to 17-scene source",
     "status": "mixed",
     "objective": "Use the live chat scenario to showcase the broader agent workspace: support for chat and telephony, practical productivity tools, and embedded Copilot assistance.",
@@ -564,7 +575,7 @@ body.focus .script blockquote{font-size:22px}
     "number": "07",
     "title": "Omnichannel close · Hand off to Beth",
     "owner": "Brad → Beth",
-    "min": 4,
+    "min": 2,
     "original": "aligned to 17-scene source",
     "status": "mixed",
     "objective": "Close Brad's service journey and introduce possible channel extensibility without scripting Beth's part.",
@@ -620,6 +631,52 @@ body.focus .script blockquote{font-size:22px}
   reports:["Agent Dashboard","My Workload","Supervisor Operations","CRM service information","demonstration data"],
   admin:["chat","consistent customer-service experience","Dynamics 365","Dataverse","mobile","Beth"]
  };
+ // Each stop includes the real on-screen gesture, spoken explanation, business value and a
+ // timebox for screen interaction—not merely the time needed to read the words aloud.
+ const DEMO_STOPS={
+  voice:[
+   ["Daniel finishes","Wait for Daniel to hand over; do not narrate his unverified screens.","Thanks, Daniel. I'll pick up with a different constituent, Elena, and show chat as another entry point into a consistent service experience.","Separate scenarios can illustrate a shared design approach without suggesting a live transfer.",0.5],
+   ["Set the journey","Show the process overview or navigate to the portal's opening screen.","As we go, watch how the interaction moves from self-service to a representative, then to the Contact, Case and reporting. The technology matters because it helps staff carry the work forward.","Frame the business story before navigating through records.",1],
+   ["Introduce Elena","Pause with the portal Overview visible and identify the fictional constituent scenario.","Elena needs help because a Direct Deposit change requires further verification. Let's see what she experiences first.","Give the audience one customer and one service need to follow.",0.5]
+  ],
+  portal:[
+   ["Overview verification notice","Open SSA MyAccount Preview, point at the Direct Deposit verification alert on Overview; pause so the audience can read it.","Notice that Elena can immediately see her Direct Deposit request needs additional verification. She shouldn't have to guess whether the payment change went through.","The service issue is visible at the point of need; the alert is a fictional demonstration, not a production notice.",1],
+   ["Direct Deposit details","Select Direct Deposit; identify the request and its pending review state, then return to chat.","This is the protected request behind the notice. We're not claiming the bank change has been approved. The useful next action is to get help completing the required review.","Distinguish a request from an authorized transaction.",1],
+   ["Copilot conversation","Open the actual widget. Send Message 1 using its Copy button, wait for the assistant's response, and point to the verification explanation and sensitive-data warning.","Elena can ask in natural language what the notice means. The configured assistant can explain the issue and next step without asking her to reveal full banking details or verification secrets.","General guidance reduces confusion while keeping protected actions out of the chatbot.",2],
+   ["Request a live person","Send Message 2, show the request for a human agent, wait for the observed transfer path and narrate only what actually happens.","Elena needs additional help before the holidays, so she asks for a representative. Watch how this moves from digital self-service toward a human conversation; we'll follow the actual path the demo provides.","A bot-to-agent escalation connects self-service with assisted service; don't infer a linked Case was automatically created.",2]
+  ],
+  conversation:[
+   ["Accept the chat","In Dynamics, identify the incoming conversation and accept it. Point to the customer message and communication panel.","We're now in the representative workspace. Chat is today's channel, but the value is the collection of communication and service tools available in one place.","The representative can continue a service interaction without starting from a blank screen.",1],
+   ["Channel and conversation controls","Point to Voice call, Video call, the chat window and consultation controls; distinguish visible buttons from enabled live scenarios.","The workspace can bring together chat, telephony and other configured channels. Here are the communication controls the representative can work with, even though we're demonstrating chat today.","One workspace can support multiple contact methods; don't claim live SSA telephony was tested here.",1],
+   ["Summary and assistance","Open the conversation summary. Identify its recap, then point out text prediction and compliance nudges where visible.","A summary helps the representative quickly understand what brought the person here. Supporting features can reduce repetitive reading and typing while the representative remains responsible for the conversation.","Faster orientation and more consistent communication.",1],
+   ["Message composer tools","Point to Quick Replies, consultation, transfer, attach, links, notes, rich messages and translation where present. Use /q hello if it is available; don't send an invented response.","These aren't just chat bubbles. A representative can use quick replies, involve colleagues, transfer work or add supporting material within the interaction. We only need a few examples to demonstrate the breadth.","Show specific operational tools, not a feature-name dump.",1.5],
+   ["Intent-based suggestion","Toward the end of the Copilot pane, show the SSA FAQ intent suggestion, recommended path and draft answer. Demonstrate copying or adapting only if the actual UI allows it.","Notice the Intent guidance: it recognizes the general issue and suggests a response or next step. I can review the wording, adjust it in the customer message on the left and decide what to send.","AI proposes contextually relevant assistance; the human controls the final reply.",1],
+   ["Custom agent sidebar","Open SSA Agent Support. Identify the custom sidebar and the configured Copilot Studio agents without touring each one.","This sidebar is our extension point. We can surface specialized Copilot Studio agents to give representatives targeted tools for different types of service requests.","Bring task-specific help directly into the representative's workflow.",1],
+   ["Same public assistant and Contact handoff","Select my Social Security Assistant last, show an actual general-information response if available, then navigate to Elena's existing Contact.","This is the same configured assistant available in the public portal, now accessible inside the representative workspace for general published SSA information. It doesn't inherit Elena's authentication. Let's look at her Contact next.","Reuse approved general guidance without confusing it with identity verification or bank authorization.",1.5]
+  ],
+  contact:[
+   ["Standard Contact form","Open Elena on Contact – Customer Insights – SSA. Point to the form name and profile sections before going deeper.","This is the standard-style Contact experience. It gives us customer context and provides a starting point for service history.","One customer record can support familiar CRM interactions.",2],
+   ["Timeline and interaction history","Scroll to the Timeline. Point to a saved activity and open any chat details only if they exist on the record.","The Timeline can bring service interactions together. If a conversation was recorded, we can inspect what was actually saved—an activity, summary or transcript. We shouldn't assume every chat message is retained.","Reduce system-switching while remaining precise about the available history.",2],
+   ["Switch forms, same Elena","Use the form selector and choose SSA | Constituent Verification & Direct Deposit. Point to the form title and the unchanged Contact identity.","Now we're looking at the same Elena record through a purpose-built SSA form. Different roles can see the information most relevant to the work without creating a duplicate customer.","Role-specific experience on a shared service record.",2],
+   ["Verification and related context","Point to Super Six, the verification alert, Direct Deposit information, related records and activity areas actually present; avoid opening every field.","Here the representative can focus on verification and payment-change context. The data is in our demonstration service layer; authoritative SSA benefit and payment systems remain distinct.","Tailored context supports the verification workflow but does not itself prove the constituent is authenticated.",2]
+  ],
+  case:[
+   ["Case Overview and SLA","Open CAS-01523-T1R7X6. Point to the Case status, owner, description, Timeline and SLA controls where visible.","This Case is where the service work is organized. The overview tells the representative what the issue is, who owns it and whether follow-up is still required.","Track responsibility and service progress in one work item.",1],
+   ["Direct Deposit tab","Open Direct Deposit and point to synthetic request DD-DEMO-H095-01523, verification state and pending authorization.","The associated request still needs verification and authorization. Those pending indicators are exactly why we cannot treat the bank change as complete.","Make protected-action readiness explicit.",2],
+   ["Supporting banking record","Open the related synthetic banking entry; point to its verification-required flag and masked destination details if present.","The banking record gives more context about the requested change. We're intentionally using synthetic information, and the status matters more than displaying an account number.","Connect Case workflow to related data without exposing sensitive details.",2],
+   ["One supporting-system view","Show one actual Benefits & Payments, TED or document pane—not every tab. Identify the data it illustrates and what remains conceptual.","A representative may need information from benefits, payments or documents to resolve a request. This view illustrates how a service workspace can put that supporting context nearby.","Less navigation between systems; no claim of a proven production SSA integration.",1.5],
+   ["AI Recommendation Center","Show a visible recommendation, its rationale or provenance, and the suggested next action. Name any rule-based fallback as such.","Recommendations help the representative understand possible next steps. The representative still evaluates the guidance, and a rule-based fallback is not an autonomous AI decision.","Decision support with transparent provenance.",1.5],
+   ["Review & Resolution","Open the Case Review & Resolution area. Point to incomplete checks, readiness and outstanding decisions actually shown; leave the Case pending.","Here's how the work comes together: what remains unverified, whether authorization was recorded and whether the request is ready to resolve. Today the appropriate outcome is to continue verification, not close the Case.","A controlled process keeps an unresolved banking request from appearing complete.",2]
+  ],
+  reports:[
+   ["Agent Dashboard / My Workload","Open the Agent Dashboard and My Workload screens from the supplied screenshots. Point to assignments, open work, follow-up indicators and Customer 360 where visible.","An agent needs to see what work is assigned and which requests need attention. These CRM views help prioritize day-to-day constituent service activities.","Operational visibility for individual staff, not merely a collection of charts.",2],
+   ["Supervisor Operations","Open Supervisor Dashboard, My Workload and the relevant Customer 360 view. Highlight ownership, distribution and aging, using only values actually displayed.","A supervisor can look across Cases to understand workload and follow-up patterns. This is CRM service reporting; Beth will cover contact-center performance measures separately.","Connect individual Case work to team oversight without presenting demo figures as official SSA totals.",2]
+  ],
+  admin:[
+   ["Revisit the journey","Remain on the final CRM screen; briefly recap portal, chat, workspace, Contact, Case and reporting.","We followed Elena from a digital notice into assisted service, then through the same Contact, a controlled Case workflow and operational reporting. That's the consistent experience we're illustrating.","Tie the demonstrations back to a clear business story.",1],
+   ["Transition to Beth","Mention mobile-capable and additional configured channels only at a high level; invite final questions and hand off.","These capabilities can extend to additional channels when configured. That concludes my portion. Beth, I'll turn it over to you for the contact-center capabilities and operational view.","End cleanly without claiming unshown channels are implemented.",1]
+  ]
+ };
  const $=id=>document.getElementById(id);
  const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  let stored={};try{stored=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(_){}
@@ -647,6 +704,15 @@ body.focus .script blockquote{font-size:22px}
    return '<li>'+html+'</li>';
   }).join('')+'</ul>';
  }
+ function renderStops(c){
+  const stops=DEMO_STOPS[c.id]||[];
+  return '<section class="box" style="background:#f7fbfe"><div class="label">Live walkthrough · point, say, explain, advance</div><p style="margin:0 0 14px;color:#56718a">Work through these visible stops while demonstrating the actual screen. The time includes navigation, audience observation and explanation—not continuous reading.</p><div class="demo-stop-list">'+stops.map((stop,i)=>
+   '<article class="demo-stop"><div class="demo-stop-head"><span class="demo-stop-number">'+(i+1)+'</span><span class="demo-stop-title">'+esc(stop[0])+'</span><span class="demo-stop-time">'+stop[4]+' min</span></div><div class="demo-stop-body">'+
+   '<div><div class="cue">Point / click / show</div><p>'+esc(stop[1])+'</p></div>'+
+   '<div><div class="cue">Say this</div><p class="words">“'+esc(stop[2])+'”</p></div>'+
+   '<p class="why"><strong>Why it matters:</strong> '+esc(stop[3])+'</p></div></article>'
+  ).join('')+'</div></section>';
+ }
  function renderStage(){
   const c=CHAPTERS[state.index],s=statusInfo(c.status),spoken=SPOKEN[c.id];
   const beatHtml=c.beats.map(b=>'<div class="beat"><strong>'+esc(b[0])+'</strong><p>'+esc(b[1])+'</p></div>').join("");
@@ -654,7 +720,8 @@ body.focus .script blockquote{font-size:22px}
    '<div class="stage-hero"><div class="stage-hero-top"><div><div class="eyebrow">'+esc(c.owner)+' · Original scenes '+esc(c.original)+'</div><h2>'+esc(c.title)+'</h2><p>'+esc(c.objective)+'</p></div><div class="chapter-count"><span class="smalltext muted">CHAPTER</span><strong>'+c.number+' / 07</strong></div></div><div class="hero-meta"><span class="chip">Target '+c.min+' minutes</span><span class="chip">Primary screen: '+esc(c.screen)+'</span><span class="badge '+s[1]+'">'+esc(s[0])+'</span><span class="chapter-clock" id="chapterClock">00:00 / '+String(c.min).padStart(2,"0")+':00</span></div></div>'+
    '<div class="stage-body">'+
    '<section class="box"><div class="label">Section introduction · say this</div><p>“'+esc(spoken.intro)+'”</p></section>'+
-   '<section class="script"><div class="label">Presenter talk track · say this</div>'+spokenBullets(c)+'</section>'+
+   renderStops(c)+
+   '<details class="compact-details"><summary>Full chapter narrative · optional rehearsal script</summary><div class="script"><div class="label">Presenter talk track · say this</div>'+spokenBullets(c)+'</div></details>'+
    (c.customerLines?'<section class="chat-copy"><div class="label">You said · copy only the citizen message</div>'+c.customerLines.map((x,i)=>'<div class="copy-row"><p><strong>Message '+(i+1)+':</strong> '+esc(x)+'</p><button type="button" class="btn small" data-copy-citizen="'+i+'">Copy message '+(i+1)+'</button></div>').join('')+'<p>Paste the copied line into chat. No label or formatting is included.</p></section>':'')+
    (c.screenHighlights?'<section class="box"><div class="label">Portal screen highlights</div>'+ordered(c.screenHighlights.map(x=>x[0]+': '+x[1]))+'</section>':'')+
    (c.toolHighlights?'<section class="box"><div class="label">Agent workspace · short talking points</div><div class="tool-grid">'+c.toolHighlights.map(x=>'<div class="tool"><strong>'+esc(x[0])+'</strong><p>'+esc(x[1])+'</p></div>').join('')+'</div></section>':'')+
@@ -669,7 +736,7 @@ body.focus .script blockquote{font-size:22px}
   $("next").onclick=()=>go(state.index===6?0:state.index+1);
   $("mark").onclick=()=>{state.done[c.id]=!state.done[c.id];save();renderRoute();renderStage();updateClocks()};
   document.querySelectorAll('[data-copy-citizen]').forEach(b=>b.onclick=()=>{const i=Number(b.getAttribute('data-copy-citizen'));if(c.customerLines&&c.customerLines[i])copyText(c.customerLines[i],'Citizen message '+(i+1)+' copied.');});
-  $("copyChapter").onclick=()=>copyText(c.title+"\nIntroduction: "+spoken.intro+"\nTalk track: "+c.say+"\nClicks:\n"+c.clicks.map((v,i)=>(i+1)+". "+v).join("\n")+"\nTakeaway: "+spoken.takeaway+"\nNext: "+c.handoff+"\nQuestions: "+c.checkpoint);
+  $("copyChapter").onclick=()=>copyText(c.title+"\nIntroduction: "+spoken.intro+"\nWalkthrough:\n"+DEMO_STOPS[c.id].map((v,i)=>(i+1)+". "+v[0]+" ("+v[4]+" min)\nPoint/show: "+v[1]+"\nSay: "+v[2]+"\nWhy: "+v[3]).join("\n")+"\nTakeaway: "+spoken.takeaway+"\nNext: "+c.handoff+"\nQuestions: "+c.checkpoint);
   $("deepToggle").onclick=()=>{state.deep[c.id]=!state.deep[c.id];save();renderStage();updateClocks()};
   updateClocks();
  }
@@ -681,7 +748,7 @@ body.focus .script blockquote{font-size:22px}
   $("timeTable").innerHTML=CHAPTERS.map((c,i)=>'<tr><td>'+(i+1)+'. '+esc(c.title)+'</td><td>'+esc(c.original)+'</td><td>'+c.min+'m</td></tr>').join("");
  }
  function printAll(){
-  $("printArea").innerHTML=CHAPTERS.map((c,i)=>'<section class="print-chapter"><div class="print-tag">Chapter '+(i+1)+' / 7 · '+c.min+' min · '+esc(c.owner)+' · Original scenes '+esc(c.original)+'</div><h2>'+esc(c.title)+'</h2><p><b>Screen:</b> '+esc(c.screen)+'</p><p><b>Introduction:</b> “'+esc(SPOKEN[c.id].intro)+'”</p><p><b>Talk track:</b> “'+esc(c.say)+'”</p><ol>'+c.clicks.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ol><p><b>Takeaway:</b> “'+esc(SPOKEN[c.id].takeaway)+'”</p><p><b>Next:</b> '+esc(c.handoff)+'</p><p><b>Questions:</b> '+esc(c.checkpoint)+'</p><p><b>Fallback:</b> '+esc(c.fallback)+'</p><p><b>Do not claim:</b> '+esc(c.guard)+'</p></section>').join("");
+  $("printArea").innerHTML=CHAPTERS.map((c,i)=>'<section class="print-chapter"><div class="print-tag">Chapter '+(i+1)+' / 7 · '+c.min+' min · '+esc(c.owner)+'</div><h2>'+esc(c.title)+'</h2><p><b>Introduction:</b> “'+esc(SPOKEN[c.id].intro)+'”</p>'+DEMO_STOPS[c.id].map((v,j)=>'<p><b>Stop '+(j+1)+' · '+esc(v[0])+' ('+v[4]+' min)</b></p><p><b>Show:</b> '+esc(v[1])+'</p><p><b>Say:</b> “'+esc(v[2])+'”</p><p><b>Why:</b> '+esc(v[3])+'</p>').join('')+'<p><b>Takeaway:</b> “'+esc(SPOKEN[c.id].takeaway)+'”</p><p><b>Next:</b> '+esc(c.handoff)+'</p><p><b>Questions:</b> '+esc(c.checkpoint)+'</p></section>').join("");
  }
  let elapsed=0,chapterElapsed=0,timer=null;
  function fmt(n){return String(Math.floor(n/60)).padStart(2,"0")+":"+String(n%60).padStart(2,"0")}
