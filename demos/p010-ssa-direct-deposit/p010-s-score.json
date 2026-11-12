@@ -119,5 +119,10 @@
     "pages_live": "NOT_VERIFIED",
     "live_integration": "PARTIAL_NOT_GRADED"
   },
-  "scoring_note": "This score measures source-grounded public presenter quality, not live operational, financial, identity or agency integration acceptance."
+  "scoring_note": "This score measures source-grounded public presenter quality, not live operational, financial, identity or agency integration acceptance.",
+  "improvement_plan": {
+    "id": "P010-I",
+    "path": "p010-i-improvements.md",
+    "format": "seven criteria with Why and Improve bullets"
+  }
 }
