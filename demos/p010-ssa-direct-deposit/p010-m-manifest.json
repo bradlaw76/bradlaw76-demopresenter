@@ -162,7 +162,7 @@
     ],
     "customer_copy_messages": 2,
     "agent_controls": true,
-    "intent_and_case_agents": "conditional_pending_verification",
+    "intent_and_case_agents": "intent_based_suggestion_observed__case_management_agent_creation_conditional",
     "contact_timeline_chat": "show actual stored history when present",
     "case_reference": "CAS-01523-T1R7X6",
     "related_request": "DD-DEMO-H095-01523",
@@ -181,6 +181,14 @@
     "citizen_message_1": "I see a notice when logged into the mySSA portal that my direct deposit change needs additional verification. Can you explain what that means?",
     "message_1_change": "Clarifies that the constituent noticed the verification message while logged into the fictional mySSA-style portal; common spelling typos corrected.",
     "total_minutes": 40,
-    "copy_button_count": 2
+    "copy_button_count": 2,
+    "intent_suggestion": {
+      "section": 3,
+      "step": 3,
+      "issue_label": "SSA FAQ",
+      "visual_pane": "right-side Copilot",
+      "use": "representative may adapt suggested guidance in left-side conversation before sending",
+      "capture_status": "owner screenshot"
+    }
   }
 }
