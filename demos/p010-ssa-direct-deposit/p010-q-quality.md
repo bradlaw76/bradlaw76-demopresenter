@@ -28,6 +28,8 @@ The originating SSA demo project supplied the complete master storyline, detaile
 - **[P010-S — Numeric score: 89/100](p010-s-score.json)** — structured category calculation.
 - **[P010-B — Canonical runbook](p010-b-runbook.md)** — source-supported presenter narrative.
 
+[P010-I · Per-criterion improvement plan](p010-i-improvements.md) — seven concise reasons and corrective actions, one per rubric category.
+
 ## Graded categories
 
 | Category | Earned | Maximum | Evidence and explicit deduction |
