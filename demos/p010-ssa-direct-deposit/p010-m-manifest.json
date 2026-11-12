@@ -177,6 +177,10 @@
     ],
     "question_checkpoints_per_section": true,
     "prior_version_branch": "backup/p010-before-portal-chat-copy-2026-11-12",
-    "grade_unchanged": true
+    "grade_unchanged": true,
+    "citizen_message_1": "I see a notice when logged into the mySSA portal that my direct deposit change needs additional verification. Can you explain what that means?",
+    "message_1_change": "Clarifies that the constituent noticed the verification message while logged into the fictional mySSA-style portal; common spelling typos corrected.",
+    "total_minutes": 40,
+    "copy_button_count": 2
   }
 }
