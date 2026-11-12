@@ -1,27 +1,31 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "library_title": "Demo Presenters",
-  "canonical_format": "P### collection + P###-N artifact",
-  "next_available_id": "P011",
+  "canonical_format": "P### collection + P###-N timed artifact + P###-[B,Q,G,S,I,R,M] standard document",
+  "next_available_collection_id": "P011",
   "collections": [
     {
       "id": "P010",
+      "title": "SSA Direct Deposit",
       "slug": "ssa-direct-deposit",
       "folder": "p010-ssa-direct-deposit",
-      "title": "SSA Direct Deposit",
-      "canonical_url_path": "demos/p010-ssa-direct-deposit/",
-      "default_presenter_id": "P010-1",
-      "runbook_id": "P010-4",
-      "quality_id": "P010-8",
+      "url_path": "demos/p010-ssa-direct-deposit/",
+      "default_presenter": "P010-1",
+      "runbook": "P010-B",
+      "quality": "P010-Q",
+      "grade": "P010-G",
+      "score": "P010-S",
+      "improvements": "P010-I",
+      "readme": "P010-R",
+      "manifest": "P010-M",
       "assessment": {
         "percentage": 89,
-        "letter_grade": "B+",
-        "date": "2026-11-12",
-        "meaning": "presentation artifact quality, not live-integration acceptance"
+        "letter": "B+",
+        "reviewed_on": "2026-11-12",
+        "scope": "presentation/source artifact quality; not live integrations"
       },
       "source_readiness": "READY",
-      "public_release": "committed",
-      "live_integration": "partially verified in originating source; not certified by public library",
+      "publication": "committed; Pages status unverified",
       "artifacts": [
         {
           "id": "P010",
@@ -30,7 +34,7 @@
         },
         {
           "id": "P010-1",
-          "type": "presenter-current",
+          "type": "presenter-current-40min",
           "path": "demos/p010-ssa-direct-deposit/p010-1-presenter-40min.html"
         },
         {
@@ -44,54 +48,61 @@
           "path": "demos/p010-ssa-direct-deposit/p010-3-presenter-52min.html"
         },
         {
-          "id": "P010-4",
-          "type": "runbook",
-          "path": "demos/p010-ssa-direct-deposit/p010-4-runbook.md"
-        },
-        {
           "id": "P010-5",
-          "type": "notes-40min",
+          "type": "notes-current-40min",
           "path": "demos/p010-ssa-direct-deposit/p010-5-presenter-40min.md"
         },
         {
           "id": "P010-6",
-          "type": "notes-13min",
+          "type": "notes-historical-13min",
           "path": "demos/p010-ssa-direct-deposit/p010-6-presenter-13min.md"
         },
         {
           "id": "P010-7",
-          "type": "notes-52min",
+          "type": "notes-historical-52min",
           "path": "demos/p010-ssa-direct-deposit/p010-7-presenter-52min.md"
         },
         {
-          "id": "P010-8",
-          "type": "scorecard",
-          "path": "demos/p010-ssa-direct-deposit/p010-8-quality.md"
+          "id": "P010-B",
+          "type": "runbook",
+          "path": "demos/p010-ssa-direct-deposit/p010-b-runbook.md"
         },
         {
-          "id": "P010-9",
+          "id": "P010-Q",
+          "type": "quality",
+          "path": "demos/p010-ssa-direct-deposit/p010-q-quality.md"
+        },
+        {
+          "id": "P010-G",
+          "type": "grade",
+          "path": "demos/p010-ssa-direct-deposit/p010-g-grade.md"
+        },
+        {
+          "id": "P010-S",
+          "type": "score",
+          "path": "demos/p010-ssa-direct-deposit/p010-s-score.json"
+        },
+        {
+          "id": "P010-I",
+          "type": "improvements",
+          "path": "demos/p010-ssa-direct-deposit/p010-i-improvements.md"
+        },
+        {
+          "id": "P010-R",
+          "type": "readme",
+          "path": "demos/p010-ssa-direct-deposit/p010-r-readme.md"
+        },
+        {
+          "id": "P010-M",
           "type": "manifest",
-          "path": "demos/p010-ssa-direct-deposit/p010-9-manifest.json"
-        },
-        {
-          "id": "P010-10",
-          "type": "collection-readme",
-          "path": "demos/p010-ssa-direct-deposit/p010-10-README.md"
+          "path": "demos/p010-ssa-direct-deposit/p010-m-manifest.json"
         }
-      ]
+      ],
+      "aliases": []
     }
   ],
-  "policy": "docs/ARTIFACT_QUALITY_STANDARD.md",
-  "source_review": "docs/SOURCE_REVIEW.md",
-  "registry_markdown": "docs/P_REGISTRY.md",
-  "automatic_private_repository_sync": false,
-  "next_available_collection_id": "P011",
-  "artifact_id_pattern": "^P[0-9]{3,}-[1-9][0-9]*$",
-  "rules": {
-    "collections_have_parent_P_id": true,
-    "artifacts_use_parent_suffix": true,
-    "ids_unique_per_collection": true,
-    "next_demo_collection": "P011",
-    "redirects": false
-  }
+  "quality_standard": "docs/ARTIFACT_QUALITY_STANDARD.md",
+  "read_only_source_review": "docs/SOURCE_REVIEW.md",
+  "artifact_registry_markdown": "docs/P_REGISTRY.md",
+  "automatic_source_repo_sync": false
 }
