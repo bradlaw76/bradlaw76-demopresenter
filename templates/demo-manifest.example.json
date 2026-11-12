@@ -1,70 +1,76 @@
 {
-  "schema_version": 2,
-  "collection_id": "P021",
+  "schema_version": 3,
+  "collection_id": "P011",
   "slug": "example-service-flow",
-  "folder": "p021-example-service-flow",
+  "folder": "p011-example-service-flow",
   "title": "Example Service Flow",
-  "description": "Sanitized example business scenario",
   "visibility": "public-presentation-only",
-  "source_readiness": "READY",
-  "default_variant": "P022",
+  "source_readiness": "PENDING_SOURCE_REVIEW",
+  "default_variant": "P011-1",
   "index": "index.html",
-  "runbook": {
-    "id": "P023",
-    "source": "p023-runbook.md"
-  },
-  "quality": {
-    "id": "P025",
-    "source": "p025-quality.md",
-    "percentage": 85,
-    "letter": "B",
-    "reviewed_on": "YYYY-MM-DD"
+  "id_policy": {
+    "parent_demo": "P011",
+    "timed_children": "P011-1, P011-2...",
+    "standard_documents": [
+      "P011-B",
+      "P011-Q",
+      "P011-G",
+      "P011-S",
+      "P011-I",
+      "P011-R",
+      "P011-M"
+    ]
   },
   "versions": [
     {
-      "id": "P022",
+      "id": "P011-1",
       "label": "20-minute main",
       "duration_minutes": 20,
-      "html": "p022-presenter-20min.html",
-      "notes_id": "P024",
-      "notes": "p024-presenter-20min.md",
-      "current": true,
-      "status": "current"
+      "html": "p011-1-presenter-20min.html",
+      "notes_id": "P011-2",
+      "notes": "p011-2-presenter-20min.md",
+      "current": true
     }
   ],
-  "assets": [
-    {
-      "id": "P021",
-      "type": "collection",
-      "path": "index.html"
-    },
-    {
-      "id": "P023",
-      "type": "runbook",
-      "path": "p023-runbook.md"
-    },
-    {
-      "id": "P025",
-      "type": "quality",
-      "path": "p025-quality.md"
-    },
-    {
-      "id": "P026",
-      "type": "manifest",
-      "path": "p026-manifest.json"
-    },
-    {
-      "id": "P027",
-      "type": "guide",
-      "path": "p027-README.md"
-    }
-  ],
+  "runbook": {
+    "id": "P011-B",
+    "source": "p011-b-runbook.md"
+  },
+  "quality": {
+    "id": "P011-Q",
+    "source": "p011-q-quality.md",
+    "percentage": null,
+    "letter": null,
+    "reviewed_on": null
+  },
+  "grade": {
+    "id": "P011-G",
+    "source": "p011-g-grade.md"
+  },
+  "score": {
+    "id": "P011-S",
+    "source": "p011-s-score.json"
+  },
+  "improvements": {
+    "id": "P011-I",
+    "source": "p011-i-improvements.md",
+    "required_format": "seven categories; Why and Improve bullets for each"
+  },
+  "readme": {
+    "id": "P011-R",
+    "source": "p011-r-readme.md"
+  },
+  "manifest": {
+    "id": "P011-M",
+    "source": "p011-m-manifest.json"
+  },
   "owner_approval_required_for_public_updates": true,
-  "contains_live_integrations": false,
   "checks": {
-    "html_js": "not_run",
-    "public_links": "not_run",
-    "browser_mobile": "not_run",
-    "pages_live": "not_verified"
-  }
+    "source_gate": "NOT_VERIFIED",
+    "static_html": "NOT_RUN",
+    "links": "NOT_RUN",
+    "browser": "NOT_VERIFIED",
+    "pages": "NOT_VERIFIED"
+  },
+  "contains_live_integrations": false
 }
