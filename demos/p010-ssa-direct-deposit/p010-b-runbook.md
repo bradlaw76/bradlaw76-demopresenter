@@ -36,7 +36,7 @@
 
 **Two citizen chat messages:** P010-1 has dedicated Copy buttons. Only the customer sentence is copied, with normal ASCII punctuation and no “You said” label or formatting.
 
-> I see a notice that my direct deposit change needs additional verification. Can you explain what that means?
+> I see a notice when logged into the mySSA portal that my direct deposit change needs additional verification. Can you explain what that means?
 
 > Can I speak to an agent about my direct deposit? I really need to get it corrected before the holidays.
 
@@ -106,7 +106,7 @@ The configured chat assistant responds automatically; do not type a redundant ag
 
 **Copyable citizen text**
 
-- **You said 1:** I see a notice that my direct deposit change needs additional verification. Can you explain what that means?
+- **You said 1:** I see a notice when logged into the mySSA portal that my direct deposit change needs additional verification. Can you explain what that means?
 - **You said 2:** Can I speak to an agent about my direct deposit? I really need to get it corrected before the holidays.
 
 **Key beats**
