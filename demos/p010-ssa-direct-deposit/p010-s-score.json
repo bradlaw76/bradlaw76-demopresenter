@@ -137,14 +137,17 @@
       "P010-B",
       "P010-5"
     ],
-    "updates": [
-      "owner-confirmed live chat path",
-      "two Contact forms",
-      "Case CAS-01523-T1R7X6",
-      "seven section Q&A cues",
-      "CRM reporting vs contact-center reporting"
+    "change": "Portal Overview and Direct Deposit navigation; two copyable ASCII citizen prompts; agent workspace features; conditional AI agents; Contact Timeline and actual chat history if stored.",
+    "timings_minutes": [
+      5,
+      5,
+      4,
+      8,
+      10,
+      4,
+      4
     ],
     "score_change": 0,
-    "reason": "browser/mobile/accessibility validation and historical alternatives still pending"
+    "browser_validation": "NOT_VERIFIED"
   }
 }
