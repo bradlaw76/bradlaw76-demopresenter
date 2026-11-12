@@ -1,93 +1,92 @@
-# Demo Presenters
+# Demo Presenters — Public Presentation Library
 
-A public, **presentation-only** library of self-contained interactive demos, master runbooks, speaker notes, multiple timeboxes and graded improvement plans.
+Reusable, **public presentation-only** walkthroughs created from source-repository materials after authorized read-only review, privacy review and explicit approval to publish.
 
-**Repository:** [bradlaw76/bradlaw76-demopresenter](https://github.com/bradlaw76/bradlaw76-demopresenter) · **Expected Pages home (after enablement):** https://bradlaw76.github.io/bradlaw76-demopresenter/
+**Repository:** [bradlaw76/bradlaw76-demopresenter](https://github.com/bradlaw76/bradlaw76-demopresenter)  
+**Planned GitHub Pages home:** https://bradlaw76.github.io/bradlaw76-demopresenter/  
+**Important:** Committed HTML is not proof that GitHub Pages has been enabled or deployed.
 
-## Current demo library
+## Current demo
 
-| Demo collection | Primary presenter | Other timed versions | Master runbook | Artifact grade | Suggested improvements |
+| Demo collection | Main presenter | Alternatives | Runbook | Artifact grade | Improve |
 | --- | --- | --- | --- | --- | --- |
-| [**P010 — SSA Direct Deposit**](demos/p010-ssa-direct-deposit/) | [P010-1 · 40 min](demos/p010-ssa-direct-deposit/p010-1-presenter-40min.html) | [P010-2 · 13 min](demos/p010-ssa-direct-deposit/p010-2-presenter-13min.html) · [P010-3 · 52 min](demos/p010-ssa-direct-deposit/p010-3-presenter-52min.html) | [P010-B](demos/p010-ssa-direct-deposit/p010-b-runbook.md) | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) | [P010-I · Seven improvements](demos/p010-ssa-direct-deposit/p010-i-improvements.md) |
+| **[P010 · SSA Direct Deposit](demos/p010-ssa-direct-deposit/)** | [P010-1 · 40 min](demos/p010-ssa-direct-deposit/p010-1-presenter-40min.html) | [P010-2 · 13 min](demos/p010-ssa-direct-deposit/p010-2-presenter-13min.html) · [P010-3 · 52 min](demos/p010-ssa-direct-deposit/p010-3-presenter-52min.html) | [P010-B](demos/p010-ssa-direct-deposit/p010-b-runbook.md) | [P010-G · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [P010-S · 89%](demos/p010-ssa-direct-deposit/p010-s-score.json) | [P010-I](demos/p010-ssa-direct-deposit/p010-i-improvements.md) |
 
-### P010 artifact tracking chart
+The grade measures source-grounded public presenter/runbook quality, **not** whether a live SSA, banking, chatbot or Dataverse integration is operating. The older 13- and 52-minute editions are labeled historical.
 
-| P ID | Artifact (canonical GitHub Pages path) | Duration | Collection grade & improvements | Status |
-| --- | --- | --- | --- | --- |
-| **P010** | [Collection homepage](demos/p010-ssa-direct-deposit/index.html) | — | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-1** | [Main presenter HTML](demos/p010-ssa-direct-deposit/p010-1-presenter-40min.html) | 40 min | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-2** | [Short rehearsal HTML](demos/p010-ssa-direct-deposit/p010-2-presenter-13min.html) | 13 min | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Historical |
-| **P010-3** | [Detailed presenter HTML](demos/p010-ssa-direct-deposit/p010-3-presenter-52min.html) | 52 min | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Historical |
-| **P010-5** | [40-minute speaker notes](demos/p010-ssa-direct-deposit/p010-5-presenter-40min.md) | 40 min | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-6** | [13-minute speaker notes](demos/p010-ssa-direct-deposit/p010-6-presenter-13min.md) | 13 min | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Historical |
-| **P010-7** | [52-minute speaker notes](demos/p010-ssa-direct-deposit/p010-7-presenter-52min.md) | 52 min | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Historical |
-| **P010-B** | [Master demo runbook](demos/p010-ssa-direct-deposit/p010-b-runbook.md) | 40 min | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-Q** | [Quality evaluation](demos/p010-ssa-direct-deposit/p010-q-quality.md) | — | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-G** | [Letter grade](demos/p010-ssa-direct-deposit/p010-g-grade.md) | — | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-S** | [Numeric score](demos/p010-ssa-direct-deposit/p010-s-score.json) | — | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-I** | [Improvement plan](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | — | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-R** | [Collection README](demos/p010-ssa-direct-deposit/p010-r-readme.md) | — | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
-| **P010-M** | [Manifest](demos/p010-ssa-direct-deposit/p010-m-manifest.json) | — | [89% · B+](demos/p010-ssa-direct-deposit/p010-g-grade.md) · [Improve](demos/p010-ssa-direct-deposit/p010-i-improvements.md) | Current |
+## Permanent P identifier standard
 
-**Scoring:** The **89% · B+** is an overall artifact-quality grade for P010, inherited by its files for tracking. It is not fourteen independent grades and does not certify live banking, chatbot handoff, or other system integrations. See [P010-Q evaluation](demos/p010-ssa-direct-deposit/p010-q-quality.md), [P010-S score breakdown](demos/p010-ssa-direct-deposit/p010-s-score.json), and [P010-I short improvement plan](demos/p010-ssa-direct-deposit/p010-i-improvements.md).
+**One parent ID per demo**: SSA is **P010**; a genuinely new demo would be **P011** (after owner assignment and checking the registry).
 
-## Consistent naming across every demo
+- Timed presenters and notes have child IDs **P010-1**, **P010-2**, etc.
+- Every demo must also have these seven fixed-suffix standard artifacts:
 
-One **parent P ID per demo**. SSA is P010; the **next collection is P011**. Its reusable artifacts use the same parent with unique numeric child suffixes, e.g. `P011-1`, `P011-2`.
-
-**Standard documents get fixed letters, not new parent IDs:**
-
-| Standard ID | File pattern within `demos/pNNN-<slug>/` | Meaning |
+| Suffix | File pattern | Meaning |
 | --- | --- | --- |
-| **P###-B** | `pNNN-b-runbook.md` | Canonical complete walkthrough and exact transitions |
-| **P###-Q** | `pNNN-q-quality.md` | Seven-criterion evidence/deduction review |
-| **P###-G** | `pNNN-g-grade.md` | A+–F letter and grade derivation |
-| **P###-S** | `pNNN-s-score.json` | 100-point score and rubric breakdown |
-| **P###-I** | `pNNN-i-improvements.md` | **Seven brief "Why" + "Improve" pairs**, one for each criterion |
-| **P###-R** | `pNNN-r-readme.md` | Demo-specific guide and artifact directory |
-| **P###-M** | `pNNN-m-manifest.json` | Stable version IDs, filenames, quality and readiness |
+| **B** | `pNNN-b-runbook.md` | Complete runbook; objectives, screens, spoken lines, transitions, fallbacks |
+| **Q** | `pNNN-q-quality.md` | Qualitative 100-point rubric with seven criteria |
+| **G** | `pNNN-g-grade.md` | A+–F letter grade, with plus/minus bands |
+| **S** | `pNNN-s-score.json` | Percentage and earned/max points |
+| **I** | `pNNN-i-improvements.md` | **Why** and **Improve** bullets for all seven criteria |
+| **R** | `pNNN-r-readme.md` | Per-demo README and artifact links |
+| **M** | `pNNN-m-manifest.json` | Machine-readable catalog of versions, IDs and statuses |
 
-Each demo folder also has one **`index.html`** collection homepage. Timed HTML presenters and their speaker notes receive **numeric children**; each presenter links visibly to the same demo's **-B runbook** and its own notes. P010's files are the reference layout. Old unnumbered and superseded-number filenames are not supported as aliases or redirects in this new library.
+Example: P010-B / P010-Q / P010-G / P010-S / P010-I / P010-R / P010-M. These are **not separate demo IDs**. No redirects or duplicate unnumbered copies are part of this new library.
 
-## Source readiness, exact artifact requirements and grading
-
-Do not generate a public presenter until the originating source has enough content: approved business story, fictional/sanitized person, real/planned screen sequence, presenters and timeboxes, speakable lines, **all transitions**, source-vs-live evidence, fallbacks, privacy review and public-publish approval.
-
-Every **runbook (-B)** gives a time-summed agenda and, for every section, a goal, screen, clicks, audience highlight, script, transition, status and fallback. Every timed HTML is static, accessible, copy/print friendly, timed and linked to runbook/notes. The completed artifact set receives a **seven-criterion 100-point A+–F grade**, plus **-I improvements** explaining each deduction and corrective action. New collections require **source READY** and a minimum **80% · B−** score.
-
-See the full [quality and source-readiness standard](docs/ARTIFACT_QUALITY_STANDARD.md), [agent instructions](AGENTS.md), [new-demo onboarding](docs/ADD_A_DEMO.md), [example manifest](templates/demo-manifest.example.json) and [global P registry](artifact-registry.json).
-
-## Repository structure
+## Standard folder structure
 
 ```text
-index.html                             # Public demo library homepage
-README.md                              # This chart and naming contract
-artifact-registry.json                 # Parent P IDs and every artifact
-AGENTS.md                              # Publication/creation requirements
-.github/copilot-instructions.md
-docs/ARTIFACT_QUALITY_STANDARD.md
-docs/ADD_A_DEMO.md
-templates/AGENTS.demo-presenter.md
-templates/demo-manifest.example.json
-demos/p010-ssa-direct-deposit/
-  index.html                           # P010 demo collection
-  p010-1-presenter-40min.html          # Current presenter
-  p010-2-presenter-13min.html          # Historical timebox
-  p010-3-presenter-52min.html          # Historical timebox
-  p010-5-presenter-40min.md            # Current speaker notes
-  p010-6-presenter-13min.md
-  p010-7-presenter-52min.md
-  p010-b-runbook.md
-  p010-q-quality.md
-  p010-g-grade.md
-  p010-s-score.json
-  p010-i-improvements.md
-  p010-r-readme.md
-  p010-m-manifest.json
+/
+├── index.html                          # Library homepage
+├── artifact-registry.json              # Global demo/child/standard P IDs
+├── AGENTS.md                           # Mandatory source-review and publication rules
+├── docs/
+│   ├── ARTIFACT_QUALITY_STANDARD.md    # Eight source gates, runbook/HTML contract, grading
+│   ├── SOURCE_REVIEW.md                # Authorized read-only source-repository access
+│   ├── P_REGISTRY.md                   # Human-readable canonical IDs/URLs
+│   └── ADD_A_DEMO.md                   # Onboarding instructions
+├── templates/
+│   ├── AGENTS.demo-presenter.md        # Reusable instructions for a source repo
+│   └── demo-manifest.example.json      # Template for future demo manifests
+├── scripts/
+│   └── review-source.cjs               # Local read-only source evidence inspection
+└── demos/
+    └── p010-ssa-direct-deposit/
+        ├── index.html                   # Collection home (P010)
+        ├── p010-1-presenter-40min.html  # P010-1 current
+        ├── p010-2-presenter-13min.html  # P010-2 historical
+        ├── p010-3-presenter-52min.html  # P010-3 historical
+        ├── p010-5-presenter-40min.md    # P010-5 notes
+        ├── p010-6-presenter-13min.md    # P010-6 notes
+        ├── p010-7-presenter-52min.md    # P010-7 notes
+        ├── p010-b-runbook.md
+        ├── p010-q-quality.md
+        ├── p010-g-grade.md
+        ├── p010-s-score.json
+        ├── p010-i-improvements.md
+        ├── p010-r-readme.md
+        └── p010-m-manifest.json
 ```
 
-## Public release and Pages
+Retired intermediate P010 numeric IDs are **not reusable**. The next unallocated numeric child must be verified against the registry.
 
-The original source repository remains authoritative. The public site holds **sanitized, approved presentations only**. No automatic cross-repository mirroring; a private change does not automatically authorize a public release.
+## Source review and public-release gates
 
-To enable Pages on this public repository, select **Settings → Pages → Deploy from a branch → main → /(root)** and Save. A GitHub file commit confirms source publication, not a live Pages deployment.
+1. **Inspect the originating repository with authorized read-only access** and establish a current source revision, audience, business case, screens, section goals, owner, speaker text, timings, transitions and actual-vs-proposed status.
+2. Pass all **eight required source inputs** and create public-safe versions—no private repo URLs, credentials, tenant/environment IDs or real restricted data.
+3. Build each HTML timebox with a prominent link to the same demo's **B runbook** and its own numbered notes.
+4. Produce Q/G/S quality evidence and **I improvement plan**, where every criterion has concise **Why** and **Improve** bullets.
+5. Request the owner's explicit approval for the specific public content before publishing. Source project changes never trigger automatic public mirroring.
+6. Validate static HTML, JS, links, durations and manifest/registry; report visual/mobile and Pages status honestly.
+
+New releases require at least **80% / B−** on the [grading rubric](docs/ARTIFACT_QUALITY_STANDARD.md), independent of live-system acceptance.
+
+## Start here
+
+- [Add a new demo](docs/ADD_A_DEMO.md)
+- [Exact HTML/runbook/grade requirements](docs/ARTIFACT_QUALITY_STANDARD.md)
+- [Read originating repository docs](docs/SOURCE_REVIEW.md)
+- [P registry](docs/P_REGISTRY.md)
+- [Reusable source-repo agent instructions](templates/AGENTS.demo-presenter.md)
+
+**Pages activation:** [Settings → Pages](https://github.com/bradlaw76/bradlaw76-demopresenter/settings/pages) → Deploy from a branch → `main` / `(root)`. Verify the actual live URL after deployment.
