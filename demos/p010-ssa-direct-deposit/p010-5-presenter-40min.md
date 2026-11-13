@@ -148,11 +148,13 @@ The first portal alert is a fictional demonstration example. It is **not the sam
 
 ## 5. Case · Cross-system information and controlled decisions — 10 minutes
 
-**Goal:** Keep the Case within ten minutes by emphasizing the overview, Direct Deposit status, one external-information example, recommendations and human review.
+**Goal:** Keep the Case within ten minutes by emphasizing the overview, Direct Deposit status, one external-information example, recommendations, human review and customer follow-up.
 
-**Main highlight:** CAS-01523-T1R7X6 → Direct Deposit → synthetic bank record → supporting system information → AI recommendations → review.
+**Main highlight:** CAS-01523-T1R7X6 → Direct Deposit → supporting information → recommendations → review → customer follow-up.
 
 **Say:** “Here's Elena's in-progress Case, CAS-01523-T1R7X6. Case Overview gives us the request, owner, status and recent activity; I'll keep that high level rather than walk through every widget. The Direct Deposit tab brings in the associated request. The synthetic banking record shows Verification Required and Pending Authorization. That tells us what remains, not that any banking change is approved. We can also bring information from benefits, payment or document systems into a consolidated service experience; I'll use one supporting view to illustrate the pattern without claiming a production SSA integration. The AI Recommendation Center can present guidance and possible next steps. If its provenance is labeled rule-based fallback, we'll say that rather than claiming an autonomous AI decision. Finally, Review & Resolution helps the representative assess outstanding work. This request remains pending; we do not change account details or close it prematurely.”
+
+**Final 30-second stop — Customer follow-up & Case disposition:** “This closes today's representative interaction, not Elena's Case. The representative would follow up through an SSA-approved channel, such as a call or secure message where configured, to explain what's still needed. SSA could request more information, escalate for review or complete an authorized change once verification is satisfied. Only after confirming the outcome would the Case be resolved. We won't return to chat or contact Elena during this demo.”
 
 **Click/show:**
 - Open Case CAS-01523-T1R7X6 and highlight Overview, In Progress, owner, description and Timeline.
@@ -160,13 +162,14 @@ The first portal alert is a fictional demonstration example. It is **not the sam
 - Briefly open the related banking record; do not assume its fields and the Case summary show identical data.
 - Show ONE relevant supporting view: Benefits & Payments, TED or documents, describing source integration at a high level.
 - Show AI Recommendation Center with actual recommendation provenance, then Review & Resolution as available for this Case.
-- Leave the Case and banking request pending; don't repeat the old Case's checklist counts or supervisor recommendation.
+- Spend approximately 1½ minutes on Review & Resolution. Then use the final 30 seconds on the same Case to point to In Progress, outstanding verification and assigned owner/follow-up areas where visible.
+- Explain approved outreach and possible resolution paths without reopening chat, sending a message or changing the Case; don't repeat the old Case's checklist counts or supervisor recommendation.
 
 **Questions:** “Any questions about how the Case brings together information and guides the next action before we move to operational dashboards?”
 
-**Next section:** “We've seen the work involved in one constituent request. Let's widen the view to the day-to-day CRM workload for agents and supervisors.”
+**Next section:** “We've identified Elena's next steps and how the representative would follow up, while keeping her Case open. Let's widen the view to the day-to-day CRM workload for agents and supervisors.”
 
-**Do not claim:** The synthetic Case and banking form can show different completeness of saved fields; do not imply full synchronization. No bank write, authorization, verification clearance, automatic resolution or externally verified SSA integration.
+**Do not claim:** Outreach channels, information requests and referrals are possible options subject to policy and configuration—not demonstrated actions. The Case and banking record remain pending. Do not claim synchronized details, bank writes, authorization, verification clearance, automatic resolution or externally verified SSA integration.
 
 
 ## 6. CRM dashboards · Agent and supervisor work — 4 minutes

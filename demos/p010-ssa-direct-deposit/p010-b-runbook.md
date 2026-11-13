@@ -230,14 +230,19 @@ The configured chat assistant responds automatically; do not type a redundant ag
 ### 5. Case · Cross-system information and controlled decisions — 10 minutes
 
 **Owner:** Brad · Case  
-**Goal:** Keep the Case within ten minutes by emphasizing the overview, Direct Deposit status, one external-information example, recommendations and human review.  
+**Goal:** Keep the Case within ten minutes by emphasizing the overview, Direct Deposit status, one external-information example, recommendations, human review and the customer follow-up path.
+
 **Primary screen:** Elena Case CAS-01523-T1R7X6 / request DD-DEMO-H095-01523
 
-**Key highlight:** CAS-01523-T1R7X6 → Direct Deposit → synthetic bank record → supporting system information → AI recommendations → review.
+**Key highlight:** CAS-01523-T1R7X6 → Direct Deposit → supporting information → recommendations → review → customer follow-up.
 
 **Say**
 
 > Here's Elena's in-progress Case, CAS-01523-T1R7X6. Case Overview gives us the request, owner, status and recent activity; I'll keep that high level rather than walk through every widget. The Direct Deposit tab brings in the associated request. The synthetic banking record shows Verification Required and Pending Authorization. That tells us what remains, not that any banking change is approved. We can also bring information from benefits, payment or document systems into a consolidated service experience; I'll use one supporting view to illustrate the pattern without claiming a production SSA integration. The AI Recommendation Center can present guidance and possible next steps. If its provenance is labeled rule-based fallback, we'll say that rather than claiming an autonomous AI decision. Finally, Review & Resolution helps the representative assess outstanding work. This request remains pending; we do not change account details or close it prematurely.
+
+**Final 30-second stop — Customer follow-up & Case disposition (within the existing 10 minutes):**
+
+> This closes today's representative interaction, not Elena's Case. The representative would follow up through an SSA-approved channel, such as a call or secure message where configured, to explain what's still needed. SSA could request more information, escalate for review or complete an authorized change once verification is satisfied. Only after confirming the outcome would the Case be resolved. We won't return to chat or contact Elena during this demo.
 
 **What to show**
 
@@ -246,7 +251,8 @@ The configured chat assistant responds automatically; do not type a redundant ag
 3. Briefly open the related banking record; do not assume its fields and the Case summary show identical data.
 4. Show ONE relevant supporting view: Benefits & Payments, TED or documents, describing source integration at a high level.
 5. Show AI Recommendation Center with actual recommendation provenance, then Review & Resolution as available for this Case.
-6. Leave the Case and banking request pending; don't repeat the old Case's checklist counts or supervisor recommendation.
+6. In Review & Resolution, spend approximately 1½ minutes pointing to actual readiness and outstanding decisions.
+7. Remain on the same Case for approximately 30 seconds. Point to In Progress, remaining verification/authorization and ownership/follow-up indicators where visible. Describe approved customer outreach and eventual authorized resolution; do not reopen chat, send a message, select Resolve or Close, or change any record.
 
 **Key beats**
 
@@ -255,6 +261,7 @@ The configured chat assistant responds automatically; do not type a redundant ag
 - **Other systems:** One benefits/TED/document example; label integration boundaries.
 - **AI Recommendation Center:** Assisted guidance, with rule-based provenance where shown.
 - **Review & Resolution:** Outstanding work and human-controlled decision, not premature closure.
+- **Customer follow-up:** Approved channels and possible decisions are explained, not executed; the Case remains open.
 
 **Questions**
 
@@ -262,9 +269,9 @@ The configured chat assistant responds automatically; do not type a redundant ag
 
 **Transition**
 
-> We've seen the work involved in one constituent request. Let's widen the view to the day-to-day CRM workload for agents and supervisors.
+> We've identified Elena's next steps and how the representative would follow up, while keeping her Case open. Let's widen the view to the day-to-day CRM workload for agents and supervisors.
 
-**Do not overstate:** The synthetic Case and banking form can show different completeness of saved fields; do not imply full synchronization. No bank write, authorization, verification clearance, automatic resolution or externally verified SSA integration.
+**Do not overstate:** The synthetic Case and banking form can show different completeness of saved fields; do not imply full synchronization. Follow-up calls, secure messages, additional-information requests and referrals are possible paths subject to SSA policy and configuration—not actions performed during this demo. No bank write, authorization, verification clearance, automatic resolution or externally verified SSA integration.
 
 **Fallback:** If an embedded tab is slow, state its role at a high level and continue with the saved Case and pending state; do not troubleshoot on stage.
 

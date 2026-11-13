@@ -497,21 +497,21 @@ body.focus .script blockquote{font-size:22px}
     "min": 10,
     "original": "aligned to 17-scene source",
     "status": "mixed",
-    "objective": "Keep the Case within ten minutes by emphasizing the overview, Direct Deposit status, one external-information example, recommendations and human review.",
-    "highlight": "CAS-01523-T1R7X6 → Direct Deposit → synthetic bank record → supporting system information → AI recommendations → review.",
+    "objective": "Keep the Case within ten minutes: overview, Direct Deposit status, one supporting-system example, recommendations, human review and an explained customer follow-up path.",
+    "highlight": "CAS-01523-T1R7X6 → Direct Deposit → supporting information → recommendations → review → customer follow-up.",
     "screen": "Elena Case CAS-01523-T1R7X6 / request DD-DEMO-H095-01523",
-    "say": "Here's Elena's in-progress Case, CAS-01523-T1R7X6. Case Overview gives us the request, owner, status and recent activity; I'll keep that high level rather than walk through every widget. The Direct Deposit tab brings in the associated request. The synthetic banking record shows Verification Required and Pending Authorization. That tells us what remains, not that any banking change is approved. We can also bring information from benefits, payment or document systems into a consolidated service experience; I'll use one supporting view to illustrate the pattern without claiming a production SSA integration. The AI Recommendation Center can present guidance and possible next steps. If its provenance is labeled rule-based fallback, we'll say that rather than claiming an autonomous AI decision. Finally, Review & Resolution helps the representative assess outstanding work. This request remains pending; we do not change account details or close it prematurely.",
+    "say": "Here's Elena's in-progress Case, CAS-01523-T1R7X6. Case Overview gives us the request, owner, status and recent activity; I'll keep that high level rather than walk through every widget. The Direct Deposit tab brings in the associated request. The synthetic banking record shows Verification Required and Pending Authorization. That tells us what remains, not that any banking change is approved. We can also bring information from benefits, payment or document systems into a consolidated service experience; I'll use one supporting view to illustrate the pattern without claiming a production SSA integration. The AI Recommendation Center can present guidance and possible next steps. If its provenance is labeled rule-based fallback, we'll say that rather than claiming an autonomous AI decision. Finally, Review & Resolution helps the representative assess outstanding work. The representative would arrange approved follow-up with Elena and explain the remaining requirements; we do not return to chat, change banking details or close this pending Case during the demo.",
     "clicks": [
       "Open Case CAS-01523-T1R7X6 and highlight Overview, In Progress, owner, description and Timeline.",
       "Open Direct Deposit; locate request DD-DEMO-H095-01523. Highlight pending verification and authorization.",
       "Briefly open the related banking record; do not assume its fields and the Case summary show identical data.",
       "Show ONE relevant supporting view: Benefits & Payments, TED or documents, describing source integration at a high level.",
       "Show AI Recommendation Center with actual recommendation provenance, then Review & Resolution as available for this Case.",
-      "Leave the Case and banking request pending; don't repeat the old Case's checklist counts or supervisor recommendation."
+      "Explain an approved customer follow-up path and possible next actions without returning to chat; leave the Case and banking request pending."
     ],
     "checkpoint": "Any questions about how the Case brings together information and guides the next action before we move to operational dashboards?",
-    "handoff": "We've seen the work involved in one constituent request. Let's widen the view to the day-to-day CRM workload for agents and supervisors.",
-    "guard": "The synthetic Case and banking form can show different completeness of saved fields; do not imply full synchronization. No bank write, authorization, verification clearance, automatic resolution or externally verified SSA integration.",
+    "handoff": "We've identified Elena's next steps and how the representative would follow up, while keeping her Case open. Let's widen the view to the day-to-day CRM workload for agents and supervisors.",
+    "guard": "The synthetic Case and banking form can show different completeness of saved fields; do not imply full synchronization. Follow-up channels are possible options, not demonstrated outreach. No message, bank write, authorization, verification clearance, Case resolution or externally verified SSA integration is performed.",
     "fallback": "If an embedded tab is slow, state its role at a high level and continue with the saved Case and pending state; do not troubleshoot on stage.",
     "beats": [
       [
@@ -533,9 +533,13 @@ body.focus .script blockquote{font-size:22px}
       [
         "Review & Resolution",
         "Outstanding work and human-controlled decision, not premature closure."
+      ],
+      [
+        "Customer follow-up",
+        "Approved outreach and conditional Case disposition; no message, bank change or resolution is executed."
       ]
     ],
-    "value": "CAS-01523-T1R7X6 → Direct Deposit → synthetic bank record → supporting system information → AI recommendations → review."
+    "value": "CAS-01523-T1R7X6 → Direct Deposit → supporting context → human review → approved follow-up; Case stays open."
   },
   {
     "id": "reports",
@@ -661,7 +665,8 @@ body.focus .script blockquote{font-size:22px}
    ["Supporting banking record","Open the related synthetic banking entry; point to its verification-required flag and masked destination details if present.","The banking record gives more context about the requested change. We're intentionally using synthetic information, and the status matters more than displaying an account number.","Connect Case workflow to related data without exposing sensitive details.",2],
    ["One supporting-system view","Show one actual Benefits & Payments, TED or document pane—not every tab. Identify the data it illustrates and what remains conceptual.","A representative may need information from benefits, payments or documents to resolve a request. This view illustrates how a service workspace can put that supporting context nearby.","Less navigation between systems; no claim of a proven production SSA integration.",1.5],
    ["AI Recommendation Center","Show a visible recommendation, its rationale or provenance, and the suggested next action. Name any rule-based fallback as such.","Recommendations help the representative understand possible next steps. The representative still evaluates the guidance, and a rule-based fallback is not an autonomous AI decision.","Decision support with transparent provenance.",1.5],
-   ["Review & Resolution","Open the Case Review & Resolution area. Point to incomplete checks, readiness and outstanding decisions actually shown; leave the Case pending.","Here's how the work comes together: what remains unverified, whether authorization was recorded and whether the request is ready to resolve. Today the appropriate outcome is to continue verification, not close the Case.","A controlled process keeps an unresolved banking request from appearing complete.",2]
+   ["Review & Resolution","Open the Case Review & Resolution area. Point to incomplete checks, readiness and outstanding decisions actually shown; leave the Case pending.","Here's how the work comes together: what remains unverified, whether authorization was recorded and whether the request is ready to resolve. Today the appropriate outcome is to continue verification, not close the Case.","A controlled process keeps an unresolved banking request from appearing complete.",1.5],
+   ["Customer follow-up & Case disposition","Stay on Review & Resolution. Point to the Case's In Progress status, remaining verification/authorization needs and owner or follow-up area where visible; do not select Resolve or Close.","This closes today's representative interaction, not Elena's Case. The representative would follow up through an SSA-approved channel, such as a call or secure message where configured, to explain what's still needed. SSA could request more information, escalate for review or complete an authorized change once verification is satisfied. Only after confirming the outcome would the Case be resolved. We won't return to chat or contact Elena during this demo.","SSA could keep Elena informed and the service request accountable without prematurely closing a protected payment issue.",0.5]
   ],
   reports:[
    ["Agent Dashboard / My Workload","Open the Agent Dashboard and My Workload screens from the supplied screenshots. Point to assignments, open work, follow-up indicators and Customer 360 where visible.","An agent needs to see what work is assigned and which requests need attention. These CRM views help prioritize day-to-day constituent service activities.","Operational visibility for individual staff, not merely a collection of charts.",2],
@@ -707,7 +712,8 @@ body.focus .script blockquote{font-size:22px}
    ["From the Case Direct Deposit section, select the linked synthetic banking/request record if the link is available.","Point to the verification-required flag, request reference and masked destination fields where displayed.","Return to the Case without saving changes."],
    ["From the Case tabs, select one supporting source view: Benefits & Payments, TED or Documents—whichever actually loads.","Point to a specific source-data panel or record section and describe what information it would contribute.","Return to the Case; do not claim a live production SSA connection."],
    ["Select the AI Recommendation Center area/tab on the Case.","Point to the recommendation text, rationale and next-action suggestion.","Read the displayed source/provenance; call it rule-based if the UI labels a fallback."],
-   ["Select Review & Resolution on the Case.","Point to checklist completion, verification, authorization and readiness indicators actually visible.","Leave the Case in its pending state rather than selecting Resolve or Close."]
+   ["Select Review & Resolution on the Case.","Point to checklist completion, verification, authorization and readiness indicators actually visible.","Leave the Case in its pending state rather than selecting Resolve or Close."],
+   ["Remain on the Case's Review & Resolution screen; do not reopen the chat.","Point to In Progress, outstanding verification/authorization indicators and assigned owner or follow-up area, if present.","Explain approved call/secure-message follow-up, information requests or referral as possible paths, not actions performed; leave the Case unchanged."]
   ],
   reports:[
    ["From the Dynamics app navigation, open Agent Dashboard.","Select My Workload and identify assigned/open items or follow-up indicators.","If available, open Customer 360 and point to the relationship with the individual constituent view."],
@@ -751,7 +757,8 @@ body.focus .script blockquote{font-size:22px}
    "Related banking context could help SSA representatives see the request status without exposing full account details.",
    "Bringing supporting information into a service view could reduce SSA representatives' need to switch among systems.",
    "Recommendation guidance could assist SSA representatives with consistent next steps, provided provenance and human decision authority stay clear.",
-   "Review and readiness indicators could support SSA's controlled resolution process and help surface unresolved work before closure."
+   "Review and readiness indicators could support SSA's controlled resolution process and help surface unresolved work before closure.",
+   "SSA could communicate next steps through approved follow-up channels while maintaining Case ownership and only resolving after verified, authorized action."
   ],
   reports:[
    "Workload dashboards could help SSA representatives prioritize assigned Cases and identify follow-up needs.",
