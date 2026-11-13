@@ -50,16 +50,18 @@ The configured chat assistant responds automatically; do not type a redundant ag
 **Goal:** Bridge into Brad's separate chat demonstration without presuming what Daniel showed.  
 **Primary screen:** Daniel concludes → Brad opens Elena's portal
 
+**Before the HTML presenter:** The three overview PowerPoint slides have already been presented. Section 1 is Brad's spoken handoff into the live walkthrough, not another slide tour.
+
 **Key highlight:** Chat is another entry point into a consistent customer-service experience—not an additional disconnected application.
 
 **Say**
 
-> Thanks, Daniel. I'm going to switch to a different constituent scenario, this time using chat. The point is not simply to add another way to contact SSA; chat is another entry point into a consistent customer-service experience. Whether someone begins through voice, a website or another appropriate channel, the goal is to give representatives the relevant service information and a process for continuing the work. We'll follow Elena's request from her digital experience through the representative's conversation, her Contact record, the Case and operational reporting. This is a different person and a different session from Daniel's example.
+> Thanks, Daniel. We've just seen the voice side of customer service, and the slides laid out the bigger opportunity: constituents may reach SSA through different channels, but they should find clear guidance and a consistent path to help. The real value isn't simply adding chat to voice. It's giving representatives the context and tools to carry a request forward. Let's make that tangible with a different constituent. Meet Elena. She needs to change her Direct Deposit information, but additional verification is required—and she's concerned about her next payment. We'll start in her digital portal, ask for help through Copilot Studio chat, and see how a representative can continue the work through her Contact, Case and follow-up in Dynamics 365. This is a separate scenario from Daniel's, but it illustrates the same connected-service principle. Let's step into Elena's experience.
 
 **What to show**
 
 1. Allow Daniel to complete his own segment without assuming or describing his details.
-2. Brad delivers only the high-level architecture bridge.
+2. Brad delivers the main Section 1 introduction above, building on the completed PowerPoint without replaying its slides.
 3. Open Elena's independent portal and introduce the Direct Deposit issue.
 
 **Key beats**
@@ -279,26 +281,26 @@ The configured chat assistant responds automatically; do not type a redundant ag
 ### 6. CRM dashboards · Agent and supervisor work — 4 minutes
 
 **Owner:** Brad · CRM reporting  
-**Goal:** Show agent and supervisor visibility into everyday Case and activity work, not contact-center performance metrics.  
-**Primary screen:** Dynamics CRM Agent Dashboard and Supervisor Dashboard
+**Goal:** Show agent and supervisor Case visibility in CRM, then an optional Power BI reporting example using demonstration data.
+**Primary screen:** Dynamics CRM dashboards → Power BI My Cases & Follow-ups, if accessible
 
-**Key highlight:** Agent Dashboard / My Workload → Supervisor Operations: workload, aging and follow-up.
+**Key highlight:** Agent Dashboard / My Workload → Supervisor Operations → Power BI My Cases & Follow-ups.
 
 **Say**
 
-> Let's step back from one constituent's Case. An agent needs to know what work is assigned, which requests are open and where follow-up is required. The Agent Dashboard and My Workload help organize that day-to-day work. A supervisor needs a broader view of Case ownership, workload distribution and aging. That's what Supervisor Operations can provide. This is CRM service information: customer records, Cases and activities. It's a different perspective from the contact-center channel and performance metrics Beth will cover. The values shown here are from our demonstration data, not official SSA operational totals.
+> Let's step back from one constituent's Case. An agent needs to know what work is assigned, which requests are open and where follow-up is required. The Agent Dashboard and My Workload help organize that day-to-day work. A supervisor needs a broader view of Case ownership, workload distribution and aging. That's what Supervisor Operations can provide. I'll also show an optional Power BI example with a case worklist and follow-up indicators. This is service reporting based on demonstration data, not official SSA totals or proof of a production integration. Beth will cover contact-center performance separately.
 
 **What to show**
 
-1. Open Agent Dashboard/My Workload and highlight one pending-work or ownership insight.
-2. Open Supervisor Operations and Customer 360/My Workload as appropriate; describe one supervisory insight.
-3. Distinguish CRM Case/activity operations from Beth's contact-center performance scope. Avoid every graph and filter.
+1. **1¼ minutes:** Open Agent Dashboard/My Workload and highlight one pending-work or ownership insight.
+2. **1¼ minutes:** Open Supervisor Operations and Customer 360/My Workload as appropriate; describe one supervisory insight.
+3. **1½ minutes:** In Power BI, open **SSAContactCenter_Modernized → My Cases & Follow-ups** if accessible. Point to the Case worklist, overdue Cases, follow-ups and **Next action**. Identify the report's **Development Preview — demo data, not live** label. Do not tour other report pages or filters.
 
 **Key beats**
 
 - **Agent operations:** Assignments and follow-ups.
 - **Supervisor operations:** Open work, aging and Case-level oversight.
-- **Reporting boundary:** CRM operational view, not contact-center performance.
+- **Power BI example:** A prepared view of Cases and follow-ups, distinct from Beth's contact-center performance section.
 
 **Questions**
 
@@ -308,9 +310,9 @@ The configured chat assistant responds automatically; do not type a redundant ag
 
 > The same organized service data supports the constituent and the people managing the work. Let me close on how that extends to other engagement channels.
 
-**Do not overstate:** Dashboard values are demonstration/scope-specific and not government production service metrics.
+**Do not overstate:** CRM and Power BI values are demonstration/scope-specific, not government production metrics. A Power BI screenshot does not establish report access, data freshness or a production integration.
 
-**Fallback:** If a chart is empty, describe the operational perspective instead of inventing a number.
+**Fallback:** If a chart is empty or Power BI is inaccessible, describe the perspective using the available CRM screen. Do not invent totals or troubleshoot during the four-minute section.
 
 
 ### 7. Omnichannel close · Hand off to Beth — 2 minutes
