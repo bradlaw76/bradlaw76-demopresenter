@@ -29,7 +29,7 @@
 
 ## The only two customer messages to paste
 
-The **two Copy buttons in P010-1 HTML** copy only the text below, without a label or formatting, with ordinary ASCII punctuation. The configured chatbot answers automatically.
+The **two Copy buttons in P010-1 HTML** now appear inside the **Copilot conversation** live walkthrough stop, beside the actual step where the messages are needed. They copy only the text below, without a label or formatting, with ordinary ASCII punctuation. Send Message 1 during that stop and Message 2 during the following human-escalation stop. The configured chatbot answers automatically.
 
 **You said — Message 1**
 
