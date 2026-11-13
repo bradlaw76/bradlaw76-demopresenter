@@ -4,7 +4,7 @@
 
 [P010-1 live presenter](p010-1-presenter-40min.html) · [P010-B runbook](p010-b-runbook.md) · [Collection](index.html) · [P010-Q quality](p010-q-quality.md) · [P010-I improvements](p010-i-improvements.md)
 
-**Presenter display convention:** P010-1 is the on-stage screen-by-screen guide. Every chapter has timed **Point / click / show**, **Say this**, and **Why it matters** stops with individual **DONE** toggles saved only in the browser. The **next-section transition** appears immediately below those stops. The Dynamics workspace talking points are integrated into their corresponding stops rather than repeated in a separate box. Target minutes include navigation, pauses to inspect the UI, transitions and questions; they are not a claim that reading the words takes that long. The older narrative remains in a collapsed rehearsal section; fallback and truth-boundary reminders also remain collapsed.
+**Presenter display convention:** P010-1 is the on-stage screen-by-screen guide. Every chapter has timed **Point / click / show**, **Say this**, and **Why it matters** stops with individual **DONE** toggles saved only in the browser. The **spoken audience takeaway** comes immediately after the walkthrough, directly above the **next-section transition**. The Dynamics workspace talking points are integrated into their corresponding stops rather than repeated in a separate box. Target minutes include navigation, pauses to inspect the UI, transitions and questions; they are not a claim that reading the words takes that long. The older narrative remains in a collapsed rehearsal section; fallback and truth-boundary reminders also remain collapsed.
 
 ## Core message
 
