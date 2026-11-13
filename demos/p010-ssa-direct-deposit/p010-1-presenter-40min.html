@@ -782,6 +782,7 @@ body.focus .script blockquote{font-size:22px}
    const key=c.id+':'+i,done=Boolean(state.stopDone[key]);
    return '<article class="demo-stop '+(done?'completed':'')+'"><div class="demo-stop-head"><span class="demo-stop-number">'+(i+1)+'</span><span class="demo-stop-title">'+esc(stop[0])+'</span><span class="demo-stop-time">'+stop[4]+' min</span><button type="button" class="stop-done" data-stop="'+key+'" aria-pressed="'+done+'" aria-label="'+(done?'Mark incomplete: ':'Mark done: ')+esc(stop[0])+'">'+(done?'✓ DONE':'DONE')+'</button></div><div class="demo-stop-body">'+
    '<div><div class="cue">Point / click / show · exact on-screen steps</div>'+ordered(UI_ACTIONS[c.id][i])+'</div>'+
+   (c.id==='portal'&&i===2&&c.customerLines?'<div class="chat-copy" style="margin:0"><div class="label">Copy only these two messages into chat</div>'+c.customerLines.map((x,j)=>'<div class="copy-row"><p><strong>Message '+(j+1)+':</strong> '+esc(x)+'</p><button type="button" class="btn small" data-copy-citizen="'+j+'">Copy message '+(j+1)+'</button></div>').join('')+'<p class="smalltext muted">Send Message 1 here. Use Message 2 when you reach the next stop: Request a live person.</p></div>':'')+
    '<div><div class="cue">Say this</div><p class="words">“'+esc(stop[2])+'”</p></div>'+
    '<p class="why"><strong>Value to SSA:</strong> '+esc(SSA_VALUE[c.id][i])+'</p></div></article>'
   }).join('')+'</div></section>';
@@ -796,7 +797,6 @@ body.focus .script blockquote{font-size:22px}
    renderStops(c)+
    '<section class="box alt"><div class="label">Audience takeaway · say this</div><p class="takeaway-script">“'+esc(spoken.takeaway)+'”</p><details class="compact-details" style="margin-top:16px"><summary>If the live path is not ready</summary><p>'+esc(c.fallback)+'</p></details></section>'+
    '<div class="handoff"><div class="label">Next section · presenter transition</div><p>“'+esc(c.handoff)+'”</p></div>'+
-   (c.customerLines?'<section class="chat-copy"><div class="label">You said · copy only the citizen message</div>'+c.customerLines.map((x,i)=>'<div class="copy-row"><p><strong>Message '+(i+1)+':</strong> '+esc(x)+'</p><button type="button" class="btn small" data-copy-citizen="'+i+'">Copy message '+(i+1)+'</button></div>').join('')+'<p>Paste the copied line into chat. No label or formatting is included.</p></section>':'')+
    '<div class="box"><div class="label">Audience checkpoint · invite questions</div><p>“'+esc(c.checkpoint)+'”</p></div>'+
    '<div class="deep-wrap"><button type="button" class="deep-toggle" id="deepToggle" aria-expanded="'+Boolean(state.deep[c.id])+'"><span>Detailed screen beats · '+esc(c.original)+'</span><span>'+ (state.deep[c.id]?'Hide −':'Expand +')+'</span></button>'+(state.deep[c.id]?'<div class="deep-panel">'+beatHtml+'</div>':'')+'</div>'+
    '</div>'+
