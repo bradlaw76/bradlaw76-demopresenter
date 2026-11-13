@@ -36,7 +36,7 @@
 
 **On-stage P010-1 layout:** Begin with the spoken introduction, then follow each timed stop: ordered **Point / click / show** UI actions, a single **Say this** script, and **Value to SSA** framed as a potential operational or constituent-service benefit. The individual **DONE** buttons retain progress in that browser only. The spoken audience takeaway follows the walkthrough directly above the next-section transition. Duplicate narrative and feature-tour boxes are removed from the interactive presenter; this runbook preserves the fuller rehearsal wording. Live-path fallback and truth-boundary guidance remain collapsed. Target minutes include navigation, observation pauses, transitions and brief questions—not simply reading aloud.
 
-**Two citizen chat messages:** P010-1 has dedicated Copy buttons. Only the customer sentence is copied, with normal ASCII punctuation and no “You said” label or formatting.
+**Two citizen chat messages:** P010-1 puts both dedicated Copy buttons inside the **Copilot conversation** live walkthrough stop, next to the actions. Use Message 1 in that stop and Message 2 in the following escalation stop. Only the customer sentence is copied, with normal ASCII punctuation and no “You said” label or formatting.
 
 > I see a notice when logged into the mySSA portal that my direct deposit change needs additional verification. Can you explain what that means?
 
