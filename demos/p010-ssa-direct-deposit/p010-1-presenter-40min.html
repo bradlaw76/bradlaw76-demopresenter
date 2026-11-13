@@ -726,11 +726,12 @@ body.focus .script blockquote{font-size:22px}
    '<div class="stage-body">'+
    '<section class="box"><div class="label">Section introduction · say this</div><p>“'+esc(spoken.intro)+'”</p></section>'+
    renderStops(c)+
+   '<section class="box alt"><div class="label">Audience takeaway · say this</div><p class="takeaway-script">“'+esc(spoken.takeaway)+'”</p><details class="compact-details" style="margin-top:16px"><summary>If the live path is not ready</summary><p>'+esc(c.fallback)+'</p></details></section>'+
    '<div class="handoff"><div class="label">Next section · presenter transition</div><p>“'+esc(c.handoff)+'”</p></div>'+
    '<details class="compact-details"><summary>Full chapter narrative · optional rehearsal script</summary><div class="script"><div class="label">Presenter talk track · say this</div>'+spokenBullets(c)+'</div></details>'+
    (c.customerLines?'<section class="chat-copy"><div class="label">You said · copy only the citizen message</div>'+c.customerLines.map((x,i)=>'<div class="copy-row"><p><strong>Message '+(i+1)+':</strong> '+esc(x)+'</p><button type="button" class="btn small" data-copy-citizen="'+i+'">Copy message '+(i+1)+'</button></div>').join('')+'<p>Paste the copied line into chat. No label or formatting is included.</p></section>':'')+
    (c.screenHighlights?'<section class="box"><div class="label">Portal screen highlights</div>'+ordered(c.screenHighlights.map(x=>x[0]+': '+x[1]))+'</section>':'')+
-   '<div class="grid2"><section class="box"><h3>What to click / show</h3>'+ordered(c.clicks)+'</section><section class="box alt"><div class="label">Audience takeaway · say this</div><p class="takeaway-script">“'+esc(spoken.takeaway)+'”</p><details class="compact-details" style="margin-top:16px"><summary>If the live path is not ready</summary><p>'+esc(c.fallback)+'</p></details></section></div>'+
+   '<section class="box"><h3>What to click / show</h3>'+ordered(c.clicks)+'</section>'+
    '<div class="box"><div class="label">Audience checkpoint · invite questions</div><p>“'+esc(c.checkpoint)+'”</p></div>'+
    '<div class="deep-wrap"><button type="button" class="deep-toggle" id="deepToggle" aria-expanded="'+Boolean(state.deep[c.id])+'"><span>Detailed screen beats · '+esc(c.original)+'</span><span>'+ (state.deep[c.id]?'Hide −':'Expand +')+'</span></button>'+(state.deep[c.id]?'<div class="deep-panel">'+beatHtml+'</div>':'')+'</div>'+
    '</div>'+
