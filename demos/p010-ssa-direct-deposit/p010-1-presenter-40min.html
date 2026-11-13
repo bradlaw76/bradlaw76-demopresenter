@@ -626,15 +626,6 @@ body.focus .script blockquote{font-size:22px}
   reports:{intro:"We've followed one constituent request. Let's step back and look at how agents and supervisors manage their wider workload.",takeaway:"The same organized service data supports the agent handling a single request and the supervisor managing a team. Agents can prioritize follow-up, while supervisors see ownership, workload distribution and aging from the CRM perspective."},
   admin:{intro:"Let me close by connecting the experience we've seen to the broader omnichannel picture.",takeaway:"Across channels and roles, the goal is a coherent service experience supported by relevant information and representative tools. That wraps up my portion, and I'll hand over to Beth for the contact-center view."}
  };
- const EMPHASIS={
-  voice:["chat","consistent customer-service experience","voice","website","Elena"],
-  portal:["Direct Deposit","additional verification","chat","human representative","protected payment issue"],
-  conversation:["agent workspace","chat","telephony","conversation summary","quick replies","Intent-based suggestion","SSA FAQ","custom SSA Agent Support sidebar","Copilot Studio agents","my Social Security Assistant","representative"],
-  contact:["Timeline","Contact – Customer Insights – SSA","SSA | Constituent Verification & Direct Deposit","same Elena Contact","Dataverse"],
-  case:["Case Overview","Direct Deposit","Verification Required","Pending Authorization","AI Recommendation Center","Review & Resolution"],
-  reports:["Agent Dashboard","My Workload","Supervisor Operations","CRM service information","demonstration data"],
-  admin:["chat","consistent customer-service experience","Dynamics 365","Dataverse","mobile","Beth"]
- };
  // Each stop includes the real on-screen gesture, spoken explanation, business value and a
  // timebox for screen interaction—not merely the time needed to read the words aloud.
  const DEMO_STOPS={
@@ -681,6 +672,96 @@ body.focus .script blockquote{font-size:22px}
    ["Transition to Beth","Mention mobile-capable and additional configured channels only at a high level; invite final questions and hand off.","These capabilities can extend to additional channels when configured. That concludes my portion. Beth, I'll turn it over to you for the contact-center capabilities and operational view.","End cleanly without claiming unshown channels are implemented.",1]
   ]
  };
+ // Screen labels are grounded in the supplied demo references. Conditional controls are
+ // identified explicitly, since the live environment can differ from the capture.
+ const UI_ACTIONS={
+  voice:[
+   ["Wait for Daniel to finish his independent voice segment and hand over to Brad.","Bring the SSA MyAccount Preview browser tab to the front; do not open Daniel's records."],
+   ["Keep the portal browser tab visible while introducing the separate Elena scenario.","Point to the portal navigation as the digital starting point; do not claim a transferred voice session."],
+   ["Select Overview in the SSA MyAccount Preview navigation.","Locate the Direct Deposit verification notice on the Overview page and pause there."]
+  ],
+  portal:[
+   ["In SSA MyAccount Preview, select Overview.","Point directly to the Direct Deposit additional-verification notice, then pause for the audience to read its status."],
+   ["Select Direct Deposit in the portal navigation.","Point to the pending request/review indicator, then return to Overview or the available chat entry point."],
+   ["Select the portal's chat launcher to open my Social Security Assistant.","Use Copy Message 1 in this presenter; paste into the chat message field and send it.","Point to the assistant's verification explanation and warning not to share sensitive information."],
+   ["Use Copy Message 2 in this presenter; paste it into the same chat field and send.","Point to Elena's request to speak with a representative.","Follow the actual human-assistance/transfer control or response shown; if unavailable, state the fallback and move to prepared Dynamics chat."]
+  ],
+  conversation:[
+   ["In Dynamics 365 Customer Service workspace, find the incoming chat notification or conversation queue item.","Select Accept for Elena's chat when it appears.","Point to the communication panel, Elena's opening message and the active chat conversation."],
+   ["At the conversation panel menu, point to Voice call and Video call controls (do not initiate a call).","Identify the live Chat window and Show Consult/consultation control if present.","Explain that a visible control is not proof that the channel was configured for this demo."],
+   ["Open Conversation Summary or Summarize Conversation in the communication panel.","Point to the summary text and its explanation of Elena's issue.","If visible, identify the text-prediction toggle and compliance nudge; do not change settings unnecessarily."],
+   ["In the message composer, open Quick Replies and choose /q hello if available.","Point to Transfer and Consultation, then the Attach control.","Open the additional composer menu, if available, and point to Link, Notes, Rich Messages and translation controls. Do not send an unverified canned answer."],
+   ["In the right Copilot pane, scroll to the Intent-based suggestion labeled SSA FAQ.","Point to Issue, suggested response and recommended path.","If the UI permits, select/copy the suggestion into the left chat composer, review and edit it without automatically sending."],
+   ["Open the custom SSA Agent Support sidebar from the workspace navigation or available sidebar control.","Point to the list of configured Copilot Studio agents and explain the purpose of the extension point.","Do not open every agent; reserve my Social Security Assistant for the final stop."],
+   ["Within SSA Agent Support, select my Social Security Assistant last.","Point to its actual response on a general SSA question if one is available; otherwise identify the configured agent without inventing output.","Use the Contact link or Contacts navigation to open Elena's existing Contact. Mention automatic Case creation only if separately verified." ]
+  ],
+  contact:[
+   ["Open Contacts from the Dynamics workspace navigation and select Elena's existing Contact.","Use the form selector to choose Contact – Customer Insights – SSA.","Point to the form name at the top and the profile area; remain on Elena's record."],
+   ["On Contact – Customer Insights – SSA, locate the Timeline section and scroll it into view.","Point to existing activities, dates and interaction types.","Open a saved chat activity only if present; identify whether it contains an activity, summary or transcript."],
+   ["At the same Elena Contact, open the form-selector dropdown.","Select SSA | Constituent Verification & Direct Deposit.","Point to the new form title and confirm Elena is still the Contact shown."],
+   ["On the SSA-specific Contact form, select SSA Overview if needed and point to Super Six verification.","Point to the Direct Deposit verification alert and relevant related-record/activities area where available.","Do not mark an answer verified or clear the alert during the presentation." ]
+  ],
+  case:[
+   ["Navigate to Cases and open CAS-01523-T1R7X6.","On Case Overview, point to status, owner and description, then the Timeline.","Point to SLA information in the top command area if visible; do not modify the Case."],
+   ["Select the Direct Deposit tab on Elena's Case.","Locate request DD-DEMO-H095-01523 and point to Verification Required and pending authorization indicators.","Keep the request open and in its current state."],
+   ["From the Case Direct Deposit section, select the linked synthetic banking/request record if the link is available.","Point to the verification-required flag, request reference and masked destination fields where displayed.","Return to the Case without saving changes."],
+   ["From the Case tabs, select one supporting source view: Benefits & Payments, TED or Documents—whichever actually loads.","Point to a specific source-data panel or record section and describe what information it would contribute.","Return to the Case; do not claim a live production SSA connection."],
+   ["Select the AI Recommendation Center area/tab on the Case.","Point to the recommendation text, rationale and next-action suggestion.","Read the displayed source/provenance; call it rule-based if the UI labels a fallback."],
+   ["Select Review & Resolution on the Case.","Point to checklist completion, verification, authorization and readiness indicators actually visible.","Leave the Case in its pending state rather than selecting Resolve or Close."]
+  ],
+  reports:[
+   ["From the Dynamics app navigation, open Agent Dashboard.","Select My Workload and identify assigned/open items or follow-up indicators.","If available, open Customer 360 and point to the relationship with the individual constituent view."],
+   ["From the dashboard navigation, open Supervisor Dashboard or Supervisor Operations.","Select My Workload and/or Customer 360 as shown in the supplied captures.","Point to ownership, open-work distribution and aging indicators actually populated; do not invent totals." ]
+  ],
+  admin:[
+   ["Stay on the final CRM dashboard; do not open new administration settings.","Use the visible Dashboard/Case context to recap portal → chat → Contact → Case → reporting."],
+   ["Pause on the final CRM screen and invite last questions.","Briefly mention possible configured mobile/social channels without opening untested features.","Hand the presentation to Beth for her independent contact-center segment."]
+  ]
+ };
+ const SSA_VALUE={
+  voice:[
+   "SSA can illustrate a coordinated service strategy across multiple entry channels without requiring that independent demo sessions share data.",
+   "SSA stakeholders can follow a clear constituent-service process from initial contact through tracked work and oversight.",
+   "A visible service issue can give constituents a clear reason to seek help and reduce uncertainty about a pending change."
+  ],
+  portal:[
+   "For SSA, a prominent status notice could reduce avoidable inquiries about whether a Direct Deposit request was completed.",
+   "SSA can distinguish a submitted request from an approved banking change, supporting accurate constituent expectations.",
+   "SSA could provide consistent general guidance and sensitive-data reminders before a representative joins the conversation.",
+   "Escalation offers SSA a route from self-service into assisted service when protected changes require human review."
+  ],
+  conversation:[
+   "SSA representatives could accept digital requests in the same service workspace where they manage related work, reducing context switching.",
+   "A multichannel workspace could help SSA standardize representative tools across chat and configured telephony experiences.",
+   "Conversation summaries could help SSA representatives orient faster and reduce the need for constituents to repeat information.",
+   "Quick replies, consultation and transfer could help SSA improve response consistency and collaboration on complex requests.",
+   "Intent guidance could reduce response-preparation effort while preserving representative review of SSA information and next steps.",
+   "A custom sidebar could bring SSA-specific Copilot Studio tools into the point of work without requiring separate applications.",
+   "Reusing an approved assistant could support consistent public-information answers across constituent and employee channels, while keeping protected actions under SSA control."
+  ],
+  contact:[
+   "SSA could maintain one service record while tailoring Contact forms to different representative tasks.",
+   "A connected Timeline could improve continuity across SSA constituent interactions when those activities are actually recorded.",
+   "SSA-specific forms could surface verification and payment-change context without creating duplicate customer records.",
+   "Verification-focused layout could reduce navigation and support a consistent review process, without substituting for identity authentication."
+  ],
+  case:[
+   "Case ownership, SLA and activity visibility could help SSA track accountability and follow-up for constituent requests.",
+   "Pending verification and authorization indicators could help prevent SSA staff from treating a protected change as complete too early.",
+   "Related banking context could help SSA representatives see the request status without exposing full account details.",
+   "Bringing supporting information into a service view could reduce SSA representatives' need to switch among systems.",
+   "Recommendation guidance could assist SSA representatives with consistent next steps, provided provenance and human decision authority stay clear.",
+   "Review and readiness indicators could support SSA's controlled resolution process and help surface unresolved work before closure."
+  ],
+  reports:[
+   "Workload dashboards could help SSA representatives prioritize assigned Cases and identify follow-up needs.",
+   "Supervisor dashboards could help SSA managers see workload distribution, aging and ownership patterns across service work."
+  ],
+  admin:[
+   "The end-to-end pattern could help SSA connect constituent entry points, representative tools and service data into a coherent experience.",
+   "The architecture supports a discussion about future SSA channels while leaving deployment and integration decisions explicit."
+  ]
+ };
  const $=id=>document.getElementById(id);
  const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  let stored={};try{stored=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(_){}
@@ -695,27 +776,14 @@ body.focus .script blockquote{font-size:22px}
   document.querySelectorAll("[data-route]").forEach(el=>el.addEventListener("click",()=>go(Number(el.dataset.route))));
  }
  function ordered(items){return '<ol class="step-list">'+items.map(x=>'<li><span>'+esc(x)+'</span></li>').join("")+'</ol>'}
- function spokenBullets(c){
-  const phrases=EMPHASIS[c.id]||[];
-  const sentences=c.say.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)||[c.say];
-  return '<ul class="spoken-points">'+sentences.map(s=>{
-   let html=esc(s.trim());
-   for(const phrase of [...phrases].sort((a,b)=>b.length-a.length)){
-    const escaped=esc(phrase).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-    const re=new RegExp('('+escaped+')','i');
-    if(re.test(html)){html=html.replace(re,'<strong>$1</strong>');break;}
-   }
-   return '<li>'+html+'</li>';
-  }).join('')+'</ul>';
- }
  function renderStops(c){
   const stops=DEMO_STOPS[c.id]||[];
   return '<section class="box" style="background:#f7fbfe"><div class="label">Live walkthrough · point, say, explain, advance</div><p style="margin:0 0 14px;color:#56718a">Work through these visible stops while demonstrating the actual screen. The time includes navigation, audience observation and explanation—not continuous reading.</p><div class="demo-stop-list">'+stops.map((stop,i)=>{
    const key=c.id+':'+i,done=Boolean(state.stopDone[key]);
    return '<article class="demo-stop '+(done?'completed':'')+'"><div class="demo-stop-head"><span class="demo-stop-number">'+(i+1)+'</span><span class="demo-stop-title">'+esc(stop[0])+'</span><span class="demo-stop-time">'+stop[4]+' min</span><button type="button" class="stop-done" data-stop="'+key+'" aria-pressed="'+done+'" aria-label="'+(done?'Mark incomplete: ':'Mark done: ')+esc(stop[0])+'">'+(done?'✓ DONE':'DONE')+'</button></div><div class="demo-stop-body">'+
-   '<div><div class="cue">Point / click / show</div><p>'+esc(stop[1])+'</p></div>'+
+   '<div><div class="cue">Point / click / show · exact on-screen steps</div>'+ordered(UI_ACTIONS[c.id][i])+'</div>'+
    '<div><div class="cue">Say this</div><p class="words">“'+esc(stop[2])+'”</p></div>'+
-   '<p class="why"><strong>Why it matters:</strong> '+esc(stop[3])+'</p></div></article>'
+   '<p class="why"><strong>Value to SSA:</strong> '+esc(SSA_VALUE[c.id][i])+'</p></div></article>'
   }).join('')+'</div></section>';
  }
  function renderStage(){
@@ -728,10 +796,7 @@ body.focus .script blockquote{font-size:22px}
    renderStops(c)+
    '<section class="box alt"><div class="label">Audience takeaway · say this</div><p class="takeaway-script">“'+esc(spoken.takeaway)+'”</p><details class="compact-details" style="margin-top:16px"><summary>If the live path is not ready</summary><p>'+esc(c.fallback)+'</p></details></section>'+
    '<div class="handoff"><div class="label">Next section · presenter transition</div><p>“'+esc(c.handoff)+'”</p></div>'+
-   '<details class="compact-details"><summary>Full chapter narrative · optional rehearsal script</summary><div class="script"><div class="label">Presenter talk track · say this</div>'+spokenBullets(c)+'</div></details>'+
    (c.customerLines?'<section class="chat-copy"><div class="label">You said · copy only the citizen message</div>'+c.customerLines.map((x,i)=>'<div class="copy-row"><p><strong>Message '+(i+1)+':</strong> '+esc(x)+'</p><button type="button" class="btn small" data-copy-citizen="'+i+'">Copy message '+(i+1)+'</button></div>').join('')+'<p>Paste the copied line into chat. No label or formatting is included.</p></section>':'')+
-   (c.screenHighlights?'<section class="box"><div class="label">Portal screen highlights</div>'+ordered(c.screenHighlights.map(x=>x[0]+': '+x[1]))+'</section>':'')+
-   '<section class="box"><h3>What to click / show</h3>'+ordered(c.clicks)+'</section>'+
    '<div class="box"><div class="label">Audience checkpoint · invite questions</div><p>“'+esc(c.checkpoint)+'”</p></div>'+
    '<div class="deep-wrap"><button type="button" class="deep-toggle" id="deepToggle" aria-expanded="'+Boolean(state.deep[c.id])+'"><span>Detailed screen beats · '+esc(c.original)+'</span><span>'+ (state.deep[c.id]?'Hide −':'Expand +')+'</span></button>'+(state.deep[c.id]?'<div class="deep-panel">'+beatHtml+'</div>':'')+'</div>'+
    '</div>'+
@@ -742,7 +807,7 @@ body.focus .script blockquote{font-size:22px}
   $("next").onclick=()=>go(state.index===6?0:state.index+1);
   $("mark").onclick=()=>{state.done[c.id]=!state.done[c.id];save();renderRoute();renderStage();updateClocks()};
   document.querySelectorAll('[data-copy-citizen]').forEach(b=>b.onclick=()=>{const i=Number(b.getAttribute('data-copy-citizen'));if(c.customerLines&&c.customerLines[i])copyText(c.customerLines[i],'Citizen message '+(i+1)+' copied.');});
-  $("copyChapter").onclick=()=>copyText(c.title+"\nIntroduction: "+spoken.intro+"\nWalkthrough:\n"+DEMO_STOPS[c.id].map((v,i)=>(i+1)+". "+v[0]+" ("+v[4]+" min)\nPoint/show: "+v[1]+"\nSay: "+v[2]+"\nWhy: "+v[3]).join("\n")+"\nTakeaway: "+spoken.takeaway+"\nNext: "+c.handoff+"\nQuestions: "+c.checkpoint);
+  $("copyChapter").onclick=()=>copyText(c.title+"\nIntroduction: "+spoken.intro+"\nWalkthrough:\n"+DEMO_STOPS[c.id].map((v,i)=>(i+1)+". "+v[0]+" ("+v[4]+" min)\nClick / show:\n"+UI_ACTIONS[c.id][i].map((a,j)=>"  "+(j+1)+". "+a).join("\n")+"\nSay: "+v[2]+"\nValue to SSA: "+SSA_VALUE[c.id][i]).join("\n")+"\nTakeaway: "+spoken.takeaway+"\nNext: "+c.handoff+"\nQuestions: "+c.checkpoint);
   $("deepToggle").onclick=()=>{state.deep[c.id]=!state.deep[c.id];save();renderStage();updateClocks()};
   updateClocks();
  }
@@ -754,7 +819,7 @@ body.focus .script blockquote{font-size:22px}
   $("timeTable").innerHTML=CHAPTERS.map((c,i)=>'<tr><td>'+(i+1)+'. '+esc(c.title)+'</td><td>'+esc(c.original)+'</td><td>'+c.min+'m</td></tr>').join("");
  }
  function printAll(){
-  $("printArea").innerHTML=CHAPTERS.map((c,i)=>'<section class="print-chapter"><div class="print-tag">Chapter '+(i+1)+' / 7 · '+c.min+' min · '+esc(c.owner)+'</div><h2>'+esc(c.title)+'</h2><p><b>Introduction:</b> “'+esc(SPOKEN[c.id].intro)+'”</p>'+DEMO_STOPS[c.id].map((v,j)=>'<p><b>Stop '+(j+1)+' · '+esc(v[0])+' ('+v[4]+' min)</b></p><p><b>Show:</b> '+esc(v[1])+'</p><p><b>Say:</b> “'+esc(v[2])+'”</p><p><b>Why:</b> '+esc(v[3])+'</p>').join('')+'<p><b>Takeaway:</b> “'+esc(SPOKEN[c.id].takeaway)+'”</p><p><b>Next:</b> '+esc(c.handoff)+'</p><p><b>Questions:</b> '+esc(c.checkpoint)+'</p></section>').join("");
+  $("printArea").innerHTML=CHAPTERS.map((c,i)=>'<section class="print-chapter"><div class="print-tag">Chapter '+(i+1)+' / 7 · '+c.min+' min · '+esc(c.owner)+'</div><h2>'+esc(c.title)+'</h2><p><b>Introduction:</b> “'+esc(SPOKEN[c.id].intro)+'”</p>'+DEMO_STOPS[c.id].map((v,j)=>'<p><b>Stop '+(j+1)+' · '+esc(v[0])+' ('+v[4]+' min)</b></p><ol>'+UI_ACTIONS[c.id][j].map(a=>'<li>'+esc(a)+'</li>').join('')+'</ol><p><b>Say:</b> “'+esc(v[2])+'”</p><p><b>Value to SSA:</b> '+esc(SSA_VALUE[c.id][j])+'</p>').join('')+'<p><b>Takeaway:</b> “'+esc(SPOKEN[c.id].takeaway)+'”</p><p><b>Next:</b> '+esc(c.handoff)+'</p><p><b>Questions:</b> '+esc(c.checkpoint)+'</p></section>').join("");
  }
  let elapsed=0,chapterElapsed=0,timer=null;
  function fmt(n){return String(Math.floor(n/60)).padStart(2,"0")+":"+String(n%60).padStart(2,"0")}
